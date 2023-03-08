@@ -9,6 +9,6 @@ class Saleorder(models.Model):
         res = super(Saleorder, self).action_archive()
 
         for line in self.order_line:
-            line.action_cancel()
+            line.write({'active': False})
 
         return res
