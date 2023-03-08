@@ -4,7 +4,7 @@
         <field name="name">sale.order.search.inherit.quotation.mio</field>
         <field name="model">sale.order</field>
         <field name="mode">primary</field>
-        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
         <field name="arch" type="xml">
             <xpath expr="//filter[@name='my_sale_orders_filter']" position="inside">
                 <filter string="Active" name="active_filter" domain="[('active', '=', 'False')]"/>
