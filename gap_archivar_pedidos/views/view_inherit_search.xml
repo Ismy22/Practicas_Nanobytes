@@ -16,6 +16,7 @@
                 <separator/>
                 <filter string="Create Date" name="filter_create_date" date="create_date"/>
                 <filter string="Active" name="active_filter" domain="[('active', '=', 'False')]"/>
+                <filter string="No Active" name="unactive_filter" domain="[('active', '=', 'True')]"/>
             </filter>
         </field>
     </record>
