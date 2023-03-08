@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="account_view_move_form_inherited" model="ir.ui.view">
-        <field name="name">account.view.move.form.inherited</field>
-        <field name="model">account.move</field>
+    <record id="sale.view_order_form_inherited" model="ir.ui.view">
+        <field name="name">sale.view.order.form.inherited</field>
+        <field name="model">sale.order</field>
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//group[@id='header_left_group']" position="inside">
+            <xpath expr="//group[@name='partner_details']" position="inside">
                 <field name="active" invisible="1" />
             </xpath>
         </field>
