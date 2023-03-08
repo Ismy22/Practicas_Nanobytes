@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
         <field name="arch" type="xml">
             <xpath expr="//filter[@name='filter_create_date']" position="before">
-                <filter string="Active" name="active_filter" domain="[('active', '=', 'False')]"/>
+                <filter string="Active" name="active_filter" domain="[('active', '=', False)]"/>
             </xpath>
         </field>
     </record>
