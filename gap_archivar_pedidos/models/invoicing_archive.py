@@ -12,3 +12,8 @@ class Saleorder(models.Model):
             line.write({'active': False})
 
         return res
+    
+class Saleorder(models.Model):
+    _inherit = "sale.order.line"
+
+    active = fields.Boolean(string="Active", default=True)
