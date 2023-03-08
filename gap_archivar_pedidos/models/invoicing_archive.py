@@ -13,7 +13,7 @@ class Saleorder(models.Model):
 
         return res
     
-class Saleorder(models.Model):
+class Saleorderline(models.Model):
     _inherit = "sale.order.line"
 
     active = fields.Boolean(string="Active", default=True)
