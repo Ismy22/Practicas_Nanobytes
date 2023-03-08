@@ -6,8 +6,10 @@
         <field name="mode">primary</field>
         <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
         <field name="arch" type="xml">
-            <filter name="my_quotation" position="before">
+            <filter name="filter_create_date" position="after">
+                <separator/>
                 <filter string="Active" name="active_filter" domain="[('active', '=', 'False')]"/>
+                <separator/>
             </filter>
         </field>
     </record>
