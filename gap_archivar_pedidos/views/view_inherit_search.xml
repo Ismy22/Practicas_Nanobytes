@@ -3,11 +3,13 @@
         <field name="name">sale.order.search.inherit.mio</field>
         <field name="model">sale.order</field>
         <field name="mode">primary</field>
-        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
         <field name="arch" type="xml">
-            <xpath expr="//filter[@name='filter_create_date']" position="before">
-                <filter string="Active" name="active_filter" domain="[('active', '=', False)]"/>
-            </xpath>
+            <filter name="my_sale_orders_filter" position="after">
+
+                    <filter string="Active" name="active_filter" domain="[('active', '=', False)]"/>
+
+            </filter>
         </field>
     </record>
 </odoo>
