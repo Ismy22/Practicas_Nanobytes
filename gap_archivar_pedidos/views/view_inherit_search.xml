@@ -3,7 +3,7 @@
         <field name="name">sale.order.search.inherit.sale2</field>
         <field name="model">sale.order</field>
         <field name="mode">primary</field>
-        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_sale"/>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
         <field name="arch" type="xml">
             <filter name="my_sale_orders_filter" position="after">
                 <separator/>
