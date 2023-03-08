@@ -3,7 +3,7 @@
     'sequence': -1003,
     'summary': '',
     'description': """ Gap archivar presupuestos""",
-    'depends': ['Sales'],
+    'depends': ['sales'],
     'data': [
         'view/view_inherit_presupuesto',
     ],
