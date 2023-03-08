@@ -6,6 +6,7 @@
     'depends': ['sale_management'],
     'data': [
         'views/view_inherit_presupuesto.xml',
+        'views/view_inherit_search.xml',
     ],
     'auto_install': False,
     'application': True
