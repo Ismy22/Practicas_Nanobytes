@@ -7,10 +7,8 @@ class AccountMove(models.Model):
 
     @api.multi
     def action_archive(self):
-        # Llama a la función de archivar del modelo padre
-        res = super(SaleOrder, self).action_archive()
+        res = super(AccountMove, self).action_archive()
 
-        # Itera sobre todas las líneas de pedido y las archiva también
         for line in self.order_line:
             line.action_cancel()
 
