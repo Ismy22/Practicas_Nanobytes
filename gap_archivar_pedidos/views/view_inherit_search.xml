@@ -1,7 +1,7 @@
 <odoo>
     <record id="sale_order_view_search_inherit_quotation" model="ir.ui.view">
         <field name="name">sale.order.search.inherit.quotation</field>
-        <field name="model">sale.order</field>
+        <field name="model">gap_archivar_pedidos.sale.order</field>
         <field name="mode">primary</field>
         <field name="inherit_id" ref="sale.view_sales_order_filter"/>
         <field name="arch" type="xml">
