@@ -33,7 +33,7 @@ class Saleorder(models.Model):
         logger.info("-------------fin orderlineid-------------")
 
         lineaPedido = self.env['sale.order.line'].search(domain=
-            [('order_id', '=', orderlineid)])
+            [('order_id', '=', orderlineid), ('active', '=', False)])
         logger.info("line lineaPedido")
         logger.info(lineaPedido)
         logger.info("fin linePedido")
@@ -42,7 +42,7 @@ class Saleorder(models.Model):
             logger.info("line unarchive")
             logger.info(line)
             logger.info("fin line unarchive")
-            line.write({'sale_order_line.active': True})
+            line.write({'active': True})
 
         return res
     
