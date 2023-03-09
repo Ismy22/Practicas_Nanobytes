@@ -10,28 +10,40 @@ class Saleorder(models.Model):
 
     def action_archive(self):
         res = super(Saleorder, self).action_archive()
+        logger.info("res archive")
         logger.info(res)
+        logger.info("fin res archive")
         for line in self.order_line:
+            logger.info("line archive")
             logger.info(line)
+            logger.info("fin line archive")
             line.write({'active': False})
 
         return res
     
     def action_unarchive(self):
         res = super(Saleorder, self).action_unarchive()
+        logger.info("res unarchive")
         logger.info(res)
+        logger.info("fin res unarchive")
         for line in self.order_line:
+            logger.info("line unarchive")
             logger.info(line)
+            logger.info("fin line unarchive")
             line.write({'active': True})
 
         return res
     
     def write(self, vals):
         res = super(Saleorder, self).write(vals)
+        logger.info("-----vals write-----")
         logger.info(vals)
+        logger.info("fin vals write")
         if 'active' in vals and vals['active'] == True:
             for line in self.order_line:
+                logger.info("line write")
                 logger.info(line)
+                logger.info("fin line write")
                 if not line.active:
                     line.write({'active': True})
         return res
