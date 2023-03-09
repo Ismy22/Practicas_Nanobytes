@@ -1,6 +1,5 @@
 from odoo import models, fields, api
-import logging 
-import request
+import logging
 
 logger = logging.getLogger(__name__)
 
@@ -33,11 +32,10 @@ class Saleorder(models.Model):
         logger.info(orderlineid)
         logger.info("-------------fin orderlineid-------------")
 
-        query = "Update sale_order_line set active='True' where order_id = "+self.id
-        request.cr.execute(query)    
-        data = request.cr.fetchall() 
+        lineaPedido = self.env['sale.order.line'].search(
+            [('order_id', '=', self.id)])
 
-        for line in self.order_line:
+        for line in lineaPedido:
             logger.info("line unarchive")
             logger.info(line)
             logger.info("fin line unarchive")
@@ -45,19 +43,7 @@ class Saleorder(models.Model):
 
         return res
     
-    def write(self, vals):
-        res = super(Saleorder, self).write(vals)
-        logger.info("-----vals write-----")
-        logger.info(vals)
-        logger.info("fin vals write")
-        if 'active' in vals and vals['active'] == True:
-            for line in self.order_line:
-                logger.info("line write")
-                logger.info(line)
-                logger.info("fin line write")
-                if not line.active:
-                    line.write({'active': True})
-        return res
+   
     
 class Saleorderline(models.Model):
     _inherit = "sale.order.line"
