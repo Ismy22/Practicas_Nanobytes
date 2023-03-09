@@ -15,16 +15,10 @@ class Saleorder(models.Model):
     
     def action_unarchive(self):
         res = super(Saleorder, self).action_unarchive()
-        logger.info("----------Saleorder en el for------------")
-        logger.info(Saleorder)
-        logger.info("----------fin Saleorder en el for---------")
 
         for id in self:
             lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', id.id), ('active', '=', False)])
             for line in lineaPedido:
-                logger.info("----------line en el for------------")
-                logger.info(line)
-                logger.info("----------fin line en el for---------")
                 line.write({'active': True})
             return res
        
