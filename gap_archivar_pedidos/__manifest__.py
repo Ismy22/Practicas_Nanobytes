@@ -7,6 +7,7 @@
     'data': [
         'views/view_inherit_presupuesto.xml',
         'views/view_inherit_search.xml',
+        'wizard/wizard_proyect'
     ],
     'auto_install': False,
     'application': True
