@@ -26,6 +26,14 @@ class Saleorder(models.Model):
 
         return res
     
+    def write(self, vals):
+        res = super(Saleorder, self).write(vals)
+        if 'active' in vals and vals['active'] == True:
+            for line in self.order_line:
+                if not line.active:
+                    line.write({'active': True})
+        return res
+    
 class Saleorderline(models.Model):
     _inherit = "sale.order.line"
 
