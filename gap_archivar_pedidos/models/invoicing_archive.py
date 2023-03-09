@@ -28,7 +28,9 @@ class Saleorder(models.Model):
         logger.info("fin res unarchive")
         
         orderlineid = self.id
-        logger.info(orderlineid+ "= orderlineid")
+        logger.info("-------------orderlineid-------------")
+        logger.info(orderlineid)
+        logger.info("-------------fin orderlineid-------------")
 
         # query = "Update sale_order_line set active='True' where order_id = '"+orderid+"'
         # request.cr.execute(query)    
