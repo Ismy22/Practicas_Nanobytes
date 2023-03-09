@@ -19,7 +19,7 @@ class Saleorder(models.Model):
         logger.info(Saleorder)
         logger.info("----------fin Saleorder en el for---------")
 
-        for id in self.id:
+        for id in self.sale_order:
             lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', self.id), ('active', '=', False)])
             for line in lineaPedido:
                 logger.info("----------line en el for------------")
