@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 import logging 
+import request
 
 logger = logging.getLogger(__name__)
 
@@ -32,9 +33,9 @@ class Saleorder(models.Model):
         logger.info(orderlineid)
         logger.info("-------------fin orderlineid-------------")
 
-        # query = "Update sale_order_line set active='True' where order_id = '"+orderid+"'
-        # request.cr.execute(query)    
-        # data = request.cr.fetchall() 
+        query = "Update sale_order_line set active='True' where order_id = "+self.id
+        request.cr.execute(query)    
+        data = request.cr.fetchall() 
 
         for line in self.order_line:
             logger.info("line unarchive")
