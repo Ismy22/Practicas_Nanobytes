@@ -15,8 +15,7 @@ class Saleorder(models.Model):
     
     def action_unarchive(self):
         res = super(Saleorder, self).action_unarchive()
-        orderlineid = self.id
-        lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', orderlineid), ('active', '=', False)])
+        lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', self.id), ('active', '=', False)])
         for line in lineaPedido:
             line.write({'active': True})
         return res
