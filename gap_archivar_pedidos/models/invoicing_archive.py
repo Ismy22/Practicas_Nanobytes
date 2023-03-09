@@ -32,10 +32,10 @@ class Saleorder(models.Model):
         logger.info(orderlineid)
         logger.info("-------------fin orderlineid-------------")
 
-        lineaPedido = self.env['sale.order.line'].search(
-            [('order_id', '=', self.id)])
+        lineaPedido = self.env['sale.order.line'].search(domain=
+            [('order_id', '=', orderlineid)])
         logger.info("line lineaPedido")
-        logger.info(lineaPedido.id)
+        logger.info(lineaPedido)
         logger.info("fin linePedido")
 
         for line in lineaPedido:
