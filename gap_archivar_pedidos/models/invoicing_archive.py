@@ -39,7 +39,7 @@ class Saleorder(models.Model):
             logger.info("line unarchive")
             logger.info(line)
             logger.info("fin line unarchive")
-            line.write({'active': True})
+            line.write({'sale_order_line.active': True})
 
         return res
     
