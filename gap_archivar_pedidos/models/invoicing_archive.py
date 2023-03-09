@@ -28,8 +28,10 @@ class Saleorder(models.Model):
     
     def write(self, vals):
         res = super(Saleorder, self).write(vals)
+        logger.info(vals)
         if 'active' in vals and vals['active'] == True:
             for line in self.order_line:
+                logger.info(line)
                 if not line.active:
                     line.write({'active': True})
         return res
