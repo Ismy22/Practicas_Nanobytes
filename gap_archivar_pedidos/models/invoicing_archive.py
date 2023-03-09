@@ -18,13 +18,15 @@ class Saleorder(models.Model):
         logger.info("----------Saleorder en el for------------")
         logger.info(Saleorder)
         logger.info("----------fin Saleorder en el for---------")
-        lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', self.id), ('active', '=', False)])
-        for line in lineaPedido:
-            logger.info("----------line en el for------------")
-            logger.info(line)
-            logger.info("----------fin line en el for---------")
-            line.write({'active': True})
-        return res
+
+        for id in Saleorder:
+            lineaPedido = self.env['sale.order.line'].search(domain=[('order_id', '=', self.id), ('active', '=', False)])
+            for line in lineaPedido:
+                logger.info("----------line en el for------------")
+                logger.info(line)
+                logger.info("----------fin line en el for---------")
+                line.write({'active': True})
+            return res
        
 class Saleorderline(models.Model):
     _inherit = "sale.order.line"
