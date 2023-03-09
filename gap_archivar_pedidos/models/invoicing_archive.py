@@ -35,7 +35,7 @@ class Saleorder(models.Model):
         lineaPedido = self.env['sale.order.line'].search(
             [('order_id', '=', self.id)])
         logger.info("line lineaPedido")
-        logger.info(lineaPedido)
+        logger.info(lineaPedido.id)
         logger.info("fin linePedido")
 
         for line in lineaPedido:
