@@ -27,7 +27,7 @@ class Saleorder(models.Model):
         logger.info(res)
         logger.info("fin res unarchive")
 
-        orderid = self.order.id
+        orderid = self.order.line
         logger.info(orderid + "= orderid")
         
         orderlineid = self.id
