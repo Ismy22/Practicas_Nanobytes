@@ -13,6 +13,14 @@ class Saleorder(models.Model):
 
         return res
     
+    def action_unarchive(self):
+        res = super(Saleorder, self).action_archive()
+
+        for line in self.order_line:
+            line.write({'active': True})
+
+        return res
+    
 class Saleorderline(models.Model):
     _inherit = "sale.order.line"
 
