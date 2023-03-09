@@ -1,4 +1,7 @@
 from odoo import models, fields, api
+import logging 
+
+logger = logging.getLogger(__name__)
 
 class Saleorder(models.Model):
     _inherit = "sale.order"
@@ -7,16 +10,18 @@ class Saleorder(models.Model):
 
     def action_archive(self):
         res = super(Saleorder, self).action_archive()
-
+        logger.info(res)
         for line in self.order_line:
+            logger.info(line)
             line.write({'active': False})
 
         return res
     
     def action_unarchive(self):
         res = super(Saleorder, self).action_unarchive()
-
+        logger.info(res)
         for line in self.order_line:
+            logger.info(line)
             line.write({'active': True})
 
         return res
