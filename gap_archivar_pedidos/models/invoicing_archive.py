@@ -26,6 +26,17 @@ class Saleorder(models.Model):
         logger.info("res unarchive")
         logger.info(res)
         logger.info("fin res unarchive")
+
+        orderid = self.order.id
+        logger.info(orderid + "= orderid")
+        
+        orderlineid = self.id
+        logger.info(orderlineid+ "= orderlineid")
+
+        # query = "Update sale_order_line set active='True' where order_id = '"+orderid+"' and id = '"+orderlineid
+        # request.cr.execute(query)    
+        # data = request.cr.fetchall() 
+
         for line in self.order_line:
             logger.info("line unarchive")
             logger.info(line)
