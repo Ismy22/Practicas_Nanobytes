@@ -14,7 +14,7 @@ class Saleorder(models.Model):
         return res
     
     def action_unarchive(self):
-        res = super(Saleorder, self).action_archive()
+        res = super(Saleorder, self).action_unarchive()
 
         for line in self.order_line:
             line.write({'active': True})
