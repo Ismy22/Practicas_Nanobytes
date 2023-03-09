@@ -4,5 +4,5 @@ class wizarResPartner(models.TransientModel):
     _name = 'res.partner.wizard'
     _description = 'Wizard for change user/proyect'
 
-    user = fields.one2many('res.partner', string='Usuario')
+    user = fields.One2many('res.partner', string='Usuario')
     project = fields.Many2one('proyect.proyect', string='Proyecto')
