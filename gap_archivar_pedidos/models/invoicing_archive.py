@@ -26,4 +26,4 @@ class Saleorderline(models.Model):
     _inherit = "sale.order.line"
 
     #active = fields.Boolean(string="Active", related=Saleorder.active, default=True) #funciona
-    active = fields.Boolean(string="Active", related='oder_id.active', default=True) 
+    active = fields.Boolean(string="Active", related='order_id.active', default=True) 
