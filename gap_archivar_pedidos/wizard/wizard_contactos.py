@@ -1,4 +1,5 @@
 from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 
 class wizarResPartner(models.TransientModel):
     _name = 'res.user.wizard'
@@ -10,4 +11,13 @@ class wizarResPartner(models.TransientModel):
     # project = fields.Char(String='Proyecto')
 
     def save_contact_wizard(self):
-        return
+        if not self.user or not self.project:
+            raise ValidationError(_('Debe seleccionar un usuario y un proyecto.'))
+
+        project_record = self.env['project.project'].search([('id', '=', self.project.id)])
+        if project_record:
+            project_record.write({'user_id': self.user.id})
+        else:
+            raise ValidationError(_('El proyecto seleccionado no existe.'))
+
+        return {'type': 'ir.actions.act_window_close'}
