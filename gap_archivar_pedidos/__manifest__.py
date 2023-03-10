@@ -5,7 +5,7 @@
     'description': """ Gap archivar presupuestos""",
     'depends': ['sale_management'],
     'data': [
-        'wizard/wizard_proyect',
+        'wizard/wizard_proyect.xml',
         'views/view_inherit_presupuesto.xml',
         'views/view_inherit_search.xml',
         'views/view_user_form.xml',
