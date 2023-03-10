@@ -33,7 +33,7 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
     
     def open_contact_wizard(self):
-        wizard = self.env['contact.wizard'].create({})
+        wizard = self.env['res.user.wizard'].create({})
         return {
             'name': 'Select User and Project',
             'type': 'ir.actions.act_window',
