@@ -11,6 +11,3 @@ class wizarResPartner(models.TransientModel):
 
     def save_contact_wizard(self):
         return
-
-
-
