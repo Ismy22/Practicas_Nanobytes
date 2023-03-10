@@ -12,7 +12,7 @@
                         <field name="project"/>
                     </group>
                     <footer>
-                        <button string="Guardar" type="object" name="save"/>
+                        <button string="Guardar" type="object" name="res.partner.save"/>
                         <button string="Cancelar" special="cancel"/>
                     </footer>
                 </form>
