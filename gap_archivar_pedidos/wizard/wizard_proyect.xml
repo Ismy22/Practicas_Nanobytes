@@ -4,12 +4,12 @@
         <field name="name">res.partner.wizard.form</field>
         <field name="model">res.partner.wizard</field>
         <field name="arch" type="xml">
-            <form string="Test">
+            <form>
                 <group>           
-                    <field name="User"/>            
+                    <field name="user"/>            
                 </group>         
                 <group>           
-                    <field name="Project"/>            
+                    <field name="project"/>            
                 </group>         
             </form> 
         </field>
