@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="view_contact_wizard_form" model="ir.ui.view">
-            <field name="name">contact.wizard.form</field>
-            <field name="model">contact.wizard</field>
+        <record id="view_res.user.wizard_form" model="ir.ui.view">
+            <field name="name">res.user.wizard.form</field>
+            <field name="model">res.user.wizard</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Select User and Project">
