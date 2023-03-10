@@ -1,22 +1,5 @@
 <odoo>
     <data>
-        <record id="view_res_user_wizard_form" model="ir.ui.view">
-            <field name="name">res.user.wizard.form</field>
-            <field name="model">res.user.wizard</field>
-            <field name="type">form</field>
-            <field name="arch" type="xml">
-                <form string="Select User and Project">
-                    <group>
-                        <field name="user_id"/>
-                        <field name="project_id"/>
-                    </group>
-                    <footer>
-                        <button string="Save" type="object" name="save"/>
-                        <button string="Cancel" special="cancel"/>
-                    </footer>
-                </form>
-            </field>
-        </record>
 
         <record id="view_res_partner_form_inherit" model="ir.ui.view">
             <field name="name">res.partner.form.inherit</field>
@@ -28,6 +11,14 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="res_partner_wizard_action" model="ir.actions.act_window">   
+        <field name="name">Reasignar proyecto</field>   
+        <field name="type">ir.actions.act_window</field>     
+        <field name="res_model">res.user.wizard</field>  
+        <field name="view_mode">form</field>   
+        <field name="target">new</field>
+    </record>
 
     </data>
 </odoo>
