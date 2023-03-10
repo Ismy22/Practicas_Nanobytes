@@ -6,7 +6,7 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@name='button_box']" position="inside">
+                <xpath expr="//div[@name='button_box']" position="before" class= 'btn-primary'>
                     <button name="%(gap_archivar_pedidos.res_partner_wizard_action)d" string="Reasignar Proyecto" type="action" />
                 </xpath>
             </field>
