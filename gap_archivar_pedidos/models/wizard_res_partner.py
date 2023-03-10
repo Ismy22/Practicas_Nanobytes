@@ -1,7 +1,7 @@
 from odoo import api, fields, models, _
 
 class wizarResPartner(models.TransientModel):
-    _name = 'res.partner.wizard'
+    _name = 'res.user.wizard'
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.partner', string='Usuario')
