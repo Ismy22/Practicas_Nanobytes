@@ -8,7 +8,7 @@
         'wizard/wizard_proyect'
         'views/view_inherit_presupuesto.xml',
         'views/view_inherit_search.xml',
-        'view_user_form.xml',
+        'views/view_user_form.xml',
     ],
     'auto_install': False,
     'application': True
