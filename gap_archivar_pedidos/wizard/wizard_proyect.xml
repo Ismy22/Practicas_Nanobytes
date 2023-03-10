@@ -20,7 +20,7 @@
         <field name="type">ir.actions.act_window</field>     
         <field name="res_model">res.partner.wizard</field>  
         <field name="view_mode">form</field>   
-        <field name="view_id" ref="res.partner.wizard_view_form"/>   
+        <field name="view_id" ref="res_partner_wizard_view_form"/>   
         <field name="target">new</field>
     </record>
 
