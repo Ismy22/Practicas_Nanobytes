@@ -32,7 +32,6 @@ class Saleorderline(models.Model):
 class ResPartner(models.Model):
     _inherit = 'res.partner'
     
-    @api.multi
     def open_contact_wizard(self):
         wizard = self.env['contact.wizard'].create({})
         return {
