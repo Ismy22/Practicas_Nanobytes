@@ -6,10 +6,10 @@
         <field name="arch" type="xml">
             <form string="Test">
                 <group>           
-                    <field name="Usuario"/>            
+                    <field name="User"/>            
                 </group>         
                 <group>           
-                    <field name="Proyecto"/>            
+                    <field name="Project"/>            
                 </group>         
             </form> 
         </field>
