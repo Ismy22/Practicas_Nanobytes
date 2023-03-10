@@ -2,7 +2,7 @@
 <odoo>  
     <record id="res_user_wizard_view_form" model="ir.ui.view">
         <field name="name">res.user.wizard.form</field>
-        <field name="model">res.partner.wizard</field>
+        <field name="model">res.user.wizard</field>
         <field name="arch" type="xml">
             <form>
                 <group>           
