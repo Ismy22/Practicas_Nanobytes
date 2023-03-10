@@ -21,6 +21,7 @@ class ResPartner(models.Model):
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'res_model': 'res.user.wizard',
-            'target': 'new'
+            'target': 'new',
+            'res_id': wizard.id,
         }
     
