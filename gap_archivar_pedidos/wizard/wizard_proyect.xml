@@ -12,8 +12,8 @@
                         <field name="project"/>
                     </group>
                     <footer>
-                        <button string="Save" type="object"/>
-                        <button string="Cancel" special="cancel"/>
+                        <button string="Guardar" type="object" name="save"/>
+                        <button string="Cancelar" special="cancel"/>
                     </footer>
                 </form>
             </field>
