@@ -7,6 +7,9 @@ class wizarResPartner(models.TransientModel):
     user = fields.Many2one('res.partner', string='Usuario')
     project = fields.Many2one('proyect.proyect', string='Proyecto')
 
+    def save_contact_wizard(self):
+        return
+
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
@@ -22,5 +25,3 @@ class ResPartner(models.Model):
             'res_id': wizard.id,
         }
     
-    def save_contact_wizard(self):
-        return
