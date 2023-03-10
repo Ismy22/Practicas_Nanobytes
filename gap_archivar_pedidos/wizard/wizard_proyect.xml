@@ -4,9 +4,8 @@
     <record id="view_res_user_wizard_form" model="ir.ui.view">
             <field name="name">res.user.wizard.form</field>
             <field name="model">res.user.wizard</field>
-            <field name="type">form</field>
             <field name="arch" type="xml">
-                <form string="Select User and Project">
+                <form>
                     <group>
                         <field name="user"/>
                         <field name="project"/>
