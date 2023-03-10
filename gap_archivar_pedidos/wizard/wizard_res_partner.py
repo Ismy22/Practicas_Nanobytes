@@ -22,6 +22,6 @@ class ResPartner(models.Model):
             'view_mode': 'form',
             'res_model': 'res.user.wizard',
             'target': 'new',
-            'res_id': wizard.id,
+            'res_id': self.id,
         }
     
