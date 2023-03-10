@@ -6,3 +6,5 @@ class wizarResPartner(models.TransientModel):
 
     user = fields.Many2one('res.partner', string='Usuario')
     project = fields.Many2one('proyect.proyect', string='Proyecto')
+
+

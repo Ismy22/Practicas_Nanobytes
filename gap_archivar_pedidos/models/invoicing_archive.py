@@ -27,3 +27,19 @@ class Saleorderline(models.Model):
 
     #active = fields.Boolean(string="Active", related=Saleorder.active, default=True) #funciona
     active = fields.Boolean(string="Active", related='order_id.active', default=True) 
+
+
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+    
+    @api.multi
+    def open_contact_wizard(self):
+        wizard = self.env['contact.wizard'].create({})
+        return {
+            'name': 'Select User and Project',
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'contact.wizard',
+            'target': 'new',
+            'res_id': wizard.id,
+        }
