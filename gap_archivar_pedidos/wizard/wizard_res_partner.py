@@ -17,7 +17,7 @@ class ResPartner(models.Model):
     def open_contact_wizard(self):
         wizard = self.env['res.user.wizard'].create({})
         return {
-            'name': 'Select User and Project',
+            'name': 'Reasignar proyecyo',
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'res_model': 'res.user.wizard',
