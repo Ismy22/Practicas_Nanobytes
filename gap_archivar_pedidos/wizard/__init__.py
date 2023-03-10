@@ -1,1 +1,1 @@
-from . import wizard_res_partner
+from . import wizard_contactos
