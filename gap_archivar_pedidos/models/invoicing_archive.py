@@ -38,7 +38,7 @@ class ResPartner(models.Model):
             'name': 'Select User and Project',
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
-            'res_model': 'contact.wizard',
+            'res_model': 'res.user.wizard',
             'target': 'new',
             'res_id': wizard.id,
         }
