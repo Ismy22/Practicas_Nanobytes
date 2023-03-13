@@ -9,7 +9,7 @@ class wizarResPartner(models.TransientModel):
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.users', string='Usuario')
-    project = fields.Many2one('project.project', string='Proyecto', domain="[('user_id','=', 'self.user_id')]")
+    project = fields.Many2one('project.project', string='Proyecto', default=lambda self: self._context.get('default_partner_id'))
 
     def save_contact_wizard(self):
         if not self.user or not self.project:
