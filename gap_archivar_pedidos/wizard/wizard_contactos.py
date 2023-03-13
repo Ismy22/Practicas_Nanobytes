@@ -6,7 +6,7 @@ class Project(models.Model):
     _description = 'User Project'
     
     name = fields.Char(string='Proyecto')
-    user_id = fields.Many2one('project.project', 'user_id', string='Usuario')
+    user_id = fields.Many2one('res.users', string='Usuario')
 
 class wizarResPartner(models.TransientModel):
     _name = 'res.user.wizard'
