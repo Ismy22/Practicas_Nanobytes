@@ -35,15 +35,14 @@ class wizarResPartner(models.TransientModel):
 
 
     def action_open_delivery_wizard(self):
-        view_id = self.env.ref('view_res_user_wizard_form').id
-        
+       
         return {
             'name': 'Reasignar proyecto',
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'res_model': 'res.user.wizard',
-            'view_id': view_id,
-            'views': [(view_id, 'form')],
+            'view_id': "view_res_user_wizard_form",
+            'views': [('view_res_user_wizard_form', 'form')],
             'target': 'new',
             'context': {
                 'default_partner_id': 'active_id',
