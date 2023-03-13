@@ -9,7 +9,7 @@
                     <group>
                         <field name="user"/>
                     </group>
-                    </separator>
+                    <separator/>
                     <group>
                         <field name="project"/>
                     </group>
