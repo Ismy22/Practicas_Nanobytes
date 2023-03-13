@@ -7,10 +7,10 @@
                 <tree>
                     <field name="user"/>
                     <field name="project"/>
-                    <footer>
+
                         <button string="Guardar" type="object" name="save_contact_wizard"/>
                         <button string="Cancelar" special="cancel"/>
-                    </footer>
+
                 </tree>
             </field>
         </record>
