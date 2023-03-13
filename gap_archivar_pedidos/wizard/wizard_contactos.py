@@ -14,7 +14,7 @@ class wizarResPartner(models.TransientModel):
 
     user = fields.Many2one('res.users', string='Usuario')
     #project = fields.Many2one('project.project', string='Proyecto')
-    project_ids = fields.One2many('user.project', 'user_id', string='Projects')
+    project_ids = fields.One2many('project.project', 'user_id', string='Projects')
     # user = fields.Char(String='Usuario')
     # project = fields.Char(String='Proyecto')
 
@@ -29,10 +29,3 @@ class wizarResPartner(models.TransientModel):
             raise ValidationError(_('Error al asignar el proyecto'))
 
         return {'type': 'ir.actions.act_window_close'}
-    
-    @api.onchange('user')
-    def _onchange_user(self):
-        if self.user:
-            self.project_ids = self.env['user.project'].search([('user_id', '=', self.user.id)])
-        else:
-            self.project_ids = False
