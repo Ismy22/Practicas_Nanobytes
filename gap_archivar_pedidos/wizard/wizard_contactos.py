@@ -6,7 +6,7 @@ class wizarResPartner(models.TransientModel):
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.users', string='Usuario')
-    project = fields.Many2one('project.project', string='Proyecto')
+    project = fields.Many2one('project.project', string='Proyecto' domain="[('user_id', '=', user)]")
     # user = fields.Char(String='Usuario')
     # project = fields.Char(String='Proyecto')
 
@@ -18,6 +18,6 @@ class wizarResPartner(models.TransientModel):
         if project_record:
             project_record  
         else:
-            raise ValidationError(_('El proyecto seleccionado no existe.'))
+            raise ValidationError(_('Error al asignar el proyecto'))
 
         return {'type': 'ir.actions.act_window_close'}
