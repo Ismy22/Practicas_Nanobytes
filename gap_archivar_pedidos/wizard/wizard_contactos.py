@@ -9,16 +9,13 @@ class wizarResPartner(models.TransientModel):
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.users', string='Usuario')
-    project = fields.Many2one('project.project', string='Proyecto')
+    project = fields.Many2one('project.project', string='Proyecto', domain="[('user_id','=',self.user.id)]")
 
     def save_contact_wizard(self):
         if not self.user or not self.project:
             raise ValidationError(_('Debe seleccionar un usuario y un proyecto.'))
 
         project_record = self.env['project.project'].search([('id', '=', self.project.id)])
-        logger.info('-------------------self.project----------')
-        logger.info(project_record)
-        logger.info('---------fin self.project-----------')
         if project_record:
             project_record  
         else:
@@ -31,12 +28,6 @@ class wizarResPartner(models.TransientModel):
         for r in self:
             if self.user:
                 projects = self.env['project.project'].search([('user_id', '=', self.user.id)])
-                logger.info('-------------------project----------')
-                logger.info(projects)
-                logger.info('---------fin project-----------')
-                self.project = projects.ids
-                logger.info('-------------------self.project2----------')
-                logger.info(self.project)
-                logger.info('---------fin self.project2-----------')
+                self.project = projects.id
             else:
                 self.project = False
