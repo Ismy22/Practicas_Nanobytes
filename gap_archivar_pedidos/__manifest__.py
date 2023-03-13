@@ -6,6 +6,7 @@
     'depends': ['sale_management'],
     'data': [
         'wizard/wizard_contactos_view.xml',
+        'security/ir.model.access.csv',
         'views/view_inherit_presupuesto.xml',
         'views/view_inherit_search.xml',
         'views/view_wizard_form_inherit_contactos.xml',
