@@ -6,8 +6,8 @@
             <field name="arch" type="xml">
                 <tree>
 
-                    <!-- <field name="user"/> -->
-                    <field name="project_ids"/>
+                    <field name="user"/>
+                    <field name="project"/>
 
                     <button string="Guardar" type="object" name="save_contact_wizard"/>
                     <button string="Cancelar" special="cancel"/>
