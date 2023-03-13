@@ -34,6 +34,9 @@ class wizarResPartner(models.TransientModel):
             projects_id = self.env['project.project'].search([('user_id', '=', 2)])
 
 
+class Partner(models.Model):
+    _inherit = "res.partner"
+
     def action_open_delivery_wizard(self):
        
         return {
@@ -48,4 +51,6 @@ class wizarResPartner(models.TransientModel):
                 'default_partner_id': 'active_id',
             }
         }
+
+    
   
