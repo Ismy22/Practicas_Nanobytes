@@ -5,12 +5,14 @@
             <field name="model">res.user.wizard</field>
             <field name="arch" type="xml">
                 <tree>
+                <group>
                     <field name="user"/>
                     <field name="project"/>
-
-                        <button string="Guardar" type="object" name="save_contact_wizard"/>
-                        <button string="Cancelar" special="cancel"/>
-
+                </group>
+                <group>
+                    <button string="Guardar" type="object" name="save_contact_wizard"/>
+                    <button string="Cancelar" special="cancel"/>
+                </group>    
                 </tree>
             </field>
         </record>
