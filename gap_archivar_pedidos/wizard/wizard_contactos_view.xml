@@ -7,7 +7,7 @@
                 <tree>
 
                     <field name="user"/>
-                    <field name="project"/>
+                    <field name="project_ids"/>
 
                     <button string="Guardar" type="object" name="save_contact_wizard"/>
                     <button string="Cancelar" special="cancel"/>
