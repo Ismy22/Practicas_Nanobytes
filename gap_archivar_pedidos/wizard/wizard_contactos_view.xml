@@ -4,15 +4,17 @@
             <field name="name">res.user.wizard.form</field>
             <field name="model">res.user.wizard</field>
             <field name="arch" type="xml">
-                <tree>
-
+                <form>
+                    <group>
                     <field name="user" string='Usuario'/>
                     <field name="project" string='Proyectos'/>
-
+                    </group>
+                    <group>
                     <button string="Guardar" type="object" name="save_contact_wizard"/>
                     <button string="Cancelar" special="cancel"/>
+                    </group>
 
-                </tree>
+                </form>
             </field>
         </record>
 
@@ -20,7 +22,7 @@
             <field name="name">Reasignar proyecto</field>   
             <field name="type">ir.actions.act_window</field>     
             <field name="res_model">res.user.wizard</field>  
-            <field name="view_mode">tree</field>   
+            <field name="view_mode">form</field>   
             <field name="target">new</field>
         </record>
 </odoo>
