@@ -6,7 +6,7 @@ class wizarResPartner(models.TransientModel):
     _name = 'res.user.wizard'
     _description = 'Wizard for change user/proyect'
 
-    user = fields.Many2one('res.users', string='Usuario')
+    #user = fields.Many2one('res.users', string='Usuario')
     project = fields.Many2one('project.project', string='Proyecto', compute='_compute_project_ids')
 
     def save_contact_wizard(self):
@@ -22,7 +22,7 @@ class wizarResPartner(models.TransientModel):
         return {'type': 'ir.actions.act_window_close'}
     
 
-    @api.depends('user')
+
     def _compute_project_ids(self):
         for record in self:
             if record.user:
