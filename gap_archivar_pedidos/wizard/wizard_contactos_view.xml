@@ -9,7 +9,7 @@
                         <field name="user" string='Usuario'/>
                     </group>
                     <group>
-                        <field name="project" string='Proyectos'/>
+                        <field name="project" string='Proyectos' domain="[('user_id','=', 'self.user_id')]"/>
                     </group>
                     <separator/>
                     <group>
