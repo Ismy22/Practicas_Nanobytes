@@ -6,10 +6,10 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="user" string='Usuario'/>
+                        <field name="use_id" string='Usuario'/>
                     </group>
                     <group>
-                        <field name="project" string='Proyectos'/>
+                        <field name="project_id" string='Proyectos'/>
                     </group>
                     <separator/>
                     <group>
