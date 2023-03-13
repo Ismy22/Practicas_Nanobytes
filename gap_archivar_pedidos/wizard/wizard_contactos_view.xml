@@ -9,10 +9,13 @@
                     <field name="user"/>
                     <field name="project"/>
 
-                    <separator/>
                     
-                    <button string="Guardar" type="object" name="save_contact_wizard"/>
-                    <button string="Cancelar" special="cancel"/>
+                    <footer>
+                        <button string="Guardar" type="object" name="save_contact_wizard"/>
+                        <button string="Cancelar" special="cancel"/>
+                    </footer>
+
+                    
  
                 </tree>
             </field>
