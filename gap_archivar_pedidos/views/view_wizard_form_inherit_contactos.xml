@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[@name='button_box']" position="inside">
 
-                    <button name="%(gap_archivar_pedidos.res_partner_wizard_action)d"  class='btn-primary' string="Reasignar Proyecto" type="action" context="{'default_partner_id': active_id, 'default_project_id': [(6, 0, partner_record.project_ids.ids)]}"/>
+                    <button name="%(gap_archivar_pedidos.res_partner_wizard_action)d"  class='btn-primary' string="Reasignar Proyecto" type="action" context="{'default_partner_id': active_id}"/>
 
                 </xpath>
             </field>
