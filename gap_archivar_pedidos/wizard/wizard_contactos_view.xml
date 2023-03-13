@@ -27,7 +27,7 @@
             <field name="res_model">res.user.wizard</field>  
             <field name="view_mode">form</field>   
             <field name="target">new</field>
-            <field name="context">{'default_partner_id': active_id}</field>
+            <field name="context">{'partner_id': parent.partner_id}</field>
 
         </record>
 </odoo>
