@@ -9,7 +9,7 @@
                         <field name="user" string='Usuario'/>
                     </group>
                     <group>
-                        <field name="project" string='Proyectos' domain="[('user_id','=', 'self.user_id')]"/>
+                        <field name="project" string='Proyectos'/>
                     </group>
                     <separator/>
                     <group>
@@ -27,6 +27,6 @@
             <field name="res_model">res.user.wizard</field>  
             <field name="view_mode">form</field>   
             <field name="target">new</field>
-            
+
         </record>
 </odoo>
