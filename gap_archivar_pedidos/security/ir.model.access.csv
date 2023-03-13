@@ -1,4 +1,4 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access.gap.ventas,access_gap_ventas,model_view_res_user_wizard_form,,1,1,1,1
-access.gap.ventas,access_gap_ventas,model_res_partner_wizard_action,,1,1,1,1
+access_gap_ventas,access.gap.ventas,model_view_res_user_wizard_form,,1,1,1,1
+access_gap_ventas,access.gap.ventas,model_res_partner_wizard_action,,1,1,1,1
 
