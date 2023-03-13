@@ -38,6 +38,7 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     def action_open_delivery_wizard(self):
+        logger.info(self.env.context)
         view_id = self.env.ref('gap_archivar_pedidos.view_res_user_wizard_form').id
         return {
             'name': 'Reasignar proyecto',
