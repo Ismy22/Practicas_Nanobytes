@@ -6,7 +6,8 @@ class wizarResPartner(models.TransientModel):
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.users', string='Usuario')
-    project = fields.Char(string='Proyecto')
+    #project = fields.Many2one('project.project', string='Proyecto')
+    project_ids = fields.One2many('user.project', 'user_id', string='Projects')
     # user = fields.Char(String='Usuario')
     # project = fields.Char(String='Proyecto')
 
