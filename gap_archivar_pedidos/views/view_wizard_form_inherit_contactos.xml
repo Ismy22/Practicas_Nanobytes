@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[@name='button_box']" position="inside">
 
-                    <button name="action_open_delivery_wizard"  class='btn-primary' string="Reasignar Proyecto" type="action"/>
+                    <button name="action_open_delivery_wizard"  class='btn-primary' string="Reasignar Proyecto" type="object"/>
 
                 </xpath>
             </field>
