@@ -38,14 +38,14 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     def action_open_delivery_wizard(self):
-       
+        view_id = self.env.ref('delivery.choose_delivery_carrier_view_form').id
         return {
             'name': 'Reasignar proyecto',
             'type': 'ir.actions.act_window',
             'view_mode': 'form',
             'res_model': 'res.user.wizard',
-            'view_id': "view_res_user_wizard_form",
-            'views': [('view_res_user_wizard_form', 'form')],
+            'view_id': view_id,
+            'views': [(view_id, 'form')],
             'target': 'new',
             'context': {
                 'default_partner_id': 'active_id',
