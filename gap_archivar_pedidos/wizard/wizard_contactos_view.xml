@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>  
-
     <record id="view_res_user_wizard_form" model="ir.ui.view">
             <field name="name">res.user.wizard.form</field>
             <field name="model">res.user.wizard</field>
             <field name="arch" type="xml">
                 <tree>
-                    <group>
-                        <field name="user"/>
-                    </group>
-                    <separator/>
-                    <group>
-                        <field name="project"/>
-                    </group>
+                    <field name="user"/>
+                    <field name="project"/>
                     <footer>
                         <button string="Guardar" type="object" name="save_contact_wizard"/>
                         <button string="Cancelar" special="cancel"/>
@@ -28,5 +22,4 @@
             <field name="view_mode">form</field>   
             <field name="target">new</field>
         </record>
-
 </odoo>
