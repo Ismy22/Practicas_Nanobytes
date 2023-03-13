@@ -30,7 +30,7 @@ class wizarResPartner(models.TransientModel):
 
         return {'type': 'ir.actions.act_window_close'}
     
-    @api.onchange('user')
+
     def _onchange_user(self):
         if self.user:
             self.project_ids = self.env['user.project'].search([('user_id', '=', self.user.id)])
