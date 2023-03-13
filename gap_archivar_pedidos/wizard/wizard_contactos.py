@@ -7,7 +7,7 @@ class wizarResPartner(models.TransientModel):
     _description = 'Wizard for change user/proyect'
 
     user = fields.Many2one('res.users', string='Usuario')
-    project = fields.Many2one('project.project', string='Proyecto', compute='get_user_projects')
+    project = fields.Char(string='Proyecto', compute='get_user_projects')
 
     def save_contact_wizard(self):
         if not self.user or not self.project:
@@ -25,7 +25,7 @@ class wizarResPartner(models.TransientModel):
 
     def get_user_projects(self):
         if self.user:
-            project = self.env['project.project'].search([('user_id', '=', self.user.id)])
-            self.project = project.ids
+            projects = self.env['project.project'].search([('user_id', '=', self.user.id)])
+            self.project = projects.ids
         else:
             self.project = False
