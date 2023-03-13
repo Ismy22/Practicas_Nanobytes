@@ -26,6 +26,6 @@ class wizarResPartner(models.TransientModel):
     def _compute_project_ids(self):
         for record in self:
             if record.user:
-                record.project_ids = self.env['project.project'].search([('user_id', '=', record.user.id)])
+                record.project = self.env['project.project'].search([('user_id', '=', record.user.id)])
             else:
-                record.project_ids = False
+                record.project = False
