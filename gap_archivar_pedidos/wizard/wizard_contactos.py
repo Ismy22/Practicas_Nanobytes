@@ -29,14 +29,15 @@ class wizarResPartner(models.TransientModel):
 
 
     def get_user_projects(self):
-        if self.user:
-            projects = self.env['project.project'].search([('user_id', '=', self.user.id)])
-            logger.info('-------------------project----------')
-            logger.info(projects)
-            logger.info('---------fin project-----------')
-            self.project = projects.ids
-            logger.info('-------------------self.project2----------')
-            logger.info(self.project)
-            logger.info('---------fin self.project2-----------')
-        else:
-            self.project = False
+        for r in self:
+            if self.user:
+                projects = self.env['project.project'].search([('user_id', '=', self.user.id)])
+                logger.info('-------------------project----------')
+                logger.info(projects)
+                logger.info('---------fin project-----------')
+                self.project = projects.ids
+                logger.info('-------------------self.project2----------')
+                logger.info(self.project)
+                logger.info('---------fin self.project2-----------')
+            else:
+                self.project = False
