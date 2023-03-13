@@ -27,7 +27,6 @@ class wizarResPartner(models.TransientModel):
         return {'type': 'ir.actions.act_window_close'}
     
 
-
     def get_user_projects(self):
         for r in self:
             if self.user:
