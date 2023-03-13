@@ -20,7 +20,7 @@
             <field name="name">Reasignar proyecto</field>   
             <field name="type">ir.actions.act_window</field>     
             <field name="res_model">res.user.wizard</field>  
-            <field name="view_mode">tree</field>   
+            <field name="view_mode">form</field>   
             <field name="target">new</field>
         </record>
 </odoo>
