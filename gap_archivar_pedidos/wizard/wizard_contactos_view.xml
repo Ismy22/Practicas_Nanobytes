@@ -6,12 +6,15 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                    <field name="user" string='Usuario'/>
-                    <field name="project" string='Proyectos'/>
+                        <field name="user" string='Usuario'/>
                     </group>
                     <group>
-                    <button string="Guardar" type="object" name="save_contact_wizard"/>
-                    <button string="Cancelar" special="cancel"/>
+                        <field name="project" string='Proyectos'/>
+                    </group>
+                    <separator/>
+                    <group>
+                        <button string="Guardar" type="object" name="save_contact_wizard"/>
+                        <button string="Cancelar" special="cancel"/>
                     </group>
 
                 </form>
