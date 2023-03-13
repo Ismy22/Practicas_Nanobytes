@@ -5,7 +5,7 @@ class Project(models.Model):
     _name = 'user.project'
     _description = 'User Project'
     
-    name = fields.Char(string='Name')
+    name = fields.Char(string='Proyecto')
     user_id = fields.Many2one('res.users', string='User')
 
 class wizarResPartner(models.TransientModel):
@@ -30,7 +30,7 @@ class wizarResPartner(models.TransientModel):
 
         return {'type': 'ir.actions.act_window_close'}
     
-
+    @api.onchange
     def _onchange_user(self):
         if self.user:
             self.project_ids = self.env['user.project'].search([('user_id', '=', self.user.id)])
