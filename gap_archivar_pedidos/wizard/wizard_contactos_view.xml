@@ -9,7 +9,7 @@
                         <field name="user" string='Usuario'/>
                     </group>
                     <group>
-                        <field name="project" string='Proyectos' context="{'default_partner_id':parent.partner_id}"/>
+                        <field name="project" string='Proyectos'/>
                     </group>
                     <separator/>
                     <group>
@@ -27,6 +27,8 @@
             <field name="res_model">res.user.wizard</field>  
             <field name="view_mode">form</field>   
             <field name="target">new</field>
+            <field name="parent">res.user</field>
+            <field name="context">{'default_partner_id': parent.partner_id}</field>
 
         </record>
 </odoo>
