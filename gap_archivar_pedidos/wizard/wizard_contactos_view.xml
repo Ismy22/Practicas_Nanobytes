@@ -6,7 +6,7 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="use_id" string='Usuario'/>
+                        <field name="user_id" string='Usuario'/>
                     </group>
                     <group>
                         <field name="project_id" string='Proyectos'/>
