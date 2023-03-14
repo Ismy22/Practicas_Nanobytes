@@ -8,7 +8,7 @@ class wizarResPartner(models.TransientModel):
     _name = 'res.user.wizard'
     _description = 'Wizard for change user/proyect'
 
-    use_id = fields.Many2one('res.users', string='Usuario',  compute="get_user_projects")
+    use_id = fields.Many2one('res.users', string='Usuario', domain=[('default_partner_id', '=', 'self.id')])
     project_id = fields.Many2one('project.project', string='Proyecto')
 
 
@@ -38,7 +38,7 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     def action_open_delivery_wizard(self):
-        logger.info(self.env.context)
+        logger.info(self.id)
         view_id = self.env.ref('gap_archivar_pedidos.view_res_user_wizard_form').id
         return {
             'name': 'Reasignar proyecto',
@@ -49,7 +49,7 @@ class Partner(models.Model):
             'views': [(view_id, 'form')],
             'target': 'new',
             'context': {
-                'default_partner_id': 'active_id',
+                'default_partner_id': self.id,
             }
         }
 
