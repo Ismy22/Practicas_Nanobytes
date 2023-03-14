@@ -23,7 +23,6 @@ class wizarResPartner(models.TransientModel):
         project_record = self.env['project.project'].search([('id', '=', self.project.id)])
         if project_record:
             
-
             project_record.write({'user_id': self.user_idChange.id})
         else:
             raise ValidationError(_('El proyecto seleccionado no existe.'))
@@ -52,7 +51,6 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     def action_open_delivery_wizard(self):
-        logger.info(self.id)
         view_id = self.env.ref('gap_archivar_pedidos.view_res_user_wizard_form').id
         return {
             'name': 'Reasignar proyecto',

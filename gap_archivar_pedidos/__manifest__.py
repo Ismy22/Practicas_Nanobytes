@@ -3,7 +3,7 @@
     'sequence': -1003,
     'summary': '',
     'description': """ Gap archivar presupuestos""",
-    'depends': ['sale_management'],
+    'depends': ['sale_management', 'base', 'project'],
     'data': [
         'wizard/wizard_contactos_view.xml',
         'security/ir.model.access.csv',
