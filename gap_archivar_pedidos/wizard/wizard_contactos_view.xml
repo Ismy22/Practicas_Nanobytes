@@ -13,10 +13,10 @@
                         <field name="user_idChange" string='Nuevo Encargado'/>
                     </group>
                     <separator/>
-                    <group>
+                    <footer>
                         <button string="Guardar" type="object" name="save_contact_wizard"/>
                         <button string="Cancelar" special="cancel"/>
-                    </group>
+                    </footer>
 
                 </form>
             </field>
