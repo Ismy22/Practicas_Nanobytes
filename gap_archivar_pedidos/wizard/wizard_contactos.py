@@ -14,13 +14,12 @@ class wizarResPartner(models.TransientModel):
 
 
     def save_contact_wizard(self):
-        
         if not self.user_id_change or not self.project_id:
             raise ValidationError(_('Debe seleccionar un usuario y un proyecto.'))
 
         project_record = self.env['project.project'].search([('id', '=', self.project_id.id)])
         if project_record:
-            project_record  
+            project_record.write({'user_id': self.user_id_change.id})
         else:
             raise ValidationError(_('Error al asignar el proyecto'))
 
