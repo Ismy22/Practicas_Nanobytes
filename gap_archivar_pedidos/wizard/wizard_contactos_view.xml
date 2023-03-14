@@ -7,9 +7,10 @@
                 <form>
                     <group>
                         <field name="user_id" string='Usuario'/>
+                        <field name="project_id" string='Proyectos'/>
                     </group>
                     <group>
-                        <field name="project_id" string='Proyectos'/>
+                        <field name="user_id_change" string='Nuevo Encargado'/>
                     </group>
                     <separator/>
                     <group>
