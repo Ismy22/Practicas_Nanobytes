@@ -39,7 +39,7 @@ class wizarResPartner(models.TransientModel):
         logger.info('------------------------partner------------------------------')
         logger.info(partner)
         logger.info('------------------------FIN partner------------------------------')
-        user_id = partner.user_id.id
+        user_id = partner.user_id
         logger.info('------------------------user_id------------------------------')
         logger.info(user_id)
         logger.info('------------------------FIN USER_ID------------------------------')
