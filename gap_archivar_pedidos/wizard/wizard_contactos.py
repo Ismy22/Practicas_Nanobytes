@@ -8,18 +8,18 @@ class wizarResPartner(models.TransientModel):
     _name = 'res.user.wizard'
     _description = 'Wizard for change user/proyect'
 
-    user_id = fields.Many2one('res.users', string='Usuario')
+    user_id = fields.Many2one('res.users', string='Usuario', readonly=True)
     project_id = fields.Many2one('project.project', string='Proyecto', domain="[('user_id','=',user_id)]")
+    user_id_change = fields.Many2one('res.users', string='Nuevo Encargado')
 
 
     def save_contact_wizard(self):
         
-        if not self.user_id or not self.project_id:
+        if not self.user_id_change or not self.project_id:
             raise ValidationError(_('Debe seleccionar un usuario y un proyecto.'))
 
         project_record = self.env['project.project'].search([('id', '=', self.project_id.id)])
         if project_record:
-            
             project_record  
         else:
             raise ValidationError(_('Error al asignar el proyecto'))
