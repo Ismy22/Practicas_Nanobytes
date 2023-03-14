@@ -35,7 +35,7 @@ class wizarResPartner(models.TransientModel):
         logger.info('------------------------FIN CONTACT_ID------------------------------')
 
         
-        partner = self.env['res.user'].browse(contact_id)
+        partner = self.env['res.users'].browse([('user_id', '=', contact_id)])
         logger.info('------------------------partner------------------------------')
         logger.info(partner)
         logger.info('------------------------FIN partner------------------------------')
@@ -51,7 +51,7 @@ class wizarResPartner(models.TransientModel):
 
 
 class Partner(models.Model):
-    _inherit = "res.user"
+    _inherit = "res.users"
 
     def action_open_delivery_wizard(self):
         logger.info(self.id)
