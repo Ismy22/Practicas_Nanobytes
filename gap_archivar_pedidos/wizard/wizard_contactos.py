@@ -19,6 +19,10 @@ class wizarResPartner(models.TransientModel):
 
         project_record = self.env['project.project'].search([('id', '=', self.project.id)])
         if project_record:
+            logger.info("---------self.user_id_change.id--------")
+            logger.info(self.user_id_change.id)
+            logger.info("---------FIN self.user_id_change.id--------")
+
             project_record.write({'user_id': self.user_id_change.id})
         else:
             raise ValidationError(_('El proyecto seleccionado no existe.'))
