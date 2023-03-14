@@ -32,12 +32,17 @@ class wizarResPartner(models.TransientModel):
         contact_id = self._context.get('default_partner_id')
         logger.info('------------------------contact_id------------------------------')
         logger.info(contact_id)
+        logger.info('------------------------FIN CONTACT_ID------------------------------')
 
         
         partner = self.env['res.partner'].browse(contact_id)
+        logger.info('------------------------partner------------------------------')
+        logger.info(partner)
+        logger.info('------------------------FIN partner------------------------------')
         user_id = partner.user_id.id
         logger.info('------------------------user_id------------------------------')
         logger.info(user_id)
+        logger.info('------------------------FIN USER_ID------------------------------')
         res.update({
             'user_id': user_id,
         })
