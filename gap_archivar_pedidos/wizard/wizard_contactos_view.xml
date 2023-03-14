@@ -9,10 +9,10 @@
                         <field name="user_id" string='Usuario'/>
                         <field name="project_id" string='Proyectos'/>
                     </group>
+                    <separator/>
                     <group>
                         <field name="user_idChange" string='Nuevo Encargado'/>
                     </group>
-                    <separator/>
                     <footer>
                         <button string="Guardar" type="object" name="save_contact_wizard"/>
                         <button string="Cancelar" special="cancel"/>
