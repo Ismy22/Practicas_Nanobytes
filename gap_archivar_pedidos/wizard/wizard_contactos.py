@@ -17,10 +17,10 @@ class wizarResPartner(models.TransientModel):
         logger.info("---------self.user_id_change.id--------")
         logger.info(self.user_idChange.id)
         logger.info("---------FIN self.user_id_change.id--------")
-        if not self.user_idChange or not self.project:
+        if not self.user_idChange or not self.project_id:
             raise ValidationError(_('Debe seleccionar un usuario y un proyecto.'))
 
-        project_record = self.env['project.project'].search([('id', '=', self.project.id)])
+        project_record = self.env['project.project'].search([('id', '=', self.project_id.id)])
         if project_record:
             
             project_record.write({'user_id': self.user_idChange.id})
@@ -35,8 +35,18 @@ class wizarResPartner(models.TransientModel):
         user_por_partner = self.env['res.users'].search([('partner_id', '=', contact_id)])
         id_usuario = user_por_partner.id
         proyecto_por_usurario = self.env['project.project'].search([('user_id', '=', id_usuario)])
+        logger.info("---------id_usuario--------")
+        logger.info(id_usuario)
+        logger.info("---------FIN id_usuario--------")
+        logger.info("---------proyecto_por_usurario--------")
+        logger.info(proyecto_por_usurario)
+        logger.info("---------FIN proyecto_por_usurario--------")
 
         proyecto_por_usurario = proyecto_por_usurario.filtered(lambda p: p.user_id.id == id_usuario)
+        logger.info("---------proyecto_por_usurario2--------")
+        logger.info(proyecto_por_usurario)
+        logger.info("---------FIN proyecto_por_usurario2--------")
+
         if not proyecto_por_usurario:
             proyecto_por_usurario = self.env['project.project']
 
