@@ -35,9 +35,6 @@ class wizarResPartner(models.TransientModel):
         contact_id = self._context.get('default_partner_id')
         user_por_partner = self.env['res.users'].search([('partner_id', '=', contact_id)])
         id_usuario = user_por_partner.id
-        logger.info('------------id_usuario----------')
-        logger.info(id_usuario)
-        logger.info('------------FIN id_usuario----------')
         proyecto_por_usurario = self.env['project.project'].search([('user_id', '=', id_usuario)])
 
         proyecto_por_usurario = proyecto_por_usurario.filtered(lambda p: p.user_id.id == id_usuario)
