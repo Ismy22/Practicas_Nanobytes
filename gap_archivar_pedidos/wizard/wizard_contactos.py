@@ -51,7 +51,7 @@ class wizarResPartner(models.TransientModel):
 
 
 class Partner(models.Model):
-    _inherit = "res.partner"
+    _inherit = "res.user"
 
     def action_open_delivery_wizard(self):
         logger.info(self.id)
