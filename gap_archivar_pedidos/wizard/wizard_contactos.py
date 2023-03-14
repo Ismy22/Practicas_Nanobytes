@@ -30,10 +30,14 @@ class wizarResPartner(models.TransientModel):
     def default_get(self, fields):
         res = super(wizarResPartner, self).default_get(fields)
         contact_id = self._context.get('default_partner_id')
+        logger.info('------------------------contact_id------------------------------')
+        logger.info(contact_id)
+
         
         partner = self.env['res.partner'].browse(contact_id)
         user_id = partner.user_id.id
-        
+        logger.info('------------------------user_id------------------------------')
+        logger.info(user_id)
         res.update({
             'user_id': user_id,
         })
