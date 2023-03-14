@@ -10,7 +10,7 @@
                         <field name="project_id" string='Proyectos'/>
                     </group>
                     <group>
-                        <field name="user_id_change" string='Nuevo Encargado'/>
+                        <field name="user_idChange" string='Nuevo Encargado'/>
                     </group>
                     <separator/>
                     <group>
