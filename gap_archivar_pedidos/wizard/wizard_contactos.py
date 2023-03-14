@@ -35,10 +35,11 @@ class wizarResPartner(models.TransientModel):
         logger.info('------------id_usuario----------')
         logger.info(id_usuario)
         logger.info('------------FIN id_usuario----------')
-        #proyecto_por_usurario = self.env['project.project'].search([('user_id', '=', id_usuario)])
+        proyecto_por_usurario = self.env['project.project'].search([('user_id', '=', id_usuario)])
 
-        # Actualización: filtrar proyectos por usuario actual
         proyecto_por_usurario = proyecto_por_usurario.filtered(lambda p: p.user_id.id == id_usuario)
+        if not proyecto_por_usurario:
+            proyecto_por_usurario = self.env['project.project']
 
         res.update({'user_id': user_por_partner,})
         res.update({'project_id': proyecto_por_usurario,})
