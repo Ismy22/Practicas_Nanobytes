@@ -35,7 +35,7 @@ class wizarResPartner(models.TransientModel):
         logger.info('------------------------FIN CONTACT_ID------------------------------')
 
         
-        partner = self.env['res.partner.user_id'].browse(contact_id)
+        partner = self.env['res.user'].browse(contact_id)
         logger.info('------------------------partner------------------------------')
         logger.info(partner)
         logger.info('------------------------FIN partner------------------------------')
