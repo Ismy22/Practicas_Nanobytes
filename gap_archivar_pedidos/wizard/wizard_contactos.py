@@ -27,25 +27,11 @@ class wizarResPartner(models.TransientModel):
         return {'type': 'ir.actions.act_window_close'}
     
 
-    def default_get(self, fields):
-        res = super(wizarResPartner, self).default_get(fields)
+    def default_get(self):
+        res = super(wizarResPartner, self).default_get()
         contact_id = self._context.get('default_partner_id')
-        logger.info('------------------------contact_id------------------------------')
-        logger.info(contact_id)
-        logger.info('------------------------FIN CONTACT_ID------------------------------')
-
         id_user_por_partner = self.env['res.users'].search([('partner_id', '=', contact_id)])
-        #partner = self.env['res.partner'].browse(id_user_por_partner)
-        logger.info('------------------------partner------------------------------')
-        logger.info(id_user_por_partner)
-        logger.info('------------------------FIN partner------------------------------')
-        user_id = id_user_por_partner.user_id
-        logger.info('------------------------user_id------------------------------')
-        logger.info(user_id)
-        logger.info('------------------------FIN USER_ID------------------------------')
-        res.update({
-            'user_id': id_user_por_partner,
-        })
+        res.update({'user_id': id_user_por_partner,})
         
         return res
 
