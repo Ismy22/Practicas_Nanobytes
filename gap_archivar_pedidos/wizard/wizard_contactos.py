@@ -44,7 +44,7 @@ class wizarResPartner(models.TransientModel):
         logger.info(user_id)
         logger.info('------------------------FIN USER_ID------------------------------')
         res.update({
-            'user_id': user_id,
+            'user_id': contact_id,
         })
         
         return res
