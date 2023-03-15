@@ -8,6 +8,6 @@ class Products(models.Model):
     Qty = fields.Integer(string="Cantidad total")
     Cost = fields.Monetary(string="Precio")
     SKU = fields.Char(String='SKU')
-    EAN = fields.char(String='EAN')
+    EAN = fields.Char(String='EAN')
     
 
