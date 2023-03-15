@@ -26,7 +26,7 @@ class Products(models.Model):
                     'EAN': row['EAN'],
                     'name': row['Name'],
                     'Price_cost': row['Price'],
-                    'QTY': row['QTY']
+                    'Qty': row['QTY']
                 }
                 product = Product.create(vals)
             return {'type': 'ir.actions.act_window_close'}
