@@ -19,9 +19,9 @@ class Products(models.Model):
         return product
     
 
-    file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
-    def create_products_from_csv(self, file_path):
-        #file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
+
+    def create_products_from_csv(self):
+        file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
         with open(file_path, 'r') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
