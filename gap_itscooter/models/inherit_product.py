@@ -13,12 +13,6 @@ class Products(models.Model):
     Price_cost = fields.Float(string="Price")
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
-    
-
-class ProductImport(models.TransientModel):
-    _name = 'product.import'
-
-    
 
     def import_products(self):
         url="https://www.gm2online.es/amfeed/feed/download?id=23&file=StockGm2.csv"
@@ -38,3 +32,6 @@ class ProductImport(models.TransientModel):
             return {'type': 'ir.actions.act_window_close'}
         else:
             return {'type': 'ir.actions.act_window_close', 'warning': 'Unable to fetch data from URL.'}
+    
+
+    
