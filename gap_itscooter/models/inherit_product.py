@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+
 import csv
 import base64
 import requests
@@ -19,7 +20,6 @@ class ProductImport(models.TransientModel):
 
     
 
-    @api.multi
     def import_products(self):
         url="https://www.gm2online.es/amfeed/feed/download?id=23&file=StockGm2.csv"
         response = requests.get(url)
