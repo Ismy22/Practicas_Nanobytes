@@ -5,7 +5,7 @@
     'description': """ Gap csv ITScooter""",
     'depends': ['stock'],
     'data': [
-        'view/inherit_product_form.xml',
+        'views/inherit_product_form.xml',
     ],
     'auto_install': False,
     'application': True
