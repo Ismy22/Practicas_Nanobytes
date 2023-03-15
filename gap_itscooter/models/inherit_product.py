@@ -14,11 +14,6 @@ class Products(models.Model):
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
 
-    def create(self, vals):
-        product = super(Products, self).create(vals)
-        return product
-    
-
 
     def create_products_from_csv(self):
         file_path = "/mnt/extra-addons/gap_itscooter/docs/StockGm2.csv"
@@ -40,13 +35,14 @@ class Products(models.Model):
                 ean = ean or ''
 
                 # Crear producto
-                product = Products.create({
-                    'sku': sku,
-                    'ean': ean,
+                vals = {
+                    'default_code': sku,
+                    'barcode': ean,
                     'name': name,
-                    'price': float(price),
-                    'qty': float(qty)
-                })
+                    'lst_price': float(price),
+                    'qty_available': float(qty)
+                }
+                product = self.env['product.product'].create(vals)
 
                 print(f'Creado producto {product.name} con SKU {product.sku}')
         
