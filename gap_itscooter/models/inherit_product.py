@@ -14,21 +14,31 @@ class Products(models.Model):
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
 
-    def import_products(self):
-        file_path = 'C:\Users\ismae\Downloads\StockGm2.csv'
-        with open(file_path, 'r') as f:
-            reader = csv.DictReader(f.content.decode('utf-8').splitlines())
-            Product = self.env['product.product']
+    def create(self, vals):
+        product = super(Products, self).create(vals)
+        return product
+
+    def create_products_from_csv():
+        file_path = '/ruta/al/archivo.csv'
+        with open(file_path) as csvfile:
+            reader = csv.DictReader(csvfile)
             for row in reader:
-                vals = {
-                    'default_code': row['SKU'],
-                    'barcode': row['EAN'],
-                    'name': row['Name'],
-                    'list_price': row['Price'],
-                    'Qty': row['Qty']
-                }
-                product = Product.create(vals)
-            return {'type': 'ir.actions.act_window_close'}
+                sku = row['SKU']
+                ean = row['EAN']
+                name = row['Name']
+                qty = row['QTY']
+                price = row['Price']                
+
+                # Crear objeto de producto
+                product = Products.create({
+                    'sku': sku,
+                    'ean': ean,
+                    'name': name,
+                    'qty': qty,
+                    'price': price                    
+                })
+
+                print(f'Creado producto {product.name} con SKU {product.sku}')
     
 
     
