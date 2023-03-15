@@ -44,7 +44,7 @@ class Products(models.Model):
                 }
                 product = self.env['product.template'].create(vals)
 
-                print(f'Creado producto {product.name} con SKU {product.sku}')
+                print(f'Creado producto {product.name} con SKU {product.SKU}')
         
 
     
