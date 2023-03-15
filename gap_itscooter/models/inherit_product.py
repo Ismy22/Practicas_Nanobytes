@@ -17,7 +17,7 @@ class Products(models.Model):
     def import_products(self):
         file_path = 'C:\Users\ismae\Downloads\StockGm2.csv'
         with open(file_path, 'r') as f:
-            reader = csv.DictReader(f)
+            reader = csv.DictReader(f.content.decode('utf-8').splitlines())
             Product = self.env['product.product']
             for row in reader:
                 vals = {
