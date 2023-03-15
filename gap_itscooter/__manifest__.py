@@ -3,7 +3,7 @@
     'sequence': -1003,
     'summary': '',
     'description': """ Gap csv ITScooter""",
-    'depends': ['Inventory'],
+    'depends': ['stock'],
     'data': [
         'view/inherit_product_form.xml',
     ],
