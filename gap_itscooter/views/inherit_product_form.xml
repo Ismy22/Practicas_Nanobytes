@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <button name="button" class='btn-primary' string="Importar CSV" type="object"/>
+                <button type="object" name="import_products" class='btn-primary' string="Importar CSV"/>
             </xpath>
             <xpath expr="//field[@name='barcode']" position="after">
                 <field name='Qty'/>
