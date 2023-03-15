@@ -39,7 +39,7 @@ class Products(models.Model):
                     'default_code': sku,
                     'barcode': ean,
                     'name': name,
-                    'lst_price': float(price),
+                    'list_price': float(price),
                     'qty_available': float(qty)
                 }
                 product = self.env['product.template'].create(vals)
