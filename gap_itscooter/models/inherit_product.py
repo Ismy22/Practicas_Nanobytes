@@ -25,7 +25,7 @@ class Products(models.Model):
                     'SKU': row['SKU'],
                     'EAN': row['EAN'],
                     'name': row['Name'],
-                    'Qty': row['QTY'],
+                    'Qty': row['Qty'],
                     'Price_cost': row['Price']                    
                 }
                 product = Product.create(vals)
