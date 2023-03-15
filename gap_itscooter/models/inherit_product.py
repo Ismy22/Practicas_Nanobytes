@@ -20,11 +20,11 @@ class Products(models.Model):
         with open(file_path, 'r') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                sku = row.get('SKU')
-                ean = row.get('EAN')
+                SKU = row.get('SKU')
+                EAN = row.get('EAN')
                 name = row.get('Name')
-                price = row.get('Price')
-                qty = row.get('Qty')
+                Price_cost = row.get('Price')
+                Qty = row.get('Qty')
 
                 if not sku or not name or not price:
                     # Ignorar filas sin SKU, nombre o precio
@@ -36,11 +36,11 @@ class Products(models.Model):
 
                 # Crear producto
                 vals = {
-                    'default_code': sku,
-                    'barcode': ean,
+                    'default_code': SKU,
+                    'barcode': EAN,
                     'name': name,
-                    'list_price': float(price),
-                    'qty_available': float(qty)
+                    'list_price': float(Price_cost),
+                    'qty_available': float(Qty)
                 }
                 product = self.env['product.template'].create(vals)
 
