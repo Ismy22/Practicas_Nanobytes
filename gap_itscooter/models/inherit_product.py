@@ -42,7 +42,7 @@ class Products(models.Model):
                     'lst_price': float(price),
                     'qty_available': float(qty)
                 }
-                product = self.env['product.product'].create(vals)
+                product = self.env['product.template'].create(vals)
 
                 print(f'Creado producto {product.name} con SKU {product.sku}')
         
