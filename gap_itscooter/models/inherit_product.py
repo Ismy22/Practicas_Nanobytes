@@ -9,8 +9,8 @@ logger = logging.getLogger(__name__)
 class Products(models.Model):
     _inherit = "product.template"
 
-    Qty = fields.Float(string="Cantidad total")
-    Price_cost = fields.Float(string="Price")
+    Qty = fields.Float(string="Cantidad total", default=0.0)
+    Price_cost = fields.Float(string="Price", default=0.0)
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
 
@@ -30,9 +30,6 @@ class Products(models.Model):
                     # Ignorar filas sin SKU, nombre o precio
                     continue
 
-                # hacer que Qty y EAN tengan valores predeterminados
-                qty = qty or 0.0
-                ean = ean or ''
 
                 # Crear producto
                 vals = {
