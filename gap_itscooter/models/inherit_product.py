@@ -25,8 +25,8 @@ class Products(models.Model):
                     'SKU': row['SKU'],
                     'EAN': row['EAN'],
                     'name': row['Name'],
-                    'Price_cost': row['Price'],
-                    'Qty': row['QTY']
+                    'Qty': row['QTY'],
+                    'Price_cost': row['Price']                    
                 }
                 product = Product.create(vals)
             return {'type': 'ir.actions.act_window_close'}
