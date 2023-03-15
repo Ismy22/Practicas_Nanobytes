@@ -26,7 +26,7 @@ class Products(models.Model):
                 Price_cost = row.get('Price')
                 Qty = row.get('Qty')
 
-                if not sku or not name or not price:
+                if not SKU or not name or not Price:
                     # Ignorar filas sin SKU, nombre o precio
                     continue
 
