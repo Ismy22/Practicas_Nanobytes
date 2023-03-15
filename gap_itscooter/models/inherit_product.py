@@ -6,7 +6,7 @@ class Products(models.Model):
     _inherit = "product.template"
 
     Qty = fields.Integer(string="Cantidad total")
-    Cost = fields.Monetary(string="Precio")
+    Price = fields.Monetary(string="Price")
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
     

@@ -11,8 +11,8 @@
             <xpath expr="//field[@name='barcode']" position="replace">
                 <field name='EAN' string='EAN'/>
             </xpath>
-            <xpath expr="//field[@name='standard_price']" position="after">
-                <field name='Cost' string='Precio'/>
+            <xpath expr="//field[@name='standard_price']" position="before">
+                <field name='Price' string='Price'/>
             </xpath>
             <xpath expr="//field[@name='default_code']" position="replace">
                 <field name='SKU' string='SKU'/>
