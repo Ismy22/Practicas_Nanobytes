@@ -15,23 +15,20 @@ class Products(models.Model):
     EAN = fields.Char(String='EAN')
 
     def import_products(self):
-        url="C:\Users\ismae\Downloads\StockGm2.csv"
-        response = requests.get(url)
-        if response.ok:
-            reader = csv.DictReader(response.content.decode('utf-8').splitlines())
+        file_path = 'C:\Users\ismae\Downloads\StockGm2.csv'
+        with open(file_path, 'r') as f:
+            reader = csv.DictReader(f)
             Product = self.env['product.product']
             for row in reader:
                 vals = {
-                    'SKU': row['SKU'],
-                    'EAN': row['EAN'],
+                    'default_code': row['SKU'],
+                    'barcode': row['EAN'],
                     'name': row['Name'],
-                    'Qty': row['Qty'],
-                    'Price_cost': row['Price']                    
+                    'list_price': row['Price'],
+                    'Qty': row['Qty']
                 }
                 product = Product.create(vals)
             return {'type': 'ir.actions.act_window_close'}
-        else:
-            return {'type': 'ir.actions.act_window_close', 'warning': 'Unable to fetch data from URL.'}
     
 
     
