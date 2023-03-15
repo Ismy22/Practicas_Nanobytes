@@ -19,7 +19,7 @@ class Products(models.Model):
         return product
 
     def create_products_from_csv():
-        file_path = 'C:\Users\ismae\Downloads\StockGm2.csv'
+        file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
         with open(file_path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
