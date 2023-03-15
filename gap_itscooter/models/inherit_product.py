@@ -36,11 +36,11 @@ class Products(models.Model):
 
                 # Crear producto
                 vals = {
-                    'default_code': SKU,
-                    'barcode': EAN,
+                    'SKU': SKU,
+                    'EAN': EAN,
                     'name': name,
-                    'list_price': float(Price_cost),
-                    'qty_available': float(Qty)
+                    'Price': float(Price_cost),
+                    'Qty': float(Qty)
                 }
                 product = self.env['product.template'].create(vals)
 
