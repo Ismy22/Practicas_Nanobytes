@@ -15,7 +15,7 @@ class Products(models.Model):
     EAN = fields.Char(String='EAN')
 
     def create(self, vals):
-        product = super(Product, self).create(vals)
+        product = super(Products, self).create(vals)
         return product
     
 
