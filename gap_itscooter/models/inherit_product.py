@@ -17,9 +17,11 @@ class Products(models.Model):
     def create(self, vals):
         product = super(Product, self).create(vals)
         return product
+    
 
-    def create_products_from_csv():
-        file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
+    file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
+    def create_products_from_csv(file_path):
+        #file_path = 'C:/Users/ismae/Downloads/StockGm2.csv'
         with open(file_path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -33,11 +35,11 @@ class Products(models.Model):
                     # Ignorar filas sin SKU, nombre o precio
                     continue
 
-                # Asegurarse de que Qty y EAN tengan valores predeterminados
+                # hacer que Qty y EAN tengan valores predeterminados
                 qty = qty or 0.0
                 ean = ean or ''
 
-                # Crear objeto de producto
+                # Crear producto
                 product = Products.create({
                     'sku': sku,
                     'ean': ean,
