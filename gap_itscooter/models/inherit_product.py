@@ -15,7 +15,7 @@ class Products(models.Model):
     EAN = fields.Char(String='EAN')
 
     def import_products(self):
-        url="https://www.gm2online.es/amfeed/feed/download?id=23&file=StockGm2.csv"
+        url="C:\Users\ismae\Downloads\StockGm2.csv"
         response = requests.get(url)
         if response.ok:
             reader = csv.DictReader(response.content.decode('utf-8').splitlines())
