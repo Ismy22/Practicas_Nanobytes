@@ -78,17 +78,20 @@ class Products(models.Model):
             'datas': csv_base64,
             'type': 'binary',
         })
+        logger.info('---------attachment-------')
+        logger.info(attachment)
+        logger.info('---------fin attachment-------')
 
-        # Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
+        # # Obtener la URL de descarga del archivo desde Odoo 
+        # #url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
 
-        # Verificar si url es None
-        if url is None:
-            raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
+        # # Verificar si url es None
+        # if url is None:
+        #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
 
-        # Devolver acción para descargar el archivo CSV
-        return {
-            'type': 'ir.actions.act_url',
-            'url': url + '?download=true',
-            'target': 'self',
-        }
+        # # Devolver acción para descargar el archivo CSV
+        # return {
+        #     'type': 'ir.actions.act_url',
+        #     'url': url + '?download=true',
+        #     'target': 'self',
+        # }
