@@ -8,6 +8,7 @@ import base64
 import requests
 from io import StringIO
 from odoo.tools import config
+from odoo.exceptions import UserError
 
 import io
 import os
@@ -70,27 +71,23 @@ class Products(models.Model):
         # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
+        # Crear un objeto ir.attachment para el archivo CSV
+        attachment = self.env['ir.attachment'].create({
+            'name': 'products.csv',
+            'datas': csv_base64,
+            'type': 'binary',
+        })
+
         # Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s/datas/%s' % (attachment._name, attachment.id, attachment.datas_fname)
 
         # Verificar si url es None
         if url is None:
-            return {
-                'type': 'ir.actions.act_window',
-                'view_mode': 'form',
-                'res_model': 'message.wizard',
-                'target': 'new',
-                'context': {'default_text': 'Error: "web.base.url" no está configurado en el archivo de configuración de Odoo'},
-            }
+            raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
 
         # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
-            'url': url + '/web/content/{model}/#{id}/datas/{filename}?download=true&filename={filename_export}'.format(
-                model='ir.attachment',
-                id=attachment.id,
-                filename=attachment.name,
-                filename_export='products.csv',
-            ),
+            'url': url + '?download=true',
             'target': 'self',
         }
