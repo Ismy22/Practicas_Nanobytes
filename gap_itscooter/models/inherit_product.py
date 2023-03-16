@@ -64,20 +64,25 @@ class Products(models.Model):
         for product in products:
             writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
 
+        # Crear archivo temporal y escribir datos CSV en el archivo
+        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+            tmp.write(csv_data.getvalue().encode('utf-8'))
+
         # Codificar archivo CSV como base64
-        csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
+        with open(tmp.name, 'rb') as f:
+            csv_base64 = base64.b64encode(f.read()).decode('utf-8')
 
         # Obtener la URL de descarga del archivo desde Odoo
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        url = config.get('web.base.url')
 
         # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
-            'url': url + '/web/content/{model}/#{id}/datas/#{filename}?download=true&filename={filename_export}'.format(
-                model='product.template',
-                id=self.id if self.id else 0,
-                filename='products.csv',
-                filename_export='products.csv',
+            'url': url + '/web/content/?model=ir.attachment&field=datas&filename_field=name&id=%s&download=true' % (
+                self.env['ir.attachment'].create({
+                    'name': 'products.csv',
+                    'datas': csv_base64,
+                }).id,
             ),
             'target': 'self',
         }
