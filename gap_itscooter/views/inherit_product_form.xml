@@ -9,7 +9,7 @@
                 <button type="object" name="create_products_from_csv" class='btn-primary' string="Importar CSV"/>
             </xpath>
             <xpath expr="//header" position="inside">
-                <button type="object" name="generate_csv" class='btn-primary' string="Exportar CSV"/>
+                <button type="object" name="export_products_to_csv" class='btn-primary' string="Exportar CSV"/>
             </xpath>
             <xpath expr="//field[@name='barcode']" position="after">
                 <field name='Qty'/>

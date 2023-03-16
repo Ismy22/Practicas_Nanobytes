@@ -48,31 +48,28 @@ class Products(models.Model):
             product = self.env['product.template'].create(vals)
 
       
-    def generate_product_csv(products):
-        # Creamos un objeto para escribir en memoria
-        output = io.StringIO()
-
-        # Creamos un escritor CSV
-        writer = csv.writer(output, delimiter=',', quotechar='"')
-
-        # Escribimos la fila de encabezado
-        writer.writerow(['Referencia Interna', 'Nombre', 'Descripción del sitio web', 'Precio', 'Stock', 'URL de la imagen'])
-
-        # Escribimos una fila para cada producto
+    def export_products_to_csv(self):
+        # Leer todos los productos
+        products = self.search([])
+        
+        # Crear archivo CSV y escribir encabezados de columna
+        csv_data = StringIO()
+        writer = csv.writer(csv_data)
+        writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
+        
+        # Escribir cada producto en una fila
         for product in products:
-            writer.writerow([product.default_code, product.name, product.website_description, product.list_price, product.qty_available, product.image_url])
+            writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
 
-        # Devolvemos el contenido del archivo CSV como una cadena de caracteres
-        return output.getvalue()
-    
-   
-    def generate_csv(self):
-        # Obtenemos todos los productos
-        products = self.env['product.template'].search([])
+        # Codificar archivo CSV como base64
+        csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
-        # Generamos el archivo CSV
-        csv_data = self.generate_product_csv(products)
-
-        # Devolvemos el archivo CSV al usuario
-        return request.make_response(csv_data, [('Content-Type', 'text/csv'), ('Content-Disposition', 'attachment; filename=products.csv')])
-    
+        # Devolver acción para descargar el archivo CSV
+        return {
+            'type': 'ir.actions.act_url',
+            'url': '/web/content/?model={}&id={}&filename_export=products.csv&field=datas&download=true&filename=products.csv'.format(
+                self._name,
+                self.id,
+            ),
+            'target': 'self',
+        }
