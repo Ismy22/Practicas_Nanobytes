@@ -85,7 +85,7 @@ class Products(models.Model):
             'type': 'ir.actions.act_url',
             'url': '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
                 model=self._name,
-                id=urlsafe_base64_encode(self.ids[0].to_bytes(4, 'big')).decode('utf-8'),
+                encoded_id = base64.urlsafe_b64encode(str(self.id).encode('utf-8')).decode('utf-8'),
                 filename='products.csv',
                 filename_export='products.csv',
             ),
