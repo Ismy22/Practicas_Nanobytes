@@ -67,24 +67,32 @@ class Products(models.Model):
         for product in products:
             writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
 
-        # Crear archivo temporal y escribir datos CSV en el archivo
-        with tempfile.NamedTemporaryFile(delete=False) as tmp:
-            tmp.write(csv_data.getvalue().encode('utf-8'))
-
         # Codificar archivo CSV como base64
-        with open(tmp.name, 'rb') as f:
-            csv_base64 = base64.b64encode(f.read()).decode('utf-8')
+        csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
         # Obtener la URL de descarga del archivo desde Odoo
-        url = config.get('web.base.url')
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+
+        # Verificar si url es None
+        if url is None:
+            return {
+                'type': 'ir.actions.act_window',
+                'view_mode': 'form',
+                'res_model': 'message.wizard',
+                'target': 'new',
+                'context': {'default_text': 'Error: "web.base.url" no está configurado en el archivo de configuración de Odoo'},
+            }
 
         # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
             'url': url + '/web/content/?model=ir.attachment&field=datas&filename_field=name&id=%s&download=true' % (
                 self.env['ir.attachment'].create({
-                    'name': 'products.csv',
+                    'name': 'productos.csv',
                     'datas': csv_base64,
+                    'datas_fname': 'productos.csv',
+                    'res_model': 'product.template',
+                    'res_id': self.id,
                 }).id,
             ),
             'target': 'self',
