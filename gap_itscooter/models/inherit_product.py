@@ -80,7 +80,7 @@ class Products(models.Model):
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
         # Descargar el archivo CSV en la carpeta Descargas
-        url = "/web/content/?model={}&id={}&filename_export=products.csv&field=datas&download=true&filename=products.csv".format(
+        url = "/web/content/?model=product.template&id=33168&filename_export=products.csv&field=datas&download=true&filename=products.csv': No scheme supplied. Perhaps you meant http:///web/content/?model=product.template&id=33168&filename_export=products.csv&field=datas&download=true&filename=products.csv?".format(
                 self._name,
                 self.id,
             )
