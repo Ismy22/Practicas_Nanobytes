@@ -2,8 +2,9 @@ from odoo import models, fields, api
 
 import csv
 import base64
-import requests
+from odoo.http import request
 from io import StringIO
+import io
 import logging
 logger = logging.getLogger(__name__)
 
@@ -47,5 +48,31 @@ class Products(models.Model):
             product = self.env['product.template'].create(vals)
 
         
+    def generate_product_csv(products):
+        # Creamos un objeto para escribir en memoria
+        output = io.StringIO()
 
+        # Creamos un escritor CSV
+        writer = csv.writer(output, delimiter=',', quotechar='"')
+
+        # Escribimos la fila de encabezado
+        writer.writerow(['Referencia Interna', 'Nombre', 'Descripción del sitio web', 'Precio', 'Stock', 'URL de la imagen'])
+
+        # Escribimos una fila para cada producto
+        for product in products:
+            writer.writerow([product.default_code, product.name, product.website_description, product.list_price, product.qty_available, product.image_url])
+
+        # Devolvemos el contenido del archivo CSV como una cadena de caracteres
+        return output.getvalue()
+    
+   
+    def generate_csv(self):
+        # Obtenemos todos los productos
+        products = self.env['product.template'].search([])
+
+        # Generamos el archivo CSV
+        csv_data = generate_product_csv(products)
+
+        # Devolvemos el archivo CSV al usuario
+        return request.make_response(csv_data, [('Content-Type', 'text/csv'), ('Content-Disposition', 'attachment; filename=products.csv')])
     
