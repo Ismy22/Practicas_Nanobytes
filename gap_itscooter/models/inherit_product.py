@@ -6,6 +6,7 @@ from odoo.http import request
 import tempfile
 import base64
 import requests
+import attachment
 from io import StringIO
 from odoo.tools import config
 
@@ -86,14 +87,11 @@ class Products(models.Model):
         # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
-            'url': url + '/web/content/?model=ir.attachment&field=datas&filename_field=name&id=%s&download=true' % (
-                self.env['ir.attachment'].create({
-                    'name': 'productos.csv',
-                    'datas': csv_base64,
-                    'datas_fname': 'productos.csv',
-                    'res_model': 'product.template',
-                    'res_id': self.id,
-                }).id,
+            'url': url + '/web/content/{model}/#{id}/datas/{filename}?download=true&filename={filename_export}'.format(
+                model='ir.attachment',
+                id=attachment.id,
+                filename=attachment.name,
+                filename_export='products.csv',
             ),
             'target': 'self',
         }
