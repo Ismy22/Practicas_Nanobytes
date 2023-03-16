@@ -4,6 +4,7 @@ import csv
 import base64
 from odoo.http import request
 import tempfile
+from odoo import http
 import base64
 import requests
 from io import StringIO
@@ -95,3 +96,18 @@ class Products(models.Model):
         #     'url': url + '?download=true',
         #     'target': 'self',
         # }
+
+        @http.route('/web/content/173/products.csv', type='http', auth='user', website=True)
+        def download_products(self, **kwargs):
+            # Encuentra el registro que contiene el archivo csv
+            attachment = request.env['ir.attachment'].search([('name', '=', 'products.csv')], limit=1)
+            
+            # Codifica el archivo en base64
+            csv_data = base64.b64encode(attachment.datas).decode('utf-8')
+            
+            # Crea el objeto de respuesta HTTP para descargar el archivo
+            headers = [('Content-Type', 'application/octet-stream'),
+                    ('Content-Disposition', 'attachment; filename="%s"' % attachment.name)]
+            response = request.make_response(base64.b64decode(csv_data), headers)
+            
+            return response
