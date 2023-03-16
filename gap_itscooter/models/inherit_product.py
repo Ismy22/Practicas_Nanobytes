@@ -7,6 +7,8 @@ import tempfile
 import base64
 import requests
 from io import StringIO
+from odoo.tools import config
+
 import io
 import os
 import logging
