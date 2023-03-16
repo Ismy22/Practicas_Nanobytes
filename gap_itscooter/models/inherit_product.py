@@ -56,38 +56,31 @@ class Products(models.Model):
         if response.status_code != 200:
             raise ValueError("Failed to download CSV file from URL")
         
-        # Obtiene la ruta absoluta de la carpeta Descargas
         download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
         file_path = os.path.join(download_folder, "productos.csv")
         
-        # Guarda el archivo CSV en la carpeta Descargas
         with open(file_path, "w", newline="") as csvfile:
             csvfile.write(response.content.decode("utf-8"))
-      
+
     def export_products_to_csv(self):
-        # Leer todos los productos
         products = self.search([])
 
-        # Crear archivo CSV y escribir encabezados de columna
         csv_data = StringIO()
         writer = csv.writer(csv_data)
         writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
 
-        # Escribir cada producto en una fila
         for product in products:
             writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
 
-        # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
-        # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
             'url': '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
                 model='product.template',
                 id=self.id if self.id else 0,
-                filename='products.csv',
-                filename_export='products.csv',
+                filename='productos.csv',
+                filename_export='productos.csv',
             ),
             'target': 'self',
         }
