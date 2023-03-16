@@ -47,7 +47,7 @@ class Products(models.Model):
             }
             product = self.env['product.template'].create(vals)
 
-        
+      
     def generate_product_csv(products):
         # Creamos un objeto para escribir en memoria
         output = io.StringIO()
@@ -71,7 +71,7 @@ class Products(models.Model):
         products = self.env['product.template'].search([])
 
         # Generamos el archivo CSV
-        csv_data = generate_product_csv(products)
+        csv_data = self.generate_product_csv(products)
 
         # Devolvemos el archivo CSV al usuario
         return request.make_response(csv_data, [('Content-Type', 'text/csv'), ('Content-Disposition', 'attachment; filename=products.csv')])
