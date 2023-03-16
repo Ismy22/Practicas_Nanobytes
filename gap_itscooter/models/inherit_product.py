@@ -79,7 +79,7 @@ class Products(models.Model):
         })
 
         # Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s/datas/%s' % (attachment._name, attachment.id, attachment.datas_fname)
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s/datas/%s' % ('ir.attachment', attachment.id, attachment.datas_fname)
 
         # Verificar si url es None
         if url is None:
