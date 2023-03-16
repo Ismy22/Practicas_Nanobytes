@@ -3,6 +3,7 @@ from odoo import models, fields, api
 import csv
 import base64
 from odoo.http import request
+from odoo.tools import urlsafe_base64_encode
 import requests
 from io import StringIO
 import io
@@ -66,12 +67,12 @@ class Products(models.Model):
     def export_products_to_csv(self):
         # Leer todos los productos
         products = self.search([])
-        
+
         # Crear archivo CSV y escribir encabezados de columna
         csv_data = StringIO()
         writer = csv.writer(csv_data)
         writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
-        
+
         # Escribir cada producto en una fila
         for product in products:
             writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
@@ -79,22 +80,14 @@ class Products(models.Model):
         # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
-        # Descargar el archivo CSV en la carpeta Descargas
-        url = "/web/content/?model=product.template&id=33168&filename_export=products.csv&field=datas&download=true&filename=products.csv': No scheme supplied. Perhaps you meant http:///web/content/?model=product.template&id=33168&filename_export=products.csv&field=datas&download=true&filename=products.csv?".format(
-                self._name,
-                self.id,
-            )
-        self.download_csv_file(url)
-        
-        # Devolver un mensaje para confirmar la descarga del archivo CSV
+        # Devolver acción para descargar el archivo CSV
         return {
-            'name': 'Descarga de productos',
-            'type': 'ir.actions.act_window',
-            'res_model': 'ir.actions.act_window',
-            'view_mode': 'form',
-            'view_type': 'form',
-            'target': 'new',
-            'context': {
-                'message': 'El archivo CSV se ha descargado en la carpeta Descargas.'
-            },
+            'type': 'ir.actions.act_url',
+            'url': '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
+                model=self._name,
+                id=urlsafe_base64_encode(self.ids[0].to_bytes(4, 'big')).decode('utf-8'),
+                filename='products.csv',
+                filename_export='products.csv',
+            ),
+            'target': 'self',
         }
