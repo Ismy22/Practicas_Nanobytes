@@ -73,7 +73,7 @@ class Products(models.Model):
         # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
-            'url': url + '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
+            'url': url + '/web/content/{model}/#{id}/datas/#{filename}?download=true&filename={filename_export}'.format(
                 model='product.template',
                 id=self.id if self.id else 0,
                 filename='products.csv',
