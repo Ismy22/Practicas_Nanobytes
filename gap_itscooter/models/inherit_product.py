@@ -3,7 +3,7 @@ from odoo import models, fields, api
 import csv
 import base64
 from odoo.http import request
-import urlsafe_base64_encode
+import base64
 import requests
 from io import StringIO
 import io
