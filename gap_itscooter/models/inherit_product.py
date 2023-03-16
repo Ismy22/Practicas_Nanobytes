@@ -9,6 +9,7 @@ import requests
 from io import StringIO
 from odoo.tools import config
 from odoo.exceptions import UserError
+from odoo.addons.base.models.ir_attachment import ir_attachment
 
 import io
 import os
