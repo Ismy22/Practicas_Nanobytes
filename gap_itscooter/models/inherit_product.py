@@ -84,7 +84,7 @@ class Products(models.Model):
         logger.info('---------fin attachment-------')
 
         #Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s' % (attachment.id) + '?download=true&filename=%s' % attachment.name
         logger.info('---------URL-------')
         logger.info(url)
         logger.info('---------fin URL-------')
@@ -93,11 +93,15 @@ class Products(models.Model):
         #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
 
         # # Devolver acción para descargar el archivo CSV
-        # return {
-        #     'type': 'ir.actions.act_url',
-        #     'url': url + '?download=true',
-        #     'target': 'self',
-        # }
+        return {
+            'type': 'ir.actions.act_url',
+            'url': url,
+            'target': 'self',
+        }
+
+        # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
+        # con el método anterior ya que debe cambiar el id cada vez que se genera.
+        #web/content es la base + id + nombre del archivo.
 
         @http.route('/web/content/173/products.csv', type='http', auth='user', website=True)
         def download_products(self, **kwargs):
