@@ -5,6 +5,7 @@ import base64
 from odoo.http import request
 from io import StringIO
 import io
+import os
 import logging
 logger = logging.getLogger(__name__)
 
@@ -47,6 +48,19 @@ class Products(models.Model):
             }
             product = self.env['product.template'].create(vals)
 
+
+    def download_csv_file(self, url):
+        response = requests.get(url)
+        if response.status_code != 200:
+            raise ValueError("Failed to download CSV file from URL")
+        
+        # Obtiene la ruta absoluta de la carpeta Descargas
+        download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+        file_path = os.path.join(download_folder, "productos.csv")
+        
+        # Guarda el archivo CSV en la carpeta Descargas
+        with open(file_path, "w", newline="") as csvfile:
+            csvfile.write(response.content.decode("utf-8"))
       
     def export_products_to_csv(self):
         # Leer todos los productos
@@ -64,12 +78,22 @@ class Products(models.Model):
         # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
-        # Devolver acción para descargar el archivo CSV
-        return {
-            'type': 'ir.actions.act_url',
-            'url': '/web/content/?model={}&id={}&filename_export=products.csv&field=datas&download=true&filename=products.csv'.format(
+        # Descargar el archivo CSV en la carpeta Descargas
+        url = "/web/content/?model={}&id={}&filename_export=products.csv&field=datas&download=true&filename=products.csv".format(
                 self._name,
                 self.id,
-            ),
-            'target': 'self',
+            )
+        self.download_csv_file(url)
+        
+        # Devolver un mensaje para confirmar la descarga del archivo CSV
+        return {
+            'name': 'Descarga de productos',
+            'type': 'ir.actions.act_window',
+            'res_model': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'target': 'new',
+            'context': {
+                'message': 'El archivo CSV se ha descargado en la carpeta Descargas.'
+            },
         }
