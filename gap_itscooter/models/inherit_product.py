@@ -9,7 +9,7 @@ import requests
 from io import StringIO
 from odoo.tools import config
 from odoo.exceptions import UserError
-from odoo.addons.base.models.ir_attachment import ir_attachment
+
 
 import io
 import os
@@ -80,7 +80,7 @@ class Products(models.Model):
         })
 
         # Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (ir_attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
 
         # Verificar si url es None
         if url is None:
