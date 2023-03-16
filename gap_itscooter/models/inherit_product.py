@@ -18,6 +18,7 @@ class Products(models.Model):
     def create_products_from_csv(self):
         file_path = "/mnt/extra-addons/gap_itscooter/docs/StockGm2.csv"
         with open(file_path, 'r') as csvfile:
+            
             reader = csv.DictReader(csvfile)
             for row in reader:
                 SKU = row.get('SKU')
@@ -40,8 +41,6 @@ class Products(models.Model):
                     'Qty': float(Qty)
                 }
                 product = self.env['product.template'].create(vals)
-
-                print(f'Creado producto {product.name} con SKU {product.SKU}')
         
 
     
