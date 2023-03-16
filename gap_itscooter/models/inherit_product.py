@@ -63,24 +63,32 @@ class Products(models.Model):
             csvfile.write(response.content.decode("utf-8"))
 
     def export_products_to_csv(self):
+        # Leer todos los productos
         products = self.search([])
 
+        # Crear archivo CSV y escribir encabezados de columna
         csv_data = StringIO()
         writer = csv.writer(csv_data)
         writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
 
+        # Escribir cada producto en una fila
         for product in products:
             writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
 
+        # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
+        # Obtener la URL de descarga del archivo desde Odoo
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+
+        # Devolver acción para descargar el archivo CSV
         return {
             'type': 'ir.actions.act_url',
-            'url': '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
+            'url': url + '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
                 model='product.template',
                 id=self.id if self.id else 0,
-                filename='productos.csv',
-                filename_export='productos.csv',
+                filename='products.csv',
+                filename_export='products.csv',
             ),
             'target': 'self',
         }
