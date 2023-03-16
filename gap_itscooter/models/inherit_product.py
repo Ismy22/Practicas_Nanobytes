@@ -6,7 +6,6 @@ from odoo.http import request
 import tempfile
 import base64
 import requests
-import attachment
 from io import StringIO
 from odoo.tools import config
 
