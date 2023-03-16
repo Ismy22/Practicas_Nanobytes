@@ -84,7 +84,7 @@ class Products(models.Model):
         return {
             'type': 'ir.actions.act_url',
             'url': '/web/content/{model}/{id}/datas/{filename}?download=true&filename={filename_export}'.format(
-                model=self._name,
+                model='product.template',
                 id=self.id if self.id else 0,
                 filename='products.csv',
                 filename_export='products.csv',
