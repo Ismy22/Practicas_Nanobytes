@@ -70,7 +70,7 @@ class Products(models.Model):
         # Codificar archivo CSV como base64
         csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
 
-        # Obtener la URL de descarga del archivo desde Odoo
+        # Obtener la URL de descarga del archivo desde Odoo 
         url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
 
         # Verificar si url es None
