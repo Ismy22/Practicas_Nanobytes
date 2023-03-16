@@ -51,17 +51,6 @@ class Products(models.Model):
             product = self.env['product.template'].create(vals)
 
 
-    def download_csv_file(self, url):
-        response = requests.get(url)
-        if response.status_code != 200:
-            raise ValueError("Failed to download CSV file from URL")
-        
-        download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
-        file_path = os.path.join(download_folder, "productos.csv")
-        
-        with open(file_path, "w", newline="") as csvfile:
-            csvfile.write(response.content.decode("utf-8"))
-
     def export_products_to_csv(self):
         # Leer todos los productos
         products = self.search([])
