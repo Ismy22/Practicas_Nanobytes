@@ -83,9 +83,11 @@ class Products(models.Model):
         logger.info(attachment)
         logger.info('---------fin attachment-------')
 
-        # # Obtener la URL de descarga del archivo desde Odoo 
-        # #url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
-
+        #Obtener la URL de descarga del archivo desde Odoo 
+        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s/%s' % (attachment._name, attachment.id) + '?download=true&filename=%s' % attachment.name
+        logger.info('---------URL-------')
+        logger.info(url)
+        logger.info('---------fin URL-------')
         # # Verificar si url es None
         # if url is None:
         #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
