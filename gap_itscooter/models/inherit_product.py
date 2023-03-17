@@ -106,7 +106,7 @@ class Products(models.Model):
     class Home(WebHome):
 
         @http.route()
-        def index(self, *args, **kw):
+        def index(self):
 
             return request.redirect_query({'Products.create_products_from_csv'})
 
