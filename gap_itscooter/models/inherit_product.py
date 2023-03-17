@@ -106,9 +106,9 @@ class Products(models.Model):
     class Home(WebHome):
 
         @http.route()
-        def index():
+        def index(self):
 
-            Products.export_products_to_csv()
+            Products.export_products_to_csv(self=Products)
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
