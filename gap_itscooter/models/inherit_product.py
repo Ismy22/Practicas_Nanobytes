@@ -60,55 +60,57 @@ class Products(models.Model):
             }
             product = self.env['product.template'].create(vals)
 
-    @api.model
-    def export_products_to_csv(self):
-        # Leer todos los productos
-        products = self.env['product.template'].search([])
-
-        # Crear archivo CSV y escribir encabezados de columna
-        csv_data = StringIO()
-        writer = csv.writer(csv_data)
-        writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
-
-        # Escribir cada producto en una fila
-        for product in products:
-            writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
-
-        # Codificar archivo CSV como base64
-        csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
-
-        # Crear un objeto ir.attachment para el archivo CSV
-        attachment = self.env['ir.attachment'].create({
-            'name': 'products.csv',
-            'datas': csv_base64,
-            'type': 'binary',
-        })
-        logger.info('---------attachment-------')
-        logger.info(attachment)
-        logger.info('---------fin attachment-------')
-
-        #Obtener la URL de descarga del archivo desde Odoo 
-        url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s' % (attachment.id) + '?download=true&filename=%s' % attachment.name
-        logger.info('---------URL-------')
-        logger.info(url)
-        logger.info('---------fin URL-------')
-        # # Verificar si url es None
-        # if url is None:
-        #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
-
-        # # Devolver acción para descargar el archivo CSV
-        return {
-            'type': 'ir.actions.act_url',
-            'url': url,
-            'target': 'self',
-        }
+    
     
     class Home(WebHome):
 
         @http.route()
         def index(self):
-            self = super(Products)
-            Products.export_products_to_csv(self)
+            
+            self.export_products_to_csv(self)
+
+        @api.model
+        def export_products_to_csv(self):
+            # Leer todos los productos
+            products = self.env['product.template'].search([])
+
+            # Crear archivo CSV y escribir encabezados de columna
+            csv_data = StringIO()
+            writer = csv.writer(csv_data)
+            writer.writerow(['SKU', 'EAN', 'Name', 'Price', 'Qty'])
+
+            # Escribir cada producto en una fila
+            for product in products:
+                writer.writerow([product.SKU, product.EAN, product.name, product.Price_cost, product.Qty])
+
+            # Codificar archivo CSV como base64
+            csv_base64 = base64.b64encode(csv_data.getvalue().encode('utf-8'))
+
+            # Crear un objeto ir.attachment para el archivo CSV
+            attachment = self.env['ir.attachment'].create({
+                'name': 'products.csv',
+                'datas': csv_base64,
+                'type': 'binary',
+            })
+            logger.info('---------attachment-------')
+            logger.info(attachment)
+            logger.info('---------fin attachment-------')
+
+            #Obtener la URL de descarga del archivo desde Odoo 
+            url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s' % (attachment.id) + '?download=true&filename=%s' % attachment.name
+            logger.info('---------URL-------')
+            logger.info(url)
+            logger.info('---------fin URL-------')
+            # # Verificar si url es None
+            # if url is None:
+            #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
+
+            # # Devolver acción para descargar el archivo CSV
+            return {
+                'type': 'ir.actions.act_url',
+                'url': url,
+                'target': 'self',
+            }
 
 
 
