@@ -7,6 +7,10 @@ import tempfile
 from odoo import http
 import base64
 import requests
+from odoo import http
+from odoo.addons.web.controllers.home import Home as WebHome
+from odoo.addons.web.controllers.utils import is_user_internal
+from odoo.http import request
 from io import StringIO
 from odoo.tools import config
 from odoo.exceptions import UserError
@@ -98,6 +102,16 @@ class Products(models.Model):
             'url': url,
             'target': 'self',
         }
+    
+
+
+    class Home(WebHome):
+
+        @http.route()
+        def index(self, *args, **kw):
+
+            return request.redirect_query('gap_itscooter.export_products_to_csv', query=request.params)
+
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
         # con el método anterior ya que debe cambiar el id cada vez que se genera.
