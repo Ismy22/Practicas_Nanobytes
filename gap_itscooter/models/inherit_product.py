@@ -107,7 +107,9 @@ class Products(models.Model):
 
         @http.route()
         def index(self):
-            products = Products()
+            env = request.env
+            ids = request.params.get('ids')
+            products = Products(env, ids)
             return products.export_products_to_csv()
 
 
