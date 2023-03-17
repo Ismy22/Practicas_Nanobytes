@@ -109,7 +109,11 @@ class Products(models.Model):
         def index(self):
             env = request.env
             products = env['product.template']
-            return products.export_products_to_csv()
+            return {
+            'type': 'ir.actions.act_url',
+            'url': url,
+            'target': 'new',
+            }
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
