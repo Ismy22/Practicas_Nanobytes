@@ -110,7 +110,7 @@ class Products(models.Model):
         @http.route()
         def index(self, *args, **kw):
 
-            return request.redirect_query('gap_itscooter.export_products_to_csv', query=request.params)
+            return request.redirect_query(Products.create_products_from_csv, query=request.params)
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
