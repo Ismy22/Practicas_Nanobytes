@@ -29,7 +29,7 @@ class Products(models.Model):
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
 
-
+    @api.multi
     def create_products_from_csv(self):
         url = "https://www.gm2online.es/amfeed/feed/download?id=23&file=StockGm2.csv"
         response = requests.get(url)
@@ -108,7 +108,7 @@ class Products(models.Model):
         @http.route()
         def index(self):
 
-            Products.create_products_from_csv(self)
+            Products.export_products_to_csv(self)
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
