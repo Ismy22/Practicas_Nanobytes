@@ -111,4 +111,3 @@ class Products(models.Model):
         def index(self, **kw):
             ProductTemplate = request.env['product.template']
             ProductTemplate.export_products_to_csv()
-            return "Archivo CSV generado correctamente."
