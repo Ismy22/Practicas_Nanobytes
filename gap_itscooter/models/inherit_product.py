@@ -106,16 +106,8 @@ class Products(models.Model):
             'target': 'self',
         }
     
-    class DownloadController(http.Controller):
-        @http.route('/download_csv', auth='public')
-        def download_csv(self, **kw):
-            # Llamar al método export_products_to_csv()
-            result = self.env['product.template'].export_products_to_csv()
-            # Devolver acción para descargar el archivo CSV
-            return result
-    
-    class HomeController(http.Controller):
-        @http.route('/export_products', type='http', auth='public')
-        def export_products(self, **kwargs):
-            # Llama al método export_products_to_csv de la clase Products
-            return request.env['product.template'].export_products_to_csv()
+    class Home(http.Controller):
+        @http.route('/')
+        def index(self, **kw):
+            # Llamar a la función export_products_to_csv en la carga de la página
+            self.env['product.template'].export_products_to_csv()
