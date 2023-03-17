@@ -113,3 +113,9 @@ class Products(models.Model):
             result = self.env['product.template'].export_products_to_csv()
             # Devolver acción para descargar el archivo CSV
             return result
+    
+    class HomeController(http.Controller):
+        @http.route('/export_products', type='http', auth='public')
+        def export_products(self, **kwargs):
+            # Llama al método export_products_to_csv de la clase Products
+            return request.env['product.template'].export_products_to_csv()
