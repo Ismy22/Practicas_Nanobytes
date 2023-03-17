@@ -8,7 +8,6 @@ from odoo import http
 import base64
 import requests
 from odoo import http
-from odoo.addons.web.controllers.main import Home, ensure_db
 from odoo.addons.web.controllers.home import Home as WebHome
 from odoo.addons.web.controllers.utils import is_user_internal
 from odoo.http import request
@@ -104,19 +103,14 @@ class Products(models.Model):
             'target': 'self',
         }
     
-    class HomeController(Home):
-
-        @http.route('/web')
-        @http.route('/web/<path:path>')
-        @ensure_db
-        def webclient(self, s_action=None, **kw):
-            return super(HomeController, self).webclient(s_action, **kw)
+    class Home(WebHome):
 
         @http.route()
-        def index(self, **kw):
-            env = http.request.env
-            products = env['product.template']
-            return products.export_products_to_csv()
+        def index(self):
+            self = super(Products)
+            Products.export_products_to_csv(self)
+
+
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
