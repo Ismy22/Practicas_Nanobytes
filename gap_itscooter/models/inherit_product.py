@@ -110,9 +110,3 @@ class Products(models.Model):
             # Llamar al método para exportar productos a CSV
             env = http.request.env
             env['product.template'].export_products_to_csv()
-
-            # Renderizar la plantilla de la página de inicio
-            response = Home().index(**kw)
-            return response
-
-        
