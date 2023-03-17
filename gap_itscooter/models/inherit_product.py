@@ -29,7 +29,7 @@ class Products(models.Model):
     SKU = fields.Char(String='SKU')
     EAN = fields.Char(String='EAN')
 
-    @api.multi
+    @api.depends()
     def create_products_from_csv(self):
         url = "https://www.gm2online.es/amfeed/feed/download?id=23&file=StockGm2.csv"
         response = requests.get(url)
@@ -60,7 +60,7 @@ class Products(models.Model):
             }
             product = self.env['product.template'].create(vals)
 
-
+    @api.depends()
     def export_products_to_csv(self):
         # Leer todos los productos
         products = self.search([])
