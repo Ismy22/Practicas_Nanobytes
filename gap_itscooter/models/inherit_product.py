@@ -104,14 +104,13 @@ class Products(models.Model):
         }
     
     class Home(WebHome):
-
         @http.route()
-        def index():
-            Products.export_products_to_csv(Products)
+        def index(self, **kw):
+            # Llamar al método para exportar productos a CSV
+            self.env['product.template'].export_products_to_csv()
 
-
-        # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
-        # con el método anterior ya que debe cambiar el id cada vez que se genera.
-        #web/content es la base + id + nombre del archivo.
+            # Renderizar la plantilla de la página de inicio
+            response = super(Home, self).index(**kw)
+            return response
 
         
