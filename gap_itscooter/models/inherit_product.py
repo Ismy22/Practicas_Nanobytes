@@ -108,7 +108,7 @@ class Products(models.Model):
         @http.route()
         def index(self):
 
-            return request.redirect_query({'/'+Products.create_products_from_csv})
+            Products.create_products_from_csv()
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
