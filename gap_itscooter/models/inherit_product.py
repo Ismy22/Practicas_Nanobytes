@@ -66,8 +66,12 @@ class Products(models.Model):
 
         @http.route()
         def index(self):
-            
-            self.export_products_to_csv()
+            # Llama a la función export_products_to_csv() para crear el archivo CSV y obtener la URL de descarga
+            url = self.export_products_to_csv()
+
+            # Redirige al usuario a la URL de descarga
+            return http.redirect_with_hash(url)
+
 
         @api.model
         def export_products_to_csv(self):
