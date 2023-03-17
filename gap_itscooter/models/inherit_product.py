@@ -63,7 +63,7 @@ class Products(models.Model):
     @api.depends()
     def export_products_to_csv(self):
         # Leer todos los productos
-        products = self.search([])
+        products = self.env['product.template'].search([])
 
         # Crear archivo CSV y escribir encabezados de columna
         csv_data = StringIO()
