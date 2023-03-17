@@ -110,11 +110,7 @@ class Products(models.Model):
             #     raise UserError("Error: 'web.base.url' no está configurado en el archivo de configuración de Odoo")
 
             # # Devolver acción para descargar el archivo CSV
-            return {
-                'type': 'ir.actions.act_url',
-                'url': url,
-                'target': 'self',
-            }
+            return request.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s?download=true&filename=%s' % (attachment.id, attachment.name)
 
 
 
