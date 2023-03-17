@@ -106,7 +106,7 @@ class Products(models.Model):
     class Home(WebHome):
 
         @http.route()
-        def index(self):
+        def index(Products):
             Products.export_products_to_csv()
 
 
