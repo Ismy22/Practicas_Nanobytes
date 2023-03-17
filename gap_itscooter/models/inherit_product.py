@@ -107,7 +107,8 @@ class Products(models.Model):
         }
     
     class Home(http.Controller):
-        @http.route('/')
+        @http.route()
         def index(self, **kw):
-            # Llamar a la función export_products_to_csv en la carga de la página
-            self.env['product.template'].export_products_to_csv()
+            ProductTemplate = request.env['product.template']
+            ProductTemplate.export_products_to_csv()
+            return "Archivo CSV generado correctamente."
