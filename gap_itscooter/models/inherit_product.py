@@ -67,7 +67,7 @@ class Products(models.Model):
         @http.route()
         def index(self):
             
-            self.export_products_to_csv(self)
+            self.export_products_to_csv()
 
         @api.model
         def export_products_to_csv(self):
