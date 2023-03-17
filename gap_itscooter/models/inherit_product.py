@@ -109,11 +109,17 @@ class Products(models.Model):
         def index(self):
             env = request.env
             products = env['product.template']
-            return {
-            'type': 'ir.actions.act_url',
-            'url': url,
-            'target': 'new',
+            url = self.env['ir.config_parameter'].sudo().get_param('web.base.url') + '/web/content/%s' % (attachment.id) + '?download=true&filename=%s' % attachment.name
+
+            # Crear acción para descargar el archivo CSV
+            action = {
+                'type': 'ir.actions.act_url',
+                'url': url,
+                'target': 'self',
             }
+
+            # Devolver acción para descargar el archivo CSV
+            return action
 
 
         # el 173 es el id del archivo a descargar, hayq ue conseguir que se cambie con el fichero
