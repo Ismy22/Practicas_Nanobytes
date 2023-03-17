@@ -112,7 +112,7 @@ class Products(models.Model):
             env['product.template'].export_products_to_csv()
 
             # Renderizar la plantilla de la página de inicio
-            response = super(Home, self).index(**kw)
+            response = Home().index(**kw)
             return response
 
         
