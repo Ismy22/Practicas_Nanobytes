@@ -9,14 +9,9 @@ import base64
 import requests
 from odoo import http
 from odoo.addons.web.controllers.home import Home as WebHome
-from odoo.addons.web.controllers.home import Home
-from odoo.addons.web.controllers.utils import is_user_internal
 from odoo.http import request
 from io import StringIO
-from odoo.tools import config
-from odoo.exceptions import UserError
-from werkzeug import Response
-from odoo.http import content_disposition, request
+from odoo.http import request
 
 
 import io
