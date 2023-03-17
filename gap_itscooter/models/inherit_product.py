@@ -108,7 +108,8 @@ class Products(models.Model):
         @http.route()
         def index(self, **kw):
             # Llamar al método para exportar productos a CSV
-            self.env['product.template'].export_products_to_csv()
+            env = http.request.env
+            env['product.template'].export_products_to_csv()
 
             # Renderizar la plantilla de la página de inicio
             response = super(Home, self).index(**kw)
