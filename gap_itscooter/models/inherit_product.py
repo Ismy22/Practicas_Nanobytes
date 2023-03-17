@@ -15,6 +15,8 @@ from odoo.http import request
 from io import StringIO
 from odoo.tools import config
 from odoo.exceptions import UserError
+from werkzeug import Response
+from odoo.http import content_disposition, request
 
 
 import io
@@ -104,9 +106,10 @@ class Products(models.Model):
             'target': 'self',
         }
     
-    class Home(WebHome):
-        @http.route()
-        def index(self, **kw):
-            # Llamar al método para exportar productos a CSV
-            env = http.request.env
-            env['product.template'].export_products_to_csv()
+    class DownloadController(http.Controller):
+        @http.route('/download_csv', auth='public')
+        def download_csv(self, **kw):
+            # Llamar al método export_products_to_csv()
+            result = self.env['product.template'].export_products_to_csv()
+            # Devolver acción para descargar el archivo CSV
+            return result
