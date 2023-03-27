@@ -1,15 +1,6 @@
 from odoo import models, fields, api
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-import logging
-logger = logging.getLogger(__name__)
-
-class Saleorder(models.Model):
-    _inherit = "sale.order"
-
-    active = fields.Boolean(string="Active", default=True)
-
-    
        
 class ReturnPicking(models.Model):
     _inherit = "stock.return.picking"
