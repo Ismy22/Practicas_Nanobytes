@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_valuation_search_view_inherit_promusica" model="ir.ui.view">
+        <field name="name">stock.valuation.serach.view.inherit.promusica</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.view_inventory_valuation_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter string="Category" name="group_by_category" context="{'group_by': 'categ_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
