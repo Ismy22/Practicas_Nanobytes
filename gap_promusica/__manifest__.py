@@ -1,5 +1,5 @@
 {
-    'name': 'Gestión ITScooter',
+    'name': 'Gestión Promusica',
     'sequence': -1003,
     'summary': '',
     'description': """ Gap csv ITScooter""",
