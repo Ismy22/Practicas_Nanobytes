@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="stock_account.view_inventory_valuation_search" />
         <field name="arch" type="xml">
             <xpath expr="//group" position="inside">
-                <filter string="Category" name="group_by_category" context="{'group_by': 'categ_id'}"/>
+                <filter name="category_id" string="Product Category" context="{'group_by': 'product_id.categ_id'}"/>
             </xpath>
         </field>
     </record>
