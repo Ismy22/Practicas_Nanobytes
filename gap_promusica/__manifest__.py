@@ -2,7 +2,7 @@
     'name': 'Gestión Promusica',
     'sequence': -1003,
     'summary': '',
-    'description': """ Gap csv ITScooter""",
+    'description': """ Gap Promusica""",
     'depends': ['stock'],
     'data': [
         'views/inherit_product_form.xml',
