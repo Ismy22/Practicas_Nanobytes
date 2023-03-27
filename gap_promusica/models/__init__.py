@@ -1,2 +1,1 @@
-from . import inherit_product
-
+from . import inherit_wizard_stock
