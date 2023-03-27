@@ -1,9 +1,6 @@
 from odoo import models, fields
-       
-class StockReturnPicking(models.TransientModel):
-    _inherit = "stock.return.picking"
 
-
-
-
-
+class StockValuationLayer(models.Model):
+    _inherit = 'stock.valuation.layer'
+    
+    category_id = fields.Many2one('product.category', string="Category")
