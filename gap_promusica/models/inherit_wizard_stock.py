@@ -1,6 +1,4 @@
-from odoo import models, fields, api
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import models, fields
        
 class ReturnPicking(models.Model):
     _inherit = "stock.return.picking"
