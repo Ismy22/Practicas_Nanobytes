@@ -4,9 +4,7 @@
     'summary': '',
     'description': """ Gap Promusica""",
     'depends': ['stock'],
-    'data': [
-        'views/inherit_stock_valuation_layer.xml',
-    ],
+    'data': [],
     'auto_install': False,
     'application': True
 }

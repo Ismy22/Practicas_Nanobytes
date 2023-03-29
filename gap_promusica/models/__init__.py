@@ -1,1 +1,1 @@
-
+import inherit_wizard_stock
