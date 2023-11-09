@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <!-- Cause Exemption -->
+    <record id="sii_cause_exemption_01" model="sii.cause.exemption">
+        <field name="code">E1</field>
+        <field name="name">Exenta por el artículo 20</field>
+    </record>
+    <record id="sii_cause_exemption_02" model="sii.cause.exemption">
+        <field name="code">E2</field>
+        <field name="name">Exenta por el artículo 21</field>
+    </record>
+    <record id="sii_cause_exemption_03" model="sii.cause.exemption">
+        <field name="code">E3</field>
+        <field name="name">Exenta por el artículo 22</field>
+    </record>
+    <record id="sii_cause_exemption_04" model="sii.cause.exemption">
+        <field name="code">E4</field>
+        <field name="name">Exenta por el artículo 23 y 24</field>
+    </record>
+    <record id="sii_cause_exemption_05" model="sii.cause.exemption">
+        <field name="code">E5</field>
+        <field name="name">Exenta por el artículo 25</field>
+    </record>
+        <record id="sii_cause_exemption_06" model="sii.cause.exemption">
+        <field name="code">E6</field>
+        <field name="name">Exenta por otros</field>
+    </record>
+
+    <!-- Invoice Types -->
+    <record id="sii_invoice_type_f1" model="sii.invoice.type">
+        <field name="code">F1</field>
+        <field name="name">Factura en la que se identifica al destinatario (art. 6, 7.2 y 7.3 del RD 1619/2012)</field>
+        <field name="type">invoice</field>
+        <field name="default" eval="True" />
+    </record>
+    <record id="sii_invoice_type_f2" model="sii.invoice.type">
+        <field name="code">F2</field>
+        <field name="name">Factura sin identificación del destinatario (art. 7.1 y 6.1.d del RD 1619/2012)</field>
+        <field name="type">invoice</field>
+    </record>
+    <record id="sii_invoice_type_f3" model="sii.invoice.type">
+        <field name="code">F3</field>
+        <field name="name">Factura sustitutiva sin una anotación negativa que anule las facturas simplificadas a las que sustituye</field>
+        <field name="type">invoice</field>
+    </record>
+    <record id="sii_invoice_type_f4" model="sii.invoice.type">
+        <field name="code">F4</field>
+        <field name="name">Asiento resumen de facturas</field>
+        <field name="type">invoice</field>
+    </record>
+    <record id="sii_invoice_type_f5" model="sii.invoice.type">
+        <field name="code">F5</field>
+        <field name="name">Importaciones (DUA)</field>
+        <field name="type">invoice</field>
+    </record>
+    <record id="sii_invoice_type_f6" model="sii.invoice.type">
+        <field name="code">F6</field>
+        <field name="name">Justificantes contables (art. 2.4 del RD 1619/2012)</field>
+        <field name="type">invoice</field>
+    </record>
+    <record id="sii_invoice_type_r1" model="sii.invoice.type">
+        <field name="code">R1</field>
+        <field name="name">Factura Rectificativa (Error fundado en derecho y art. 80.1, 80.2 y 80.6 LIVA)</field>
+        <field name="type">refund</field>
+    </record>
+    <record id="sii_invoice_type_r2" model="sii.invoice.type">
+        <field name="code">R2</field>
+        <field name="name">Factura Rectificativa (art. 80.3, por concurso de acreedores)</field>
+        <field name="type">refund</field>
+    </record>
+    <record id="sii_invoice_type_r3" model="sii.invoice.type">
+        <field name="code">R3</field>
+        <field name="name">Factura Rectificativa (art. 80.4, por crédito incobrable)</field>
+        <field name="type">refund</field>
+    </record>
+    <record id="sii_invoice_type_r4" model="sii.invoice.type">
+        <field name="code">R4</field>
+        <field name="name">Factura Rectificativa (Resto)</field>
+        <field name="type">refund</field>
+        <field name="default" eval="True" />
+    </record>
+    <record id="sii_invoice_type_r5" model="sii.invoice.type">
+        <field name="code">R5</field>
+        <field name="name">Factura Rectificativa en facturas simplificadas y facturas sin identificación del destinatario</field>
+        <field name="type">refund</field>
+    </record>
+    <record id="sii_invoice_type_sf" model="sii.invoice.type">
+        <field name="code">SF</field>
+        <field name="name">Asiento sin obligación de emitir factura</field>
+        <field name="type">other</field>
+    </record>
+    <record id="sii_invoice_type_dv" model="sii.invoice.type">
+        <field name="code">DV</field>
+        <field name="name">Asiento por Devolución en Régimen de Viajeros o su modificación</field>
+        <field name="type">other</field>
+    </record>
+    <record id="sii_invoice_type_aj" model="sii.invoice.type">
+        <field name="code">AJ</field>
+        <field name="name">Asiento para realizar los ajustes periódicos que reflejen el correspondiente impuesto devengado incluido en la liquidación del impuesto</field>
+        <field name="type">other</field>
+    </record>
+    <record id="sii_invoice_type_lc" model="sii.invoice.type">
+        <field name="code">LC</field>
+        <field name="name">Aduanas - Liquidación complementaria</field>
+        <field name="type">other</field>
+    </record>    
+
+    <!-- Operation Types -->
+    <record id="sii_operation_type_s1" model="sii.operation.type">
+        <field name="code">S1</field>
+        <field name="name">Operación Sujeta y No exenta - Sin inversión del sujeto pasivo</field>
+    </record>
+    <record id="sii_operation_type_s2" model="sii.operation.type">
+        <field name="code">S2</field>
+        <field name="name">Operación Sujeta y No exenta - Con inversión del sujeto pasivo</field>
+    </record>
+    <record id="sii_operation_type_n1" model="sii.operation.type">
+        <field name="code">N1</field>
+        <field name="name">Operación No Sujeta artículo 7.14, otros.</field>
+    </record>
+    <record id="sii_operation_type_n2" model="sii.operation.type">
+        <field name="code">N2</field>
+        <field name="name">Operación No Sujeta por Reglas de localización</field>
+    </record>
+    <record id="sii_operation_type_ex" model="sii.operation.type">
+        <field name="code">EX</field>
+        <field name="name">Operación Exenta</field>
+    </record>
+
+    <!-- Property Situations -->
+    <record id="sii_property_situation_01" model="sii.property.situation">
+        <field name="code">1</field>
+        <field name="name">Inmueble con referencia catastral situado en cualquier punto del territorio español, con excepción de la Comunidad Autónoma del País Vasco y Comunidad Foral de Navarra</field>
+    </record>
+    <record id="sii_property_situation_02" model="sii.property.situation">
+        <field name="code">2</field>
+        <field name="name">Inmueble con referencia catastral situado en la Comunidad Autónoma del País Vasco</field>
+    </record>
+    <record id="sii_property_situation_03" model="sii.property.situation">
+        <field name="code">3</field>
+        <field name="name">Inmueble con referencia catastral situado en la Comunidad Foral de Navarra</field>
+    </record>
+    <record id="sii_property_situation_04" model="sii.property.situation">
+        <field name="code">4</field>
+        <field name="name">Inmueble situado en cualquier punto del territorio español, pero sin tener asignada referencia catastral</field>
+    </record>
+    <record id="sii_property_situation_05" model="sii.property.situation">
+        <field name="code">5</field>
+        <field name="name">Inmueble situado en el extranjero</field>
+    </record>
+
+    <!-- Registration Keys -->
+    <record id="sii_reg_key_01" model="sii.reg.key">
+        <field name="code">01</field>
+        <field name="name">Operación de régimen general</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_02" model="sii.reg.key">
+        <field name="code">02</field>
+        <field name="name">Exportación</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_03" model="sii.reg.key">
+        <field name="code">03</field>
+        <field name="name">Operaciones a las que se aplique el régimen especial de bienes usados, objetos de arte, antigüedades y objetos de colección</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_04" model="sii.reg.key">
+        <field name="code">04</field>
+        <field name="name">Régimen especial oro de inversión</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_05" model="sii.reg.key">
+        <field name="code">05</field>
+        <field name="name">Régimen especial agencias de viajes</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_06" model="sii.reg.key">
+        <field name="code">06</field>
+        <field name="name">Régimen especial grupo de entidades en IVA (Nivel Avanzado)</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_07" model="sii.reg.key">
+        <field name="code">07</field>
+        <field name="name">Régimen especial criterio de caja</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_08" model="sii.reg.key">
+        <field name="code">08</field>
+        <field name="name">Operaciones sujetas al IPSI / IGIC (Impuesto sobre la Producción, los Servicios y la Importación / Impuesto General Indirecto Canario)</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_09" model="sii.reg.key">
+        <field name="code">09</field>
+        <field name="name">Facturación de las prestaciones de servicios de agencias de viaje que actúan como mediadoras en nombre y por cuenta ajena (D.A.4ª RD1619/2012)</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_10" model="sii.reg.key">
+        <field name="code">10</field>
+        <field name="name">Cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que realicen estas funciones de cobro</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_11" model="sii.reg.key">
+        <field name="code">11</field>
+        <field name="name">Operaciones de arrendamiento de local de negocio sujetas a retención</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_12" model="sii.reg.key">
+        <field name="code">12</field>
+        <field name="name">Operaciones de arrendamiento de local de negocio no  sujetos a retención</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_13" model="sii.reg.key">
+        <field name="code">13</field>
+        <field name="name">Operaciones de arrendamiento de local de negocio sujetas y no sujetas a retención</field>
+        <field name="type">sale</field>
+    </record> 
+    <record id="sii_reg_key_14" model="sii.reg.key">
+        <field name="code">14</field>
+        <field name="name">Factura con IVA pendiente de devengo en certificaciones de obra cuyo destinatario sea una Administración Pública</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_15" model="sii.reg.key">
+        <field name="code">15</field>
+        <field name="name">Factura con IVA pendiente de devengo en operaciones de tracto sucesivo</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_16" model="sii.reg.key">
+        <field name="code">16</field>
+        <field name="name">Primer semestre 2017</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_17" model="sii.reg.key">
+        <field name="code">17</field>
+        <field name="name">Operación acogida a alguno de los regímenes previstos en el Capítulo XI del Título IX (OSS e IOSS)</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_18" model="sii.reg.key">
+        <field name="code">18</field>
+        <field name="name"> Operaciones de actividades incluidas en el Régimen Especial de Recargo de Equivalencia (RERE)</field>
+        <field name="type">sale</field>
+    </record>
+    <record id="sii_reg_key_19" model="sii.reg.key">
+        <field name="code">19</field>
+        <field name="name">Operaciones de actividades incluidas en el Régimen Especial de Agricultura, Ganadería y Pesca (REAGYP)</field>
+        <field name="type">sale</field>
+    </record>
+
+
+    <record id="sii_reg_key_p01" model="sii.reg.key">
+        <field name="code">01</field>
+        <field name="name">Operación de régimen general</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p02" model="sii.reg.key">
+        <field name="code">02</field>
+        <field name="name">Operaciones por las que los empresarios satisfacen compensaciones en las adquisiciones a personas acogidas al Régimen especial de la agricultura, ganaderia y pesca</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p03" model="sii.reg.key">
+        <field name="code">03</field>
+        <field name="name">Operaciones a las que se aplique el régimen especial de bienes usados, objetos de arte, antigüedades y objetos de colección</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p04" model="sii.reg.key">
+        <field name="code">04</field>
+        <field name="name">Régimen especial oro de inversión</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p05" model="sii.reg.key">
+        <field name="code">05</field>
+        <field name="name">Régimen especial agencias de viajes</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p06" model="sii.reg.key">
+        <field name="code">06</field>
+        <field name="name">Régimen especial grupo de entidades en IVA (Nivel Avanzado)</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p07" model="sii.reg.key">
+        <field name="code">07</field>
+        <field name="name">Régimen especial criterio de caja</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p08" model="sii.reg.key">
+        <field name="code">08</field>
+        <field name="name">Operaciones sujetas al IPSI / IGIC (Impuesto sobre la Producción, los Servicios y la Importación / Impuesto General Indirecto Canario)</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p09" model="sii.reg.key">
+        <field name="code">09</field>
+        <field name="name">Adquisiciones intracomunitarias de bienes y prestaciones de servicios</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p10" model="sii.reg.key">
+        <field name="code">10</field>
+        <field name="name">Compra de agencias viajes: operaciones de mediación en nombre y por cuenta ajena en los servicios de transporte prestados al destinatario de los servicios de acuerdo con el apartado 3 de la D.A.4ª RD1619/2012</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p11" model="sii.reg.key">
+        <field name="code">11</field>
+        <field name="name">Facturación de las prestaciones de servicios de agencias de viaje que actúan como mediadoras en nombre y por cuenta ajena (D.A.4ª RD1619/2012)</field>
+        <field name="type">purchase</field>
+    </record> 
+    <record id="sii_reg_key_p12" model="sii.reg.key">
+        <field name="code">12</field>
+        <field name="name">Operaciones de arrendamiento de local de negocio</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p13" model="sii.reg.key">
+        <field name="code">13</field>
+        <field name="name">Factura correspondiente a una importación (informada sin asociar a un DUA)</field>
+        <field name="type">purchase</field>
+    </record>
+    <record id="sii_reg_key_p14" model="sii.reg.key">
+        <field name="code">14</field>
+        <field name="name">Primer semestre 2017</field>
+        <field name="type">purchase</field>
+    </record>
+
+</odoo>

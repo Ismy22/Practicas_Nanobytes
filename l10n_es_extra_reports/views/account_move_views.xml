@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_move_form_buttons_inherit" model="ir.ui.view">
+            <field name="name">account.move.form.buttons.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <button name="button_draft" position="after">
+                    <button type="object" string="Send SII" name="send_sii"
+                            attrs="{'invisible': ['|', '|', ('is_sii_active', '=', False), ('state', '!=', 'posted'), ('sii_state', 'in', ('sent', 'accepted_with_errors', 'cancelled'))]}" />
+                    <button type="object" string="Check SII" name="check_sii" 
+                            attrs="{'invisible': ['|', '|', ('is_sii_active', '=', False), ('state', '!=', 'posted'), ('sii_state', 'in', ('not_sent', 'error'))]}" />
+                    <button type="object" string="Drop SII" name="drop_sii" attrs="{'invisible': ['|', '|', ('is_sii_active', '=', False), ('sii_state', '=', 'cancelled'), '&amp;', ('state', '!=', 'cancel'), ('sii_state', '!=', 'cancelled')]}"/>
+                </button>
+                <xpath expr="//notebook" position="inside">
+                    <page name="aeat_data" string="AEAT Data">
+                        <group>
+
+                            <!-- COMMUNITY
+                            <group string="Reports">
+                                <field name="l10n_es_reports_mod347_available" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="l10n_es_reports_mod347_invoice_type" attrs="{'readonly':[('state', '!=', 'draft')], 'invisible':[('l10n_es_reports_mod347_available', '=', False)]}"/>
+                                <field name="l10n_es_reports_mod349_available" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="l10n_es_reports_mod349_invoice_type" attrs="{'readonly':[('state', '!=', 'draft')], 'invisible':[('l10n_es_reports_mod349_available', '=', False)]}"/>
+                                <field name="activity" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            </group>
+                            --> 
+                            <group string="Identifications">
+                                <field name="sii_key_invoice_type" invisible="1"/>
+                                <field name="l10n_es_reports_operation_date" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="sii_reg_key_id" domain="[('type', '=', sii_key_invoice_type)]" options="{'no_create': 'True', 'no_create_edit': 'True', 'no_open': 'True'}" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="is_auto_identify" />
+                                <field name="sii_invoice_type_id" options="{'no_create': 'True', 'no_create_edit': 'True', 'no_open': 'True'}" attrs="{'readonly':['|', ('state', '!=', 'draft'), ('is_auto_identify', '=', True)]}"/>
+                                <field name="is_dua" attrs="{'readonly':['|', ('state', '!=', 'draft'), ('is_auto_identify', '=', True)]}" />
+                                <field name="later_deductible" attrs="{'invisible': [('move_type', 'not in', ('in_refund', 'in_invoice'))]}"/>
+                                <field name="later_deductible_date" attrs="{'invisible': [('later_deductible', '=', False)]}"/>
+                                <field name="sii_rectificative_type" attrs="{'readonly':[('state', '!=', 'draft')], 'invisible': [('move_type', 'not in', ('in_refund', 'out_refund'))]}"/>
+                            </group>
+                            <group string="Properties">
+                                <field name="property_situations_id" options="{'no_create': 'True', 'no_create_edit': 'True', 'no_open': 'True'}" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="cadastral_reference" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='aeat_data']" position="after">
+                    <page name="aeat_sii" string="SII" attrs="{'invisible': [('is_sii_active', '=', False)]}">
+                        <group>
+                            <group string="SII Information">
+                                <field name="is_sii_active" invisible="1"/>
+                                <field name="is_sii_available"/>
+                                <field name="sii_state" />
+                                <field name="sii_description" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="sii_reconcile_state" />
+                                <field name="sii_first_invoice" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group string="SII RECC Information">
+                                <field name="sii_recc_sent"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="SII Result Information">
+                                <field name="sii_csv" attrs="{'readonly':[('state', '!=', 'draft')]}" />
+                                <field name="sii_error_message"/>
+                            </group>
+                            <group string="SII Result RECC Information">
+                                <field name="sii_recc_csv" attrs="{'readonly':[('state', '!=', 'draft')]}" />
+                                <field name="sii_recc_send_error"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="sii_results" string="SII Result">
+                                <field name="sii_result_ids" readonly="1"/>
+                            </page>
+                            <page name="sii_check_results" string="SII Verification">
+                                <field name="sii_check_result_ids" readonly="1"/>
+                            </page>
+                            <page name="sii_recc_results" string="SII RECC Result">
+                                <field name="sii_recc_result_ids" readonly="1"/>
+                            </page>
+                            <page name="jobs" string="Queue Jobs">
+                                <field name="move_jobs_ids" readonly="1">
+                                    <tree>
+                                        <field name="date_created"/>
+                                        <field name="date_done"/>
+                                        <field name="state"/>
+                                        <button type="object" name="requeue" string="Requeue" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'failed')]}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_account_invoice_sii_filter" model="ir.ui.view">
+            <field name="name">account.invoice.select.sii</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter" />
+            <field name="arch" type="xml">
+                <filter name="late" position="after">
+                    <separator />
+                    <group name="sii_sent">
+                        <filter name="sii_not_sent" string="SII Not send" domain="[('sii_state','=','not_sent')]" />
+                        <filter name="sii_sent" string="SII Sent" domain="[('sii_state','=','sent')]" />
+                        <filter name="sii_accepted_with_errors" string="SII Accepted with errors" domain="[('sii_state','=','accepted_with_errors')]" />
+                        <filter name="sii_error" string="SII Failed" domain="[('sii_state','=','error')]" />
+                        <filter name="sii_cancelled" string="SII Cancelled" domain="[('sii_state','=','cancelled')]" />
+                        <filter name="sii_sent_modified" string="SII To resend" domain="[('sii_state','in',('sent_modified', 'cancelled_modified'))]" />
+                    </group>
+                    <group name="sii_mapped">
+                        <filter name="sii_mapped" string="SII mapped" domain="[('is_sii_available','=',True)]" />
+                        <filter name="sii_not_mapped" string="SII not mapped" domain="[('is_sii_available','=',False)]" />
+                    </group>
+                </filter>
+            </field>
+        </record>
+
+        <!-- COMMUNITY
+        <record id="account_move_form_inherit" model="ir.ui.view">
+            <field name="name">account.move.form.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="l10n_es_reports.invoice_form_inherit" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='aeat_data']" position="replace">
+                </xpath>
+            </field>
+        </record>
+        -->
+        
+        <record id="action_display_data_invoices" model="ir.actions.server">
+            <field name="name">Display data to sent to SII</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="account.model_account_move" />
+            <field name="binding_model_id" ref="model_account_move" />
+            <field name="code">
+if len(records) > 1:
+    raise UserError(records._display_multiple_invoices_error())
+raise UserError(str(record._get_invoices()))
+            </field>
+        </record>
+
+        <record id="action_recompute_map" model="ir.actions.server">
+            <field name="name">Check if mapped to SII</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="account.model_account_move" />
+            <field name="binding_model_id" ref="model_account_move" />
+            <field name="code">
+if records:
+    action = records._is_sii_available()
+            </field>
+        </record>
+
+        <record id="action_send_sii_invoices" model="ir.actions.server">
+            <field name="name">Send invoices to SII</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="account.model_account_move" />
+            <field name="binding_model_id" ref="model_account_move" />
+            <field name="code">
+if records:
+    action = records.send_sii()
+            </field>
+        </record>
+
+        <record id="action_check_sii_invoices" model="ir.actions.server">
+            <field name="name">Check invoices on SII</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="account.model_account_move" />
+            <field name="binding_model_id" ref="model_account_move" />
+            <field name="code">
+if records:
+    action = records.check_sii()
+            </field>
+        </record>
+
+    </data>
+</odoo>

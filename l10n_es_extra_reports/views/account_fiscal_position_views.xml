@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_position_form" model="ir.ui.view">
+            <field name="name">account.fiscal.position.form</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page name="sii" string="SII" attrs="{'invisible': [('is_sii_active', '=', False)]}">
+                        <group>
+                            <group>
+                                <field name="is_sii_active" invisible="1" />
+                                <field name="sii_reg_key_sale_id" />
+                                <field name="sii_reg_key_purchase_id" />
+                                <field name="sii_exempt_cause_id" />
+                            </group>
+                            <group>
+                                <field name="sii_partner_id_type" />
+                                <field name="is_dua" />
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</odoo>

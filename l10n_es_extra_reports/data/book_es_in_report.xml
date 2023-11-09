@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="book_es_in_report_main_table_header">
+            <thead class="o_account_reports_header_hierarchy">
+
+                <!-- Since Odoo doesnt allow multi columns levels we try to add our custom levels -->
+                <t t-set="optional_headers" t-value="[
+                    {
+                        'name': 'Autoliquidación',
+                        'expression_label': 'col2_liquidation',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{
+                        'name': 'Actividad',
+                        'expression_label': 'col3_activity',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{},{},{},{},{},{
+                        'name': 'Identificación Factura del Expedidor',
+                        'expression_label': 'col2_identification',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{},{},{},{
+                        'name': 'NIF Expedidor',
+                        'expression_label': 'col3_vat_destination',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{},{},{},{},{},{
+                        'name': 'Periodo Deducción',
+                        'expression_label': 'col2_deductible_period',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{},{},{},{},{},{},{},{
+                        'name': 'Pago (Operación Criterio de Caja de IVA y/o artículo 7.2.1º de Reglamento del IRPF)',
+                        'expression_label': 'col4_recieve',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{},{},{},{
+                        'name': 'Inmueble',
+                        'expression_label': 'col2_property',
+                        'figure_type': none,
+                        'sortable': False,
+                    },{}
+                ]" />
+
+                <t t-call="l10n_es_extra_reports.book_es_report_main_header" />
+            
+            </thead>
+        </template>
+
+        <!-- BOOK ES IN INVOICE REPORT -->
+        <record id="book_es_in_report" model="account.report">
+            <field name="name">In invoice book report</field>
+            <field name="country_id" ref="base.es"/>
+            <field name="filter_analytic" eval="False" />
+            <field name="filter_period_comparison" eval="False" />
+            <field name="filter_unfold_all" eval="False"/>
+            <field name="filter_show_draft" eval="False"/>
+            <field name="filter_unreconciled" eval="False"/>
+            <field name="filter_journals" eval="True"/>
+            <field name="filter_hierarchy">never</field>
+            <field name="filter_multi_company">selector</field>
+            <field name="default_opening_date_filter">last_month</field>
+            <field name="custom_handler_model_id" ref="model_l10n_es_book_es_in_report_handler" />
+            <field name="root_report_id" ref="l10n_es_extra_reports.book_es_out_report" />
+            <field name="main_table_header_template">l10n_es_extra_reports.book_es_in_report_main_table_header</field>
+            <field name="line_template">l10n_es_extra_reports.book_es_report_line_template_report</field>
+            <field name="column_ids">
+                <record id="book_es_in_exercise" model="account.report.column">
+                    <field name="name">Ejercicio</field>
+                    <field name="expression_label">exercise</field>
+                    <field name="figure_type">date</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_period" model="account.report.column">
+                    <field name="name">Periodo</field>
+                    <field name="expression_label">period</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_code" model="account.report.column">
+                    <field name="name">Código</field>
+                    <field name="expression_label">code</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_type" model="account.report.column">
+                    <field name="name">Tipo</field>
+                    <field name="expression_label">type</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_group" model="account.report.column">
+                    <field name="name">Grupo o Epígrafe del IAE</field>
+                    <field name="expression_label">group</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_invoice_type" model="account.report.column">
+                    <field name="name">Tipo de Factura</field>
+                    <field name="expression_label">invoice_type</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_concept" model="account.report.column">
+                    <field name="name">Concepto de Gasto</field>
+                    <field name="expression_label">concept</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_compute_deductible" model="account.report.column">
+                    <field name="name">Ingreso Deducible</field>
+                    <field name="expression_label">compute_deductible</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_expedition_date" model="account.report.column">
+                    <field name="name">Fecha Expedición</field>
+                    <field name="expression_label">expedition_date</field>
+                    <field name="figure_type">date</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_operation_date" model="account.report.column">
+                    <field name="name">Fecha Operación</field>
+                    <field name="expression_label">operation_date</field>
+                    <field name="figure_type">date</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_serie" model="account.report.column">
+                    <field name="name">(Serie-Número)</field>
+                    <field name="expression_label">serie</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_final_number" model="account.report.column">
+                    <field name="name">Número-Final</field>
+                    <field name="expression_label">final_number</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_reception_date" model="account.report.column">
+                    <field name="name">Fecha Recepción</field>
+                    <field name="expression_label">reception_date</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_reception_number" model="account.report.column">
+                    <field name="name">Número Recepción</field>
+                    <field name="expression_label">reception_number</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_reception_final_number" model="account.report.column">
+                    <field name="name">Número Recepción Final</field>
+                    <field name="expression_label">reception_final_number</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_type_identification" model="account.report.column">
+                    <field name="name">Tipo</field>
+                    <field name="expression_label">type_identification</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_country_code" model="account.report.column">
+                    <field name="name">Código País</field>
+                    <field name="expression_label">country_code</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_identification" model="account.report.column">
+                    <field name="name">Identificación</field>
+                    <field name="expression_label">identification</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_expedition_name" model="account.report.column">
+                    <field name="name">Nombre expedidor</field>
+                    <field name="expression_label">expedition_name</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_operation_key" model="account.report.column">
+                    <field name="name">Clave de Operación</field>
+                    <field name="expression_label">operation_key</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_investment_goods" model="account.report.column">
+                    <field name="name">Bien de Inversión</field>
+                    <field name="expression_label">investment_goods</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_invest_passive_subject" model="account.report.column">
+                    <field name="name">Inversión del Sujeto Pasivo</field>
+                    <field name="expression_label">invest_passive_subject</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_later_deductible" model="account.report.column">
+                    <field name="name">Deducible en Periodo Posterior</field>
+                    <field name="expression_label">later_deductible</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_deductible_exercise" model="account.report.column">
+                    <field name="name">Ejercicio</field>
+                    <field name="expression_label">deductible_exercise</field>
+                    <field name="figure_type">date</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_deductible_period" model="account.report.column">
+                    <field name="name">Periodo</field>
+                    <field name="expression_label">deductible_period</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_total_invoice" model="account.report.column">
+                    <field name="name">Total Factura</field>
+                    <field name="expression_label">total_invoice</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>               
+                <record id="book_es_in_amount_base" model="account.report.column">
+                    <field name="name">Base Imponible</field>
+                    <field name="expression_label">amount_base</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_tax_type" model="account.report.column">
+                    <field name="name">Tipo de IVA</field>
+                    <field name="expression_label">tax_type</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_supported_vat" model="account.report.column">
+                    <field name="name">Cuota IVA Soportado</field>
+                    <field name="expression_label">supported_vat</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_deductible_vat" model="account.report.column">
+                    <field name="name">Cuota Deducible</field>
+                    <field name="expression_label">deductible_vat</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_recharge_type" model="account.report.column">
+                    <field name="name">Tipo de Recargo Eq.</field>
+                    <field name="expression_label">recharge_type</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_recharged_vat" model="account.report.column">
+                    <field name="name">Cuota Recargo Eq.</field>
+                    <field name="expression_label">recharged_vat</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_recieve_date" model="account.report.column">
+                    <field name="name">Fecha</field>
+                    <field name="expression_label">recieve_date</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_recieve_amount" model="account.report.column">
+                    <field name="name">Importe</field>
+                    <field name="expression_label">recieve_amount</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="True"/>
+                </record>
+                <record id="book_es_in_recieve_method_used" model="account.report.column">
+                    <field name="name">Medio Utilizado</field>
+                    <field name="expression_label">recieve_method_used</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_recieve_id_method_used" model="account.report.column">
+                    <field name="name">Identificación Medio Utilizado</field>
+                    <field name="expression_label">recieve_id_method_used</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_irpf_income_tax_type" model="account.report.column">
+                    <field name="name">Tipo Retención del IRPF</field>
+                    <field name="expression_label">irpf_income_tax_type</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_irpf_income_tax_amount" model="account.report.column">
+                    <field name="name">Importe Retenido del IRPF</field>
+                    <field name="expression_label">irpf_income_tax_amount</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_billing_agreement_registration" model="account.report.column">
+                    <field name="name">Registro Acuerdo Facturación</field>
+                    <field name="expression_label">billing_agreement_registration</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_property_situation" model="account.report.column">
+                    <field name="name">Situación</field>
+                    <field name="expression_label">property_situation</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_property_cadastral_reference" model="account.report.column">
+                    <field name="name">Referencia Catastral</field>
+                    <field name="expression_label">property_cadastral_reference</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+                <record id="book_es_in_external_reference" model="account.report.column">
+                    <field name="name">Referencia Externa</field>
+                    <field name="expression_label">external_reference</field>
+                    <field name="figure_type">none</field>
+                    <field name="sortable" eval="False"/>
+                </record>
+            </field>
+        </record>
+
+        <record id="action_account_report_beir" model="ir.actions.client">
+            <field name="name">In invoice book report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('l10n_es_extra_reports.book_es_in_report')}"/>
+        </record>
+
+    </data>
+</odoo>

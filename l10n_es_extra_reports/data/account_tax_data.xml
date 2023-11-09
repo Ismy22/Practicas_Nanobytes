@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mod_390_21" model="account.account.tag">
+        <field name="name">mod390[21]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_22" model="account.account.tag">
+        <field name="name">mod390[22]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_23" model="account.account.tag">
+        <field name="name">mod390[23]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_24" model="account.account.tag">
+        <field name="name">mod390[24]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_25" model="account.account.tag">
+        <field name="name">mod390[25]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_26" model="account.account.tag">
+        <field name="name">mod390[26]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_545" model="account.account.tag">
+        <field name="name">mod390[545]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_546" model="account.account.tag">
+        <field name="name">mod390[546]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_547" model="account.account.tag">
+        <field name="name">mod390[547]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_548" model="account.account.tag">
+        <field name="name">mod390[548]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_551" model="account.account.tag">
+        <field name="name">mod390[551]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_552" model="account.account.tag">
+        <field name="name">mod390[552]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_190" model="account.account.tag">
+        <field name="name">mod390[190]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_191" model="account.account.tag">
+        <field name="name">mod390[191]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_603" model="account.account.tag">
+        <field name="name">mod390[603]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_604" model="account.account.tag">
+        <field name="name">mod390[604]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_605" model="account.account.tag">
+        <field name="name">mod390[605]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_606" model="account.account.tag">
+        <field name="name">mod390[606]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_196" model="account.account.tag">
+        <field name="name">mod390[196]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_197" model="account.account.tag">
+        <field name="name">mod390[197]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_611" model="account.account.tag">
+        <field name="name">mod390[611]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_612" model="account.account.tag">
+        <field name="name">mod390[612]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_613" model="account.account.tag">
+        <field name="name">mod390[613]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_614" model="account.account.tag">
+        <field name="name">mod390[614]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_202" model="account.account.tag">
+        <field name="name">mod390[202]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_203" model="account.account.tag">
+        <field name="name">mod390[203]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_619" model="account.account.tag">
+        <field name="name">mod390[619]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_620" model="account.account.tag">
+        <field name="name">mod390[620]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_621" model="account.account.tag">
+        <field name="name">mod390[621]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_622" model="account.account.tag">
+        <field name="name">mod390[622]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_208" model="account.account.tag">
+        <field name="name">mod390[208]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_209" model="account.account.tag">
+        <field name="name">mod390[209]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_623" model="account.account.tag">
+        <field name="name">mod390[623]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_624" model="account.account.tag">
+        <field name="name">mod390[624]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_625" model="account.account.tag">
+        <field name="name">mod390[625]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_626" model="account.account.tag">
+        <field name="name">mod390[626]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_214" model="account.account.tag">
+        <field name="name">mod390[214]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_215" model="account.account.tag">
+        <field name="name">mod390[215]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_627" model="account.account.tag">
+        <field name="name">mod390[627]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_628" model="account.account.tag">
+        <field name="name">mod390[628]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_629" model="account.account.tag">
+        <field name="name">mod390[629]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_630" model="account.account.tag">
+        <field name="name">mod390[630]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_220" model="account.account.tag">
+        <field name="name">mod390[220]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_221" model="account.account.tag">
+        <field name="name">mod390[221]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_631" model="account.account.tag">
+        <field name="name">mod390[631]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_632" model="account.account.tag">
+        <field name="name">mod390[632]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_633" model="account.account.tag">
+        <field name="name">mod390[633]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_634" model="account.account.tag">
+        <field name="name">mod390[634]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_587" model="account.account.tag">
+        <field name="name">mod390[587]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_588" model="account.account.tag">
+        <field name="name">mod390[588]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_635" model="account.account.tag">
+        <field name="name">mod390[635]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_636" model="account.account.tag">
+        <field name="name">mod390[636]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_637" model="account.account.tag">
+        <field name="name">mod390[637]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+    <record id="mod_390_638" model="account.account.tag">
+        <field name="name">mod390[638]</field>
+        <field name="applicability">taxes</field>
+        <field name="country_id" ref="base.es"/>
+    </record>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bc'), ref('l10n_es.account_tax_template_p_iva4_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_21'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bc'), ref('l10n_es.account_tax_template_p_iva4_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_22'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bc'), ref('l10n_es.account_tax_template_p_iva10_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_23'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bc'), ref('l10n_es.account_tax_template_p_iva10_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_24'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bc'), ref('l10n_es.account_tax_template_p_iva21_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_25'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bc'), ref('l10n_es.account_tax_template_p_iva21_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_26'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_545'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_546'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_547'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_548'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_551'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', -100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_552'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_bc'), ref('l10n_es.account_tax_template_p_iva4_sc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_190'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_bc'), ref('l10n_es.account_tax_template_p_iva4_sc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_191'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sc'), ref('l10n_es.account_tax_template_p_iva10_bc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_603'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sc'), ref('l10n_es.account_tax_template_p_iva10_bc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_604'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_bc'), ref('l10n_es.account_tax_template_p_iva21_sc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_605'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_bc'), ref('l10n_es.account_tax_template_p_iva21_sc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_606'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_196'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_bi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_197'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_611'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_bi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_612'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_613'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_bi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_614'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ibc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_202'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ibc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_203'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ibc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_619'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ibc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_620'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ibc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_621'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ibc')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_622'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ibi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_208'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ibi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_209'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ibi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_623'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ibi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_624'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ibi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_625'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ibi')]), ('repartition_type', '=', 'tax')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_626'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_214'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bc')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_215'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_627'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bc')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_628'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bc')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_629'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bc')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_630'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_220'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_221'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_631'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_632'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bi')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_633'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_ic_bi')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_634'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_587'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva4_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_588'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_635'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva10_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_636'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_sp_in')]), ('repartition_type', '=', 'base')]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_637'))]}"/>
+</function>
+
+<function name="write" model="account.tax.repartition.line.template">
+    <function name="search" model="account.tax.repartition.line.template">
+        <value eval="[('invoice_tax_id', 'in', [ref('l10n_es.account_tax_template_p_iva21_sp_in')]), ('repartition_type', '=', 'tax'), ('factor_percent', '=', 100)]"/>
+    </function>
+    <value eval="{'tag_ids': [(4, ref('mod_390_638'))]}"/>
+</function>
+
+    <record id="tax_group_dua_exent" model="account.tax.group">
+        <field name="name">DUA exento</field>
+    </record>
+
+    <record id="account_tax_template_p_dua0" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_es.account_chart_template_common" />
+        <field name="description">DUA exento</field>
+        <field name="name">DUA Exento</field>
+        <field eval="0.00" name="amount" />
+        <field name="amount_type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="tax_group_dua_exent" />
+        <field
+            name="invoice_repartition_line_ids"
+            eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+            }),
+
+        ]"
+        />
+        <field
+            name="refund_repartition_line_ids"
+            eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+            }),
+        ]"
+        />
+    </record>
+
+</odoo>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="mod_190_main_template" inherit_id="account_reports.main_template" primary="True">
+        <xpath expr="//table" position="attributes">
+            <attribute name="class">o_account_reports_table table-striped table-hover table-bold-unfold</attribute>
+        </xpath>
+    </template>
+
+    <template id="mod_190_cell_template">
+        <table style="width:100%;">
+            <tr>
+                <td t-att-style="'padding-right:0; padding-top:0; padding-bottom:0; ' + (style or cell.get('expression_label', '') in ('vat', 'state') and 'text-align: left;' or 'text-align:right;')" t-att-class="classes">
+                    <t t-if="cell.get('auditable')">
+                        <a
+                            tabindex="-1"
+                            action="action_audit_cell"
+                            title="Audit"
+                            t-att-data-report_line_id="cell['report_line_id']"
+                            t-att-data-calling_line_dict_id="calling_line_dict_id"
+                            t-att-data-column_group_key="cell['column_group_key']"
+                            t-att-data-expression_label="cell['expression_label']"
+                            t-out="cell.get('name')"
+                        />
+                    </t>
+                    <t t-else="">
+                        <span class="o_account_report_column_value" t-out="cell.get('name')"/>
+                    </t>
+                </td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="mod_190_main_table_header">
+        <thead class="o_account_reports_header_hierarchy">
+            <t t-foreach="enumerate([{'style': 'width: 10%'}] + options['columns'])" t-as="index_cell">
+                <t t-set="index" t-value="index_cell[0]"/> <!--So, indexing of options['columns'] starts here at one, which is consistent with options['order_column']-->
+                <t t-set="cell" t-value="index_cell[1]"/>
+
+                <t t-set="sortable_column_classes" t-value="'' if not cell.get('sortable') else 'sortable %s' % ('' if not options['order_column'] or abs(options['order_column']) != index else options['order_column'] > 0 and ' up' or ' down')"/>
+                <th t-att-class="'o_account_report_column_header ' + sortable_column_classes"
+                    colspan="cell.get('colspan', 1)"
+                    t-att-style="cell.get('style', 'text-align: right;')">
+                    <t t-call="{{cell.get('template', 'l10n_es_extra_reports.mod_190_cell_template')}}"/>
+                </th>
+            </t>
+
+            <th t-if="options['show_debug_column']" class="o_account_report_column_header" style="width: 1%; text-align: right;">
+                <!--Empty, just so that we don't have a "gap" in the header beneath the debug label.-->
+            </th>
+        </thead>
+    </template>
+
+    <record id="mod_190" model="account.report">
+        <field name="name">Tax Report (Mod 190)</field>
+        <field name="filter_analytic" eval="False" />
+        <field name="filter_date_range" eval="True" />
+        <field name="filter_period_comparison" eval="False" />
+        <field name="filter_unfold_all" eval="False"/>
+        <field name="filter_show_draft" eval="False"/>
+        <field name="filter_unreconciled" eval="False"/>
+        <field name="filter_journals" eval="True"/>
+        <field name="filter_hierarchy">never</field>
+        <field name="country_id" ref="base.es"/>
+        <field name="filter_multi_company">selector</field>
+        <field name="root_report_id" ref="account.generic_tax_report"/>
+        <field name="custom_handler_model_id" ref="model_l10n_es_mod190_tax_report_handler"/>
+        <field name="main_template">l10n_es_extra_reports.mod_190_main_template</field>
+        <field name="main_table_header_template">l10n_es_extra_reports.mod_190_main_table_header</field>
+        <field name="column_ids">
+            <record id="mod_190_exercise" model="account.report.column">
+                <field name="name">Exercise</field>
+                <field name="expression_label">exercise</field>
+                <field name="figure_type">date</field>
+                <field name="sortable" eval="True"/>
+            </record>
+            <record id="mod_190_key" model="account.report.column">
+                <field name="name">Key</field>
+                <field name="expression_label">key</field>
+                <field name="figure_type">none</field>
+                <field name="sortable" eval="True"/>
+            </record>
+            <record id="mod_190_vat" model="account.report.column">
+                <field name="name">VAT</field>
+                <field name="expression_label">vat</field>
+                <field name="figure_type">none</field>
+                <field name="sortable" eval="False" />
+            </record>
+            <record id="mod_190_state" model="account.report.column">
+                <field name="name">State</field>
+                <field name="expression_label">state</field>
+                <field name="figure_type">none</field>
+                <field name="sortable" eval="False"/>
+            </record>
+            <record id="mod_190_comprehensive_perception" model="account.report.column">
+                <field name="name">Comprehensive monetary perception</field>
+                <field name="expression_label">comprehensive_perception</field>
+                <field name="sortable" eval="True"/>
+            </record>
+            <record id="mod_190_percent" model="account.report.column">
+                <field name="name">Percent</field>
+                <field name="expression_label">percent</field>
+                <field name="sortable" eval="True"/>
+            </record>
+            <record id="mod_190_widthholding" model="account.report.column">
+                <field name="name">Withholdings made</field>
+                <field name="expression_label">withholding</field>
+                <field name="sortable" eval="True"/>
+            </record>
+        </field>
+        <field name="line_ids">
+        </field>
+    </record>
+</odoo>

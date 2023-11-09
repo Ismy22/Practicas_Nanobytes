@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- SII -->
+        <menuitem id="menu_l10n_es_config" 
+            parent="account.menu_finance_configuration"
+            sequence="35" 
+            groups="account.group_account_manager" 
+            name="AT" />
+
+        <menuitem id="menu_sii_certificate" 
+            parent="menu_l10n_es_config" 
+            action="l10n_es_extra_reports.action_sii_certificate" 
+            name="SII Certificates" />
+
+        <menuitem id="menu_sii_agency" 
+            parent="menu_l10n_es_config" 
+            action="l10n_es_extra_reports.action_sii_agency" 
+            name="Agency" />
+
+        <menuitem id="menu_sii_map" 
+            parent="menu_l10n_es_config" 
+            action="l10n_es_extra_reports.action_sii_map" 
+            name="Map" />
+
+        <menuitem id="menu_sii_operation_type"
+            parent="menu_l10n_es_config"
+            action="l10n_es_extra_reports.action_sii_operation_type"
+            name="Operation Types" />
+        <menuitem id="menu_sii_cause_exemption"
+            parent="menu_l10n_es_config"
+            action="l10n_es_extra_reports.action_sii_cause_exemption"
+            name="Cause Exemption" />
+        <menuitem id="menu_sii_mapping_registration_keys"
+            parent="menu_l10n_es_config"
+            action="l10n_es_extra_reports.action_sii_reg_key"
+            name="Registration Keys" />
+        <menuitem id="menu_sii_invoice_type"
+            parent="menu_l10n_es_config"
+            action="l10n_es_extra_reports.action_sii_invoice_type"
+            name="Invoice Types" />
+        <menuitem id="menu_sii_property_situation"
+            parent="menu_l10n_es_config"
+            action="l10n_es_extra_reports.action_sii_property_situation"
+            name="Property Situations" />
+
+    </data>
+</odoo>

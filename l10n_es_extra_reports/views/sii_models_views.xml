@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Agency Views -->
+        <record id="sii_agency_view_tree" model="ir.ui.view">
+            <field name="name">sii.agency.view.tree</field>
+            <field name="model">sii.agency</field>
+            <field name="arch" type="xml">
+                <tree string="Agency">
+                    <field name="name"/>
+                    <field name="date_from" />
+                    <field name="date_to" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sii_agency_view_form" model="ir.ui.view">
+            <field name="name">sii.agency.view.form</field>
+            <field name="model">sii.agency</field>
+            <field name="arch" type="xml">
+                <form string="Agency">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                            <group>
+                                <field name="version" />
+                                <field name="date_from" />
+                                <field name="date_to" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="wsdl_url" string="WSDL">
+                                <field name="wsdl_url" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_agency">
+            <field name="name">Agency</field>
+            <field name="res_model">sii.agency</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="sii_wsdl_view_tree" model="ir.ui.view">
+            <field name="name">sii.wsdl.view.tree</field>
+            <field name="model">sii.wsdl</field>
+            <field name="arch" type="xml">
+                <tree string="WSDL" editable="bottom">
+                    <field name="name" />
+                    <field name="key" />
+                    <field name="wsdl" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Certificates Views -->
+        <record id="sii_certificate_form_view" model="ir.ui.view">
+            <field name="name">sii.certificate.form</field>
+            <field name="model">sii.certificate</field>
+            <field name="arch" type="xml">
+                <form string="SII Certificate">
+                    <header>
+                        <button name="action_password_wizard" class="btn btn-primary" type="object" string="Process certificate" attrs="{'invisible': [('state', '!=', 'draft')]}" />
+                        <button name="action_active" type="object" class="btn btn-primary" string="Active this certificate" attrs="{'invisible': [('state', '!=', 'decrypted')]}" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,active" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1 class="d-flex">
+                                <field name="name" readonly="1" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="file"/>
+                                <field name="folder"/>
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="date_start" readonly="1" />
+                                <field name="date_end" readonly="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="technical_information" string="Technical Information">
+                                <group>
+                                    <group>
+                                        <field name="public_key" />
+                                    </group>
+                                    <group>
+                                        <field name="private_key" />
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                 </form>
+            </field>
+        </record>
+
+        <record id="sii_certificate_tree_view" model="ir.ui.view">
+            <field name="name">sii.certificate.tree</field>
+            <field name="model">sii.certificate</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="company_id" groups="base.group_multi_company" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="state" />
+                 </tree>
+            </field>
+        </record>
+
+        <record id="action_sii_certificate" model="ir.actions.act_window">
+            <field name="name">SII Certificates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sii.certificate</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Cause Exemption -->
+        <!-- Tree view -->
+        <record id="sii_cause_exemption_view_tree" model="ir.ui.view">
+            <field name="name">sii.cause.exemption.view.tree</field>
+            <field name="model">sii.cause.exemption</field>
+            <field name="arch" type="xml">
+                <tree string="Cause Exemption" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search view -->
+        <record id="sii_cause_exemption_view_search" model="ir.ui.view">
+            <field name="name">sii.cause.exemption.view.search</field>
+            <field name="model">sii.cause.exemption</field>
+            <field name="arch" type="xml">
+                <search string="Cause Exemption">
+                    <field name="name" />
+                    <field name="code" />
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_cause_exemption">
+            <field name="name">Cause Exemption</field>
+            <field name="res_model">sii.cause.exemption</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Invoice Types -->
+        <!-- Tree view -->
+        <record id="sii_invoice_type_view_tree" model="ir.ui.view">
+            <field name="name">sii.invoice.type.view.tree</field>
+            <field name="model">sii.invoice.type</field>
+            <field name="arch" type="xml">
+                <tree string="Invoice Type" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="default"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search view -->
+        <record id="sii_invoice_type_view_search" model="ir.ui.view">
+            <field name="name">sii.invoice.type.view.search</field>
+            <field name="model">sii.invoice.type</field>
+            <field name="arch" type="xml">
+                <search string="Invoice Type">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="type"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Type" name="type" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_invoice_type">
+            <field name="name">Invoice Type</field>
+            <field name="res_model">sii.invoice.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Operation Types -->
+        <!-- Tree view -->
+        <record id="sii_operation_type_view_tree" model="ir.ui.view">
+            <field name="name">sii.operation.type.view.tree</field>
+            <field name="model">sii.operation.type</field>
+            <field name="arch" type="xml">
+                <tree string="Operation Type" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search view -->
+        <record id="sii_operation_type_view_search" model="ir.ui.view">
+            <field name="name">sii.operation.type.view.search</field>
+            <field name="model">sii.operation.type</field>
+            <field name="arch" type="xml">
+                <search string="Operation Type">
+                    <field name="name" />
+                    <field name="code" />
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_operation_type">
+            <field name="name">Operation Type</field>
+            <field name="res_model">sii.operation.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Property Situations -->
+        <!-- Tree view -->
+        <record id="sii_property_situations_view_tree" model="ir.ui.view">
+            <field name="name">sii.property.situation.view.tree</field>
+            <field name="model">sii.property.situation</field>
+            <field name="arch" type="xml">
+                <tree string="Property Situation" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search view -->
+        <record id="sii_property_situations_view_search" model="ir.ui.view">
+            <field name="name">sii.property.situation.view.search</field>
+            <field name="model">sii.property.situation</field>
+            <field name="arch" type="xml">
+                <search string="Property Situation">
+                    <field name="name" />
+                    <field name="code" />
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_property_situation">
+            <field name="name">Property Situation</field>
+            <field name="res_model">sii.property.situation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Registration Keys -->
+        <!-- Tree view -->
+        <record id="sii_reg_key_view_tree" model="ir.ui.view">
+            <field name="name">sii.reg.key.view.tree</field>
+            <field name="model">sii.reg.key</field>
+            <field name="arch" type="xml">
+                <tree string="Registration Key" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search view -->
+        <record id="sii_reg_key_view_search" model="ir.ui.view">
+            <field name="name">sii.reg.key.view.search</field>
+            <field name="model">sii.reg.key</field>
+            <field name="arch" type="xml">
+                <search string="Registration Key">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="type"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Type" name="type" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_reg_key">
+            <field name="name">Registration Key</field>
+            <field name="res_model">sii.reg.key</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Map Views -->
+        <record id="sii_map_view_tree" model="ir.ui.view">
+            <field name="name">sii.map.view.tree</field>
+            <field name="model">sii.map</field>
+            <field name="arch" type="xml">
+                <tree string="Map">
+                    <field name="name"/>
+                    <field name="date_from" />
+                    <field name="date_to" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sii_map_view_form" model="ir.ui.view">
+            <field name="name">sii.map.view.form</field>
+            <field name="model">sii.map</field>
+            <field name="arch" type="xml">
+                <form string="Map">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                            <group>
+                                <field name="version" />
+                                <field name="date_from" />
+                                <field name="date_to" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="out_line_maps" string="Out invoice map">
+                                <field name="out_map_line_ids">
+                                    <tree string="Map Lines" editable="bottom">
+                                        <field name="code" />
+                                        <field name="name" />
+                                        <field name="taxes" widget="many2many_tags" />
+                                        <field name="operation_type_id" options="{'no_create': 'True', 'no_create_edit': 'True', 'no_open': 'True'}" />
+                                        <field name="cause_exemption_id" options="{'no_create': 'True', 'no_create_edit': 'True', 'no_open': 'True'}" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="in_line_maps" string="In invoice map">
+                                <field name="in_map_line_ids" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sii_map">
+            <field name="name">Map</field>
+            <field name="res_model">sii.map</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <record id="sii_map_line_view_tree" model="ir.ui.view">
+            <field name="name">sii.map.line.view.tree</field>
+            <field name="model">sii.map.line</field>
+            <field name="arch" type="xml">
+                <tree string="Map Line" editable="bottom">
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="taxes" widget="many2many_tags" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Result Views -->
+        <record id="sii_result_view_tree" model="ir.ui.view">
+            <field name="name">sii.result.view.tree</field>
+            <field name="model">sii.result</field>
+            <field name="arch" type="xml">
+                <tree string="SII Result">
+                    <field name="sii_csv" />
+                    <field name="sii_presented_datetime" />
+                    <field name="sii_sent_state" />
+                    <field name="sii_invoice_number" />
+                    <field name="sii_invoice_date" />
+                    <field name="sii_registry_error_description" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sii_result_view_form" model="ir.ui.view">
+            <field name="name">sii.result.view.form</field>
+            <field name="model">sii.result</field>
+            <field name="arch" type="xml">
+                <form string="SII Result">
+                    <group>
+                        <group string="Result">
+                            <field name="sii_csv"/>
+                            <field name="sii_sent_state"/>
+                            <separator string="Presentation Data" colspan="4"/>
+                            <field name="sii_presented_vat"/>
+                            <field name="sii_presented_datetime"/>
+                        </group>
+                        <group string="Header">
+                            <field name="sii_version"/>
+                            <field name="sii_communication_type"/>
+                            <separator string="Owner" colspan="4"/>
+                            <field name="sii_name"/>
+                            <field name="sii_represented_vat"/>
+                            <field name="sii_vat"/>
+                        </group>
+                    </group>
+                    <group string="Line reply">
+                        <group>
+                            <field name="sii_registry_state"/>
+                            <field name="sii_registry_csv"/>
+                        </group>
+                        <group>
+                            <field name="sii_registry_error_code"/>
+                            <field name="sii_registry_error_description"/>
+                        </group>
+                        <group colspan="4" string="Invoice information">
+                            <group>
+                                <field name="sii_sender_vat"/>
+                                <field name="sii_sender_country_code"/>
+                                <field name="sii_sender_type_id"/>
+                                <field name="sii_sender_number_id"/>
+                            </group>
+                            <group>
+                                <field name="sii_invoice_number"/>
+                                <field name="sii_invoice_number_resume"/>
+                                <field name="sii_invoice_date"/>
+                            </group>
+                        </group>
+                        <group colspan="4" string="Duplicate registry information">
+                            <field name="sii_duplicate_registry_state"/>
+                            <field name="sii_duplicate_registry_error_code"/>
+                            <field name="sii_duplicate_registry_error_des"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Check Result -->
+        <record id="sii_check_result_view_tree" model="ir.ui.view">
+            <field name="name">sii.check.result.view.tree</field>
+            <field name="model">sii.check.result</field>
+            <field name="arch" type="xml">
+                <tree string="SII Check Result">
+                    <field name="sii_csv" />
+                    <field name="sii_check_date" />
+                    <field name="sii_sent_state" />
+                    <field name="sii_lastime_modified" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="sii_check_result_view_form" model="ir.ui.view">
+            <field name="name">sii.check.result.view.form</field>
+            <field name="model">sii.check.result</field>
+            <field name="arch" type="xml">
+                <form string="SII Check Result">
+                    <group>
+                        <group string="Result">
+                            <field name="sii_query_result"/>
+                            <field name="sii_check_date"/>
+                            <field name="sii_csv"/>
+                            <field name="sii_sent_state"/>
+                            <separator string="Presentation Data" colspan="4"/>
+                            <field name="sii_presented_vat"/>
+                            <field name="sii_presented_datetime"/>
+                            <field name="sii_lastime_modified"/>
+                        </group>
+                        <group string="Reconcile">
+                            <field name="sii_reconcile_state"/>
+                            <field name="sii_reconcile_datetime"/>
+                            <field name="sii_reconcile_description"/>
+                        </group>
+                    </group>
+                    <group string="Invoice information">
+                        <group>
+                            <field name="sii_sender_vat"/>
+                            <field name="sii_sender_other_id"/>
+                            <field name="sii_invoice_number"/>
+                            <field name="sii_invoice_date"/>
+                        </group>
+                        <group>
+                            <field name="sii_invoice_type"/>
+                            <field name="sii_rectificative_type"/>
+                            <field name="sii_registration_key_id"/>
+                            <field name="sii_amount_total"/>
+                            <field name="sii_description"/>
+                        </group>
+                        <group string="Partner information">
+                            <field name="sii_name"/>
+                            <field name="sii_partner_vat"/>
+                            <field name="sii_partner_other_id"/>
+                        </group>
+                    </group>
+                    <group string="Error">
+                        <field name="sii_error_code"/>
+                        <field name="sii_description_error"/>
+                        <field name="sii_registry_error_description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

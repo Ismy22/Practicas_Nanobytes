@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="nmod_303_casilla_76" model="account.report.line">
+            <field name="name">[76] Regularización cuotas art. 80. Cinco.5ª LIVA</field>
+            <field name="code">aeat_nmod_303_76</field>
+            <field name="parent_id" ref="l10n_es_reports.mod_303_title_18"/>
+            <field name="expression_ids">
+                <record id="nmod_303_casilla_76_balance" model="account.report.expression">
+                    <field name="label">balance</field>
+                    <field name="engine">external</field>
+                    <field name="formula">sum</field>
+                    <field name="subformula">editable;rounding=2</field>
+                </record>
+            </field>
+        </record>
+        <record id="nmod_303_casilla_64" model="account.report.line">
+            <field name="name">[64] Suma de resultados</field>
+            <field name="code">aeat_nmod_303_64</field>
+            <field name="parent_id" ref="l10n_es_reports.mod_303_title_18" />
+            <field name="aggregation_formula">aeat_mod_303_46.balance + aeat_nmod_303_76.balance</field>
+        </record>
+
+        <record id="l10n_es_reports.mod_303_casilla_66" model="account.report.line">
+            <field name="name">[66] Atribuible a la Administración del Estado</field>
+            <field name="code">aeat_mod_303_66</field>
+            <!--<field name="aggregation_formula">aeat_mod_303_65.balance/100 * aeat_mod_303_46.balance</field>-->
+            <field name="aggregation_formula">aeat_mod_303_65.balance * aeat_nmod_303_64.balance / 100</field>
+        </record>
+
+    </data>
+</odoo>

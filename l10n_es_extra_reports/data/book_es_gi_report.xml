@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- BOOK ES GOOD INVESTMENT REPORT -->
+        <record id="book_es_gi_report" model="account.report">
+            <field name="name">Good Investment book report</field>
+            <field name="country_id" ref="base.es"/>
+            <field name="filter_analytic" eval="False" />
+            <field name="filter_period_comparison" eval="False" />
+            <field name="filter_unfold_all" eval="False"/>
+            <field name="filter_show_draft" eval="False"/>
+            <field name="filter_unreconciled" eval="False"/>
+            <field name="filter_journals" eval="True"/>
+            <field name="filter_hierarchy">never</field>
+            <field name="filter_multi_company">selector</field>
+            <field name="default_opening_date_filter">last_month</field>
+            <field name="root_report_id" ref="l10n_es_extra_reports.book_es_out_report" />
+            <field name="custom_handler_model_id" ref="model_l10n_es_book_es_gi_report_handler" />
+
+            <!--<field name="main_table_header_template">l10n_es_extra_reports.book_es_in_report_main_table_header</field>
+            <field name="line_template">l10n_es_extra_reports.book_es_report_line_template_report</field>-->
+
+
+            <field name="column_ids">
+
+            </field>
+
+
+        </record>
+
+        <record id="action_account_report_begir" model="ir.actions.client">
+            <field name="name">Good Investment book report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('l10n_es_extra_reports.book_es_gi_report')}"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sii_reg_key,access_sii_reg_key user,model_sii_reg_key,base.group_user,1,0,0,0
+manager_sii_reg_key,access_sii_reg_key manager,model_sii_reg_key,account.group_account_manager,1,1,1,1
+access_sii_invoice_type,access_sii_invoice_type user,model_sii_invoice_type,base.group_user,1,0,0,0
+manager_sii_invoice_type,access_sii_invoice_type manager,model_sii_invoice_type,account.group_account_manager,1,1,1,1
+access_sii_property_situation,access_sii_property_situation user,model_sii_property_situation,base.group_user,1,0,0,0
+manager_sii_property_situation,access_sii_property_situation manager,model_sii_property_situation,account.group_account_manager,1,1,1,1
+access_sii_operation_type,access_sii_operation_type user,model_sii_operation_type,base.group_user,1,0,0,0
+manager_sii_operation_type,access_sii_operation_type manager,model_sii_operation_type,account.group_account_manager,1,1,1,1
+access_sii_cause_exemption,access_sii_cause_exemption user,model_sii_cause_exemption,base.group_user,1,0,0,0
+manager_sii_cause_exemption,access_sii_cause_exemption manager,model_sii_cause_exemption,account.group_account_manager,1,1,1,1
+manager_sii_map,sii_map manager,model_sii_map,account.group_account_manager,1,1,1,1
+access_sii_map,sii_map user,model_sii_map,account.group_account_user,1,0,0,0
+manager_sii_map_line,sii_map_line manager,model_sii_map_line,account.group_account_manager,1,1,1,1
+access_sii_map_line,sii_map_line user,model_sii_map_line,account.group_account_user,1,0,0,0
+manager_sii_wsdl,sii_wsdl manager,model_sii_wsdl,account.group_account_manager,1,1,1,1
+access_sii_wsdl,sii_wsdl user,model_sii_wsdl,account.group_account_user,1,0,0,0
+manager_sii_certificate,sii_certificate manager,model_sii_certificate,account.group_account_manager,1,1,1,1
+access_sii_certificate,sii_certificate user,model_sii_certificate,account.group_account_user,1,0,0,0
+access_sii_certificate_password,access_sii_certificate_password user,model_sii_certificate_password,base.group_user,1,1,1,1
+manager_sii_agency,sii_agency manager,model_sii_agency,account.group_account_manager,1,1,1,1
+access_sii_agency,sii_agency user,model_sii_agency,account.group_account_user,1,0,0,0
+access_sii_result,sii_result user,model_sii_result,account.group_account_user,1,1,1,0
+access_sii_check_result,sii_check_result user,model_sii_check_result,account.group_account_user,1,1,1,0
+manager_sii_check_result,sii_check_result manager,model_sii_check_result,account.group_account_manager,1,1,1,1

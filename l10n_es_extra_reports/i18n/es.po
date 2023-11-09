@@ -1,0 +1,3347 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_extra_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20230913\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-21 07:30+0000\n"
+"PO-Revision-Date: 2023-09-21 12:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_serie
+msgid "(Serie-Número)"
+msgstr "(Serie-Número)"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.book_es_report_line_template_report
+msgid ""
+"<i class=\"fa fa-caret-right invisible\" role=\"img\" aria-"
+"label=\"Unfolded\" title=\"Unfolded\"/>"
+msgstr ""
+"<i class=\"fa fa-caret-right invisible\" role=\"img\" aria-"
+"label=\"Desplegado\" title=\"Desplegado\"/>"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "AEAT Data"
+msgstr "Información AT"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_journal_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "AEAT data"
+msgstr "Información AT"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_l10n_es_config
+msgid "AT"
+msgstr "AT"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__accepted_with_errors
+#, python-format
+msgid "Accepted with errors"
+msgstr "Aceptado con errores"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr "Factura rectificativa"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__is_sii_active
+#, python-format
+msgid "Activate SII"
+msgstr "Activar SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_certificate__state__active
+#, python-format
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_form_view
+msgid "Active this certificate"
+msgstr "Activar este certificado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_journal.py:0
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__activity
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_journal__activity
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__activity
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__activity
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__activity
+#, python-format
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_4
+msgid "Adquisiciones intracomunitarias de bienes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_5
+msgid "Adquisiciones intracomunitarias de servicios"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_agency
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_agency
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_agency_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__sii_agency_id
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_agency
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_agency_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_agency_view_tree
+#, python-format
+msgid "Agency"
+msgstr "Agencia"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_amount_total
+#, python-format
+msgid "Amount total"
+msgstr "Importe Total"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.book_es_report_line_template_report
+msgid "Annotate"
+msgstr "Anotaciones"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_partner__anonymous_customer
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_users__anonymous_customer
+#, python-format
+msgid "Anonymous customer"
+msgstr "Cliente anónimo"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_company__sii_send_moves_time__fixed
+#, python-format
+msgid "At fixed time"
+msgstr "A una hora determinada"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.book_es_report_cell_template
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.mod_180_cell_template
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.mod_190_cell_template
+msgid "Audit"
+msgstr "Auditar"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_390_column
+msgid "Balance"
+msgstr "Balance"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_amount_base
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_amount_base
+msgid "Base Imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_base_income
+msgid "Base withholdings and payments on account"
+msgstr "Importe retenciones y pagos a cuenta"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_investment_goods
+msgid "Bien de Inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_journal.py:0
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_journal__billing_agreement_registration
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__billing_agreement_registration
+#, python-format
+msgid "Billing Agreement Registration"
+msgstr "Registro Acuerdo Facturación"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_action_account_report_gber
+msgid "Book report"
+msgstr "Informe de libros"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_company__sii_send_moves_on__button
+#, python-format
+msgid "Button"
+msgstr "Botón"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: code:addons/l10n_es_extra_reports/wizards/account_move_reversal.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_rectificative_type__i
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move_reversal__sii_rectificative_type__i
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_rectificative_type__i
+#, python-format
+msgid "By differences"
+msgstr "Por diferencias"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: code:addons/l10n_es_extra_reports/wizards/account_move_reversal.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_rectificative_type__s
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move_reversal__sii_rectificative_type__s
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_rectificative_type__s
+#, python-format
+msgid "By substitution"
+msgstr "Por sustitución"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_csv
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_csv
+#, python-format
+msgid "CSV"
+msgstr "CSV"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__cadastral_reference
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__cadastral_reference
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__cadastral_reference
+msgid "Cadastral Reference"
+msgstr "Referencia Catastral"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_operation_clasification
+msgid "Calificación de la Operación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_password_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__cancelled
+#, python-format
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__cancelled_modified
+#, python-format
+msgid "Cancelled in SII but last modifications not sent"
+msgstr "Cancelado en SII pero las últimas modificaciones sin enviar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/product_template.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_cause_exemption
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_cause_exemption
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_product_product__cause_exemption_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_product_template__cause_exemption_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__cause_exemption_id
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_cause_exemption
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_cause_exemption_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_cause_exemption_view_tree
+#, python-format
+msgid "Cause Exemption"
+msgstr "Causa de exención"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment__method_used__02
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment_register__method_used__02
+#, python-format
+msgid "Check"
+msgstr "Consultar"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Check SII"
+msgstr "Consultar SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_check_date
+#, python-format
+msgid "Check date"
+msgstr "Fecha de consulta"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.server,name:l10n_es_extra_reports.action_recompute_map
+msgid "Check if mapped to SII"
+msgstr "Recalcular disponibilidad para SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.server,name:l10n_es_extra_reports.action_check_sii_invoices
+msgid "Check invoices on SII"
+msgstr "Consultar facturas en SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_check_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_check_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_check_result_ids
+msgid "Check results"
+msgstr "Consultar resultados"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_operation_key
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_operation_key
+msgid "Clave de Operación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__code
+#, python-format
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_communication_type
+#, python-format
+msgid "Communication Type"
+msgstr "Tipo de comunicación"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_res_company
+msgid "Companies"
+msgstr "Compañias"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__company_id
+#, python-format
+msgid "Company"
+msgstr "Compañia"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_name
+#, python-format
+msgid "Company Name"
+msgstr "Nombre de compañia"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_comprehensive_perception
+msgid "Comprehensive monetary perception"
+msgstr "Percepción monetaria global"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_concept
+msgid "Concepto de Gasto"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_concept
+msgid "Concepto de Ingreso"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_reconcile_state__5
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_reconcile_state__5
+#, python-format
+msgid "Contrasted"
+msgstr "Contrastado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_sender_country_code
+#, python-format
+msgid "Country Code"
+msgstr "Código de país"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__create_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__create_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/wizards/sii_certificate_password.py:0
+#, python-format
+msgid "Cryptography version is not supported. Upgrade to 3.0.0 or greater."
+msgstr ""
+"La versión de Cryptography no esta suportada. Actualiza a la versión 3.0.0 o "
+"superior."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_deductible_vat
+msgid "Cuota Deducible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_charged_vat
+msgid "Cuota IVA Repercutida"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_supported_vat
+msgid "Cuota IVA Soportado"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recharged_vat
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recharged_vat
+msgid "Cuota Recargo Eq."
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "Currently there's no support for multiple exempt causes."
+msgstr "Actualmente no se suporta múltiple causas de exenciones."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_code
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_code
+msgid "Código"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_country_code
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_country_code
+msgid "Código País"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:product.template,name:l10n_es_extra_reports.product_dua_compensation_product_template
+msgid "DUA Compensación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:product.template,name:l10n_es_extra_reports.product_dua_val_10_product_template
+msgid "DUA Valoración IVA 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:product.template,name:l10n_es_extra_reports.product_dua_val_21_product_template
+msgid "DUA Valoración IVA 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:product.template,name:l10n_es_extra_reports.product_dua_val_4_product_template
+msgid "DUA Valoración IVA 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.tax.group,name:l10n_es_extra_reports.tax_group_dua_exent
+msgid "DUA exento"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_invoice_date
+#, python-format
+msgid "Date Invoice"
+msgstr "Fecha de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__date_from
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__date_from
+#, python-format
+msgid "Date from"
+msgstr "Fecha desde"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__date_to
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__date_to
+#, python-format
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_certificate__state__decrypted
+#, python-format
+msgid "Decrypted"
+msgstr "Desencryptado"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_later_deductible
+msgid "Deducible en Periodo Posterior"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__default
+#, python-format
+msgid "Default"
+msgstr "Por defecto"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_description
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_description_error
+#, python-format
+msgid "Description Error"
+msgstr "Descripción de error"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "Descriptions"
+msgstr "Descripciones"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment__method_used__05
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment_register__method_used__05
+#, python-format
+msgid "Direct Debit"
+msgstr "Domiciliación bancaria"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__display_name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.server,name:l10n_es_extra_reports.action_display_data_invoices
+msgid "Display data to sent to SII"
+msgstr "Mostrar datos a enviar al SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_partner__l10n_es_reports_documentation_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_users__l10n_es_reports_documentation_type
+#, python-format
+msgid "Documentation Type"
+msgstr "Tipo de documentación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_certificate__state__draft
+#, python-format
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Drop SII"
+msgstr "Cancelar SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Duplicate registry information"
+msgstr "Información acerca de duplicidad"
+
+#. module: l10n_es_extra_reports
+#: model:res.country.group,name:l10n_es_extra_reports.eee
+msgid "EEE"
+msgstr "EEE"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_deductible_exercise
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_exercise
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_exercise
+msgid "Ejercicio"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__date_end
+#, python-format
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_sii_certificate__date_end
+#, python-format
+msgid "End date for certificate. Filled from certificate."
+msgstr ""
+"Fecha de finalización del certificado. Se rellena automáticamente desde el "
+"certificado."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__error
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_error_code
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_duplicate_registry_error_code
+#, python-format
+msgid "Error code"
+msgstr "Código de error"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_duplicate_registry_error_des
+#, python-format
+msgid "Error description"
+msgstr "Descripción de error"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#, python-format
+msgid "Error! Dates already existing in other record."
+msgstr "Incorrecto! Las fechas ya están definidas en otro registro."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_exercise
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_exercise
+msgid "Exercise"
+msgstr "Ejercicio"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_fiscal_position__sii_partner_id_type__3
+#, python-format
+msgid "Export"
+msgstr "Exportar"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recieve_date
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recieve_date
+msgid "Fecha"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_expedition_date
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_expedition_date
+msgid "Fecha Expedición"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_operation_date
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_operation_date
+msgid "Fecha Operación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_reception_date
+msgid "Fecha Recepción"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__file
+#, python-format
+msgid "File"
+msgstr "Certificado"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.book_es_report_line_template_report
+msgid "Folded"
+msgstr "Plegado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__folder
+#, python-format
+msgid "Folder Name"
+msgstr "Nombre de carpeta"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "General"
+msgstr "General"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_generic_book_es_report_handler
+msgid "Generic Book Report"
+msgstr "Informe de libro genérico"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_invoice_type_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_reg_key_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_group
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_group
+msgid "Grupo o Epígrafe del IAE"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Header"
+msgstr "Cabecera"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_delay_time
+#, python-format
+msgid "How much delay?"
+msgstr "¿Cuánto retraso?"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_2
+msgid "IVA Devengado"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_12
+msgid "IVA deducible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_21
+msgid "IVA deducible en adquisiciones intracomunitarias de bienes corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_23
+msgid "IVA deducible en adquisiciones intracomunitarias de bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_25
+msgid "IVA deducible en adquisiciones intracomunitarias de servicios"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_17
+msgid "IVA deducible en importaciones de bienes corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_19
+msgid "IVA deducible en importaciones de bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_15
+msgid "IVA deducible en operaciones interiores de bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_13
+msgid ""
+"IVA deducible en operaciones interiores de bienes y servicios corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_identification
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_identification
+msgid "Identificación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recieve_id_method_used
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recieve_id_method_used
+msgid "Identificación Medio Utilizado"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Identifications"
+msgstr "Identificaciones"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_res_company__use_queue
+#, python-format
+msgid "If check it use queue_job module"
+msgstr "Si esta activado utiliza el módulo de cola de trabajo"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_res_company__is_sii_description_automatic
+#, python-format
+msgid ""
+"If description automatic is checked then description of invoice will be "
+"filled automatically with the description of lines"
+msgstr ""
+"Si la descripción automática esta activada entonces la descripción de la "
+"factura hacia el SII será rellenada automáticamente con la descripción de "
+"las lineas."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recieve_amount
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recieve_amount
+msgid "Importe"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_irpf_income_tax_amount
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_irpf_income_tax_amount
+msgid "Importe Retenido del IRPF"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__in_map_id
+#, python-format
+msgid "In Invoice Map"
+msgstr "Mapeado de facturas recibidas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_reconcile_state__2
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_reconcile_state__2
+#, python-format
+msgid "In contrast process"
+msgstr "En proceso de contrastado"
+
+#. module: l10n_es_extra_reports
+#: model:account.report,name:l10n_es_extra_reports.book_es_in_report
+#: model:ir.actions.client,name:l10n_es_extra_reports.action_account_report_beir
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_book_es_gi_report_handler
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_book_es_in_report_handler
+msgid "In invoice book report"
+msgstr "Informe de libro de facturas recibidas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__in_map_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_view_form
+#, python-format
+msgid "In invoice map"
+msgstr "Mapeado de facturas recibidas"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_compute_income
+msgid "Ingreso Computable"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_compute_deductible
+msgid "Ingreso Deducible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_password_view
+#, python-format
+msgid "Insert Certificate Password"
+msgstr "Introducir la contraseña del certificado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_fiscal_position__sii_partner_id_type__2
+#, python-format
+msgid "Intracom"
+msgstr "Intracomunitario"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_invest_passive_subject
+msgid "Inversión del Sujeto Pasivo"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_invoice_type__type__invoice
+#, python-format
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.client,name:l10n_es_extra_reports.action_account_report_beor
+msgid "Invoice Book Report"
+msgstr "Informe de libro de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_invoice_type
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_invoice_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_invoice_type_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_invoice_type_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_invoice_type_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_invoice_type_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_invoice_type_view_tree
+#, python-format
+msgid "Invoice Type"
+msgstr "Tipo de factura"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__sii_invoice_type_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__sii_invoice_type_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__sii_invoice_type_id
+msgid "Invoice Type used for registry book or SII"
+msgstr "Tipo de factura utilizado para el informe de libros o SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_invoice_type
+msgid "Invoice Types"
+msgstr "Tipos de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_invoice_date
+#, python-format
+msgid "Invoice date"
+msgstr "Fecha de factura"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Invoice information"
+msgstr "Información de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_invoice_number
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_invoice_number
+#, python-format
+msgid "Invoice number"
+msgstr "Número de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_invoice_number_resume
+#, python-format
+msgid "Invoice number end resume"
+msgstr "Número de factura fin de resumen"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_invoice_type
+#, python-format
+msgid "Invoice type"
+msgstr "Tipo de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__is_dua
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__is_dua
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position_template__is_dua
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__is_dua
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__is_dua
+#, python-format
+msgid "Is DUA?"
+msgstr "Es DUA?"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__is_sii_active
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__is_sii_active
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__is_sii_active
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__is_sii_active
+#, python-format
+msgid "Is SII active?"
+msgstr "Esta el SII activo?"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__is_sii_description_automatic
+#, python-format
+msgid "Is SII description automatic?"
+msgstr "Generar descripción automática?"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__is_sii_test
+#, python-format
+msgid "Is SII for test?"
+msgstr "Activar el entorno de pruebas?"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__is_auto_identify
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__is_auto_identify
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__is_auto_identify
+#, python-format
+msgid "Is auto identify?"
+msgstr "Identificar automaticamente?"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__is_sii_available
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__is_sii_available
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__is_sii_available
+msgid "Is available for SII?"
+msgstr "Se puede subir al SII?"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment__method_used__03
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment_register__method_used__03
+#, python-format
+msgid "Is not recived/paid"
+msgstr "No esta recibido/pagado"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_key
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_key
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__key
+#, python-format
+msgid "Key"
+msgstr "Clave"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_key_invoice_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_key_invoice_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_key_invoice_type
+msgid "Key Invoice Type"
+msgstr "Clave de tipo de factura"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result____last_update
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl____last_update
+msgid "Last Modified on"
+msgstr "Última vez modificado en"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_lastime_modified
+#, python-format
+msgid "Last Time Updated"
+msgstr "Última vez actualizado"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__write_uid
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__write_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__later_deductible
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__later_deductible
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__later_deductible
+msgid "Later Deductible"
+msgstr "Deducible más tarde"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__later_deductible_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__later_deductible_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__later_deductible_date
+msgid "Later Deductible Date"
+msgstr "Fecha deducible posterior"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Line reply"
+msgstr "Información acerca del envío"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_map
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_map
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_map
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_view_tree
+#, python-format
+msgid "Map"
+msgstr "Mapeado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_map_line
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_line_view_tree
+#, python-format
+msgid "Map Line"
+msgstr "Mapeado de linea"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_view_form
+msgid "Map Lines"
+msgstr "Mapeado de lineas"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recieve_method_used
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recieve_method_used
+msgid "Medio Utilizado"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: code:addons/l10n_es_extra_reports/wizards/account_payment_register.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__method_used
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment_register__method_used
+#, python-format
+msgid "Method Used"
+msgstr "Método utilizado"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_7
+msgid "Modificación de bases y cuotas"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_10
+msgid "Modificación recargo equivalencia"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_move_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_move_id
+#, python-format
+msgid "Move"
+msgstr "Factura"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__move_jobs_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__move_jobs_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__move_jobs_ids
+msgid "Move Jobs"
+msgstr "Trabajos de factura"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_recc_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_recc_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_recc_result_ids
+msgid "Move RECC results"
+msgstr "Respuestas de RECC"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_result_ids
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_result_ids
+msgid "Move results"
+msgstr "Respuestas de factura"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__02
+#, python-format
+msgid "NIF/IVA"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_cause_exemption__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_operation_type__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_property_situation__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__name
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_sii_certificate__name
+#, python-format
+msgid "Name of certificate. Filled from certificate"
+msgstr ""
+"Nombre del certificado. Se rellena de forma automática desde el certificado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_fiscal_position__sii_partner_id_type__1
+#, python-format
+msgid "National"
+msgstr "Nacional"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "No VAT configured for the company '{}'"
+msgstr "No se ha configurado ningún NIF/CIF para la compañía '{}'"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_destination_name
+msgid "Nombre destinatario"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_expedition_name
+msgid "Nombre expedidor"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_result__sii_type__normal
+msgid "Normal"
+msgstr "Normal"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_reconcile_state__3
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_reconcile_state__3
+#, python-format
+msgid "Not contrasted"
+msgstr "No contrastada"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__07
+#, python-format
+msgid "Not registered"
+msgstr "No registrada"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__not_sent
+#, python-format
+msgid "Not sent"
+msgstr "No enviada"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_reconcile_state__1
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_reconcile_state__1
+#, python-format
+msgid "Not verifiable"
+msgstr "No verificada"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_sender_number_id
+#, python-format
+msgid "Number ID"
+msgstr "Número de ID"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_number
+msgid "Número"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_reception_number
+msgid "Número Recepción"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_reception_final_number
+msgid "Número Recepción Final"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_final_number
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_final_number
+msgid "Número-Final"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__04
+#, python-format
+msgid "Official identification issued by the country or territory of residence"
+msgstr ""
+"Documento oficial de identificación expedido por el país o territorio de "
+"residencia"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_company__sii_send_moves_time__auto
+#, python-format
+msgid "On validate"
+msgstr "Al validar"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_exent_operation
+msgid "Operación exenta"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__l10n_es_reports_operation_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__l10n_es_reports_operation_date
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__l10n_es_reports_operation_date
+msgid "Operation Date"
+msgstr "Fecha de operación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/product_template.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_operation_type
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_operation_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_product_product__operation_type_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_product_template__operation_type_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__operation_type_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_operation_type_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_operation_type_view_tree
+#, python-format
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_operation_type
+msgid "Operation Types"
+msgstr "Tipos de operación"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__l10n_es_reports_operation_date
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__l10n_es_reports_operation_date
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__l10n_es_reports_operation_date
+msgid "Operation date used for registry book"
+msgstr "Fecha de operación utilizado para el libro de registro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_invoice_type__type__other
+#, python-format
+msgid "Other"
+msgstr "Otro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__06
+#, python-format
+msgid "Other document"
+msgstr "Otro documento"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment__method_used__04
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment_register__method_used__04
+#, python-format
+msgid "Other payment method"
+msgstr "Otro tipo de pago"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_6
+msgid "Otros supuestos de inversión de sujeto pasivo"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__out_map_id
+#, python-format
+msgid "Out Invoice Map"
+msgstr "Mapeado de facturas emitidas"
+
+#. module: l10n_es_extra_reports
+#: model:account.report,name:l10n_es_extra_reports.book_es_out_report
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_book_es_out_report_handler
+msgid "Out invoice book report"
+msgstr "Informe de libro de facturas emitidas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__out_map_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_map_view_form
+#, python-format
+msgid "Out invoice map"
+msgstr "Mapeado de facturas emitidas"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Owner"
+msgstr "Propietario"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_reconcile_state__4
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_reconcile_state__4
+#, python-format
+msgid "Partially contrasted"
+msgstr "Parcialmente contrastada"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_partner_other_id
+#, python-format
+msgid "Partner Other ID"
+msgstr "Otro ID de cliente"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_partner_vat
+#, python-format
+msgid "Partner VAT"
+msgstr "NIF/CIF de cliente"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+msgid "Partner information"
+msgstr "Información de cliente"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__03
+#, python-format
+msgid "Passport"
+msgstr "Pasaporte"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/wizards/sii_certificate_password.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate_password__password
+#, python-format
+msgid "Password of certificate"
+msgstr "Contraseña del certificado"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_percent
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_percent
+msgid "Percent"
+msgstr "Porcentaje"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_deductible_period
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_period
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_period
+msgid "Periodo"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Presentation Data"
+msgstr "Datos de presentación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_presented_datetime
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_presented_datetime
+#, python-format
+msgid "Presented Datetime"
+msgstr "Fecha de presentación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_presented_vat
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_presented_vat
+#, python-format
+msgid "Presented VAT"
+msgstr "NIF/CIF del presentador"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__private_key
+#, python-format
+msgid "Private Key"
+msgstr "Clave privada"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_password_view
+msgid "Process certificate"
+msgstr "Procesar certificado"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Properties"
+msgstr "Propiedades"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_property_situation
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_property_situation
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__property_situations_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__property_situations_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__property_situations_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_property_situations_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_property_situations_view_tree
+#, python-format
+msgid "Property Situation"
+msgstr "Situación inmobiliaria"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_property_situation
+msgid "Property Situations"
+msgstr "Situaciones inmobiliarias"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__property_situations_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__property_situations_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__property_situations_id
+msgid "Property Situations used for registry book"
+msgstr "Situaciones inmobiliarias utilizados para el libro de registro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__public_key
+#, python-format
+msgid "Public Key"
+msgstr "Clave pública"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_reg_key__type__purchase
+#, python-format
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_query_result
+#, python-format
+msgid "Query Result"
+msgstr "Resultado de consulta"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Queue Jobs"
+msgstr "Cola de trabajos"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_result__sii_type__recc
+msgid "RECC"
+msgstr "RECC"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_9
+msgid "Recargo de equivalencia"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+msgid "Reconcile"
+msgstr "Reconciliar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_reconcile_datetime
+#, python-format
+msgid "Reconcile Datetime"
+msgstr "Fecha de reconciliación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_reconcile_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_reconcile_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_reconcile_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_reconcile_state
+#, python-format
+msgid "Reconcile State"
+msgstr "Estado de reconciliación"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_reconcile_description
+#, python-format
+msgid "Reconcile description"
+msgstr "Descripción de reconciliación"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_27
+msgid "Rectificación de deducciones"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: code:addons/l10n_es_extra_reports/wizards/account_move_reversal.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_rectificative_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_rectificative_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move_reversal__sii_rectificative_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_rectificative_type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_rectificative_type
+#, python-format
+msgid "Rectificative Type"
+msgstr "Tipo de rectificativa"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_property_cadastral_reference
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_property_cadastral_reference
+msgid "Referencia Catastral"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_external_reference
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_external_reference
+msgid "Referencia Externa"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_invoice_type__type__refund
+#, python-format
+msgid "Refund"
+msgstr "Reembolso"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_payment_register
+msgid "Register Payment"
+msgstr "Registrar pago"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__sent_modified
+#, python-format
+msgid "Registered in SII but last modifications not sent"
+msgstr "Registrado en SII pero últimas modificaciones no enviadas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_reg_key
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_reg_key
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_reg_key_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_reg_key_view_tree
+#, python-format
+msgid "Registration Key"
+msgstr "Clave de registro"
+
+#. module: l10n_es_extra_reports
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_mapping_registration_keys
+msgid "Registration Keys"
+msgstr "Claves de registro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_reg_key_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_reg_key_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_reg_key_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_registration_key_id
+#, python-format
+msgid "Registration key"
+msgstr "Clave de registro"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__sii_reg_key_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__sii_reg_key_id
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__sii_reg_key_id
+msgid "Registration key used for registry book or SII"
+msgstr "Clave de registro utilizado para el informe de libros o SII"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_billing_agreement_registration
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_billing_agreement_registration
+msgid "Registro Acuerdo Facturación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_registry_csv
+#, python-format
+msgid "Registry CSV"
+msgstr "CSV del registro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_registry_error_code
+#, python-format
+msgid "Registry Error Code"
+msgstr "Código de error del registro"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_registry_error_description
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_registry_error_description
+#, python-format
+msgid "Registry Error Description"
+msgstr "Descripción del error"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_registry_state
+#, python-format
+msgid "Registry State"
+msgstr "Estado del registro"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Reports"
+msgstr "Informes"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_represented_vat
+#, python-format
+msgid "Represented VAT"
+msgstr "NIF/CIF del representante"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Requeue"
+msgstr "Re-encolar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_partner__l10n_es_reports_documentation_type__05
+#, python-format
+msgid "Residence certificate"
+msgstr "Certificado de residencia"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+msgid "Result"
+msgstr "Respuesta"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_29
+msgid "Resultado régimen general"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_sii_certificate__folder
+#, python-format
+msgid "Route to the folder where to save the certificate."
+msgstr "Enrutar hacia la carpeta donde almacenar el certificado."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_1
+msgid "Régimen General"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_3
+msgid "Régimen ordinario"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.product_template_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_position_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "SII"
+msgstr "SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII Accepted with errors"
+msgstr "Aceptado con errores en SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_activity_type_id
+#, python-format
+msgid "SII Activity Type"
+msgstr "Tipo de actividad del aviso"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_activity_user_id
+#, python-format
+msgid "SII Activity User"
+msgstr "Usuario para la actividad del aviso"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_csv
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_csv
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_csv
+msgid "SII CSV"
+msgstr "CSV del SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII Cancelled"
+msgstr "Cancelado en SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_certificate
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_form_view
+#, python-format
+msgid "SII Certificate"
+msgstr "Certificado del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/wizards/sii_certificate_password.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_certificate_password
+#, python-format
+msgid "SII Certificate Password"
+msgstr "Contraseña del certificado del SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.act_window,name:l10n_es_extra_reports.action_sii_certificate
+#: model:ir.ui.menu,name:l10n_es_extra_reports.menu_sii_certificate
+msgid "SII Certificates"
+msgstr "Certificados del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_check_result
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_check_result_view_tree
+#, python-format
+msgid "SII Check Result"
+msgstr "Respuestas de consultas del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_description
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_description
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_description
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_description
+#, python-format
+msgid "SII Description"
+msgstr "Descripción para el SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_error_message
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_error_message
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_error_message
+msgid "SII Error"
+msgstr "Error del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__sii_exempt_cause_id
+#, python-format
+msgid "SII Exempt Cause"
+msgstr "Causa de exención"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII Failed"
+msgstr "Fallido en SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_first_invoice
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_first_invoice
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_first_invoice
+msgid "SII First Invoice"
+msgstr "Primera factura"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII Information"
+msgstr "Información del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#, python-format
+msgid "SII Invoice Canceled. Create a new invoice"
+msgstr "Factura cancelada en SII. Crea una nueva factura"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII Not send"
+msgstr "No enviado al SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_recc_csv
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_recc_csv
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_recc_csv
+msgid "SII Payment RECC CSV"
+msgstr "CSV del pago RECC"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_recc_send_error
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_recc_send_error
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_recc_send_error
+msgid "SII Payment RECC Send Error"
+msgstr "Error de envio del pago RECC"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_recc_sent
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_recc_sent
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_recc_sent
+msgid "SII Payment RECC Sent"
+msgstr "Pago RECC enviado al SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_description_purchase
+#, python-format
+msgid "SII Purchase Description"
+msgstr "Descripción de facturas recibidas para el SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII RECC Information"
+msgstr "Información de RECC del SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII RECC Result"
+msgstr "Respuesta de RECC"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__sii_reg_key_purchase_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position_template__sii_reg_key_purchase_id
+#, python-format
+msgid "SII Registration Key for Purchases"
+msgstr "Código de registro para facturas recibidas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__sii_reg_key_sale_id
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position_template__sii_reg_key_sale_id
+#, python-format
+msgid "SII Registration Key for Sales"
+msgstr "Código de registro para facturas emitidas"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_result
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_result_view_tree
+#, python-format
+msgid "SII Result"
+msgstr "Respuesta del SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII Result Information"
+msgstr "Información de respuesta del SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII Result RECC Information"
+msgstr "Información de respuesta RECC del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_description_sale
+#, python-format
+msgid "SII Sale Description"
+msgstr "Descripción de facturas emitidas para el SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII Sent"
+msgstr "Enviado al SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_bank_statement_line__sii_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_move__sii_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_payment__sii_state
+msgid "SII State"
+msgstr "Estado del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_journal.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_journal__sii_summary_invoice
+#, python-format
+msgid "SII Summary Invoice"
+msgstr "Factura de asiento resumen en SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII To resend"
+msgstr "Reenviar al SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "SII Verification"
+msgstr "Verificación del SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII mapped"
+msgstr "Disponible para el SII"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_account_invoice_sii_filter
+msgid "SII not mapped"
+msgstr "No disponible para el SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_fiscal_position.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_account_fiscal_position__sii_partner_id_type
+#, python-format
+msgid "SII partner Id Type"
+msgstr "Tipo de Id. de cliente"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_reg_key__type__sale
+#, python-format
+msgid "Sale"
+msgstr "Venta"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.account_move_form_buttons_inherit
+msgid "Send SII"
+msgstr "Enviar al SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_send_moves_on
+#, python-format
+msgid "Send SII Invoice On"
+msgstr "Enviar al SII a través de"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_send_moves_time
+#, python-format
+msgid "Send SII Invoice Time"
+msgstr "Tiempo de envió al SII"
+
+#. module: l10n_es_extra_reports
+#: model:ir.actions.server,name:l10n_es_extra_reports.action_send_sii_invoices
+msgid "Send invoices to SII"
+msgstr "Enviar facturas al SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_sender_other_id
+#, python-format
+msgid "Sender Other ID"
+msgstr "Otro Id. del emisor"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_sender_vat
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_sender_vat
+#, python-format
+msgid "Sender VAT"
+msgstr "NIF/CIF del emisor"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_move__sii_state__sent
+#, python-format
+msgid "Sent"
+msgstr "Enviado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_sent_state
+#, python-format
+msgid "Sent State"
+msgstr "Estado del envió"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_serie
+msgid "Serie"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_property_situation
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_property_situation
+msgid "Situación"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_mod390_tax_report_handler
+msgid "Spanish Tax Report Custom Handler (Mod390)"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__date_start
+#, python-format
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_sii_certificate__date_start
+#, python-format
+msgid "Start date for certificate. Filled from certificate."
+msgstr ""
+"Fecha de inicio del certificado. Se rellena de forma automática desde el "
+"certificado."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_state
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_certificate__state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_check_result__sii_sent_state
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_duplicate_registry_state
+#, python-format
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_28
+msgid "Suma de deducciones"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report,name:l10n_es_extra_reports.mod_180
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_mod180_tax_report_handler
+msgid "Tax Report (Mod 180)"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report,name:l10n_es_extra_reports.mod_190
+#: model:ir.model,name:l10n_es_extra_reports.model_l10n_es_mod190_tax_report_handler
+msgid "Tax Report (Mod 190)"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report,name:l10n_es_extra_reports.mod_390
+msgid "Tax Report (Mod 390)"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map_line__taxes
+#, python-format
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "Technical"
+msgstr "Técnico"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_certificate_form_view
+msgid "Technical Information"
+msgstr "Información técnica"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model,name:l10n_es_extra_reports.model_account_fiscal_position_template
+msgid "Template for Fiscal Position"
+msgstr "Plantilla para posición fiscal"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_journal.py:0
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_journal__billing_agreement_registration
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_res_company__billing_agreement_registration
+#, python-format
+msgid ""
+"The authorization registration number (“RGE############”) obtained at the "
+"Agency's"
+msgstr ""
+"El número de autorización de registro (“RGE############”) obtenido desde "
+"Hacienda"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "The invoice supplier number is required"
+msgstr "La referencia del proveedor de la factura es requerida."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "The partner has not a VAT configured."
+msgstr "El cliente no tiene ningún NIF/CIF establecido."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/hooks.py:0
+#, python-format
+msgid "There was an error trying to resequence mod303 ..."
+msgstr "Ha habido un error tratado de resequenciar el mod303 ..."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"This invoice is sent to SII, if you change the date you have to cancel it "
+"and drop the invoice from SII"
+msgstr ""
+"Esta factura ya ha sido enviada al SII, si cambias la fecha debes de "
+"cancelar la factura y cancelarla en el SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"This invoice is sent to SII, if you change the number you have to cancel it "
+"and drop the invoice from SII"
+msgstr ""
+"Esta factura ya ha sido enviada al SII, si cambias el número debes de "
+"cancelar la factura y cancelarla en el SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"This invoice is sent to SII, if you change the partner you have to cancel it "
+"and drop the invoice from SII"
+msgstr ""
+"Esta factura ya ha sido enviada el SII, si cambias el cliente debes de "
+"cancelar la factura y cancelarla en el SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"This invoice is sent to SII, if you change the type you have to cancel it "
+"and drop the invoice from SII"
+msgstr ""
+"Esta factura ya ha sido enviada al SII, si cambias el tipo de factura debes "
+"de cancelar la factura y cancelarla en el SII"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_type_identification
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_type_identification
+msgid "Tipo"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_irpf_income_tax_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_irpf_income_tax_type
+msgid "Tipo Retención del IRPF"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_invoice_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_invoice_type
+msgid "Tipo de Factura"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_tax_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_tax_type
+msgid "Tipo de IVA"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_recharge_type
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_recharge_type
+msgid "Tipo de Recargo Eq."
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_journal.py:0
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__activity
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_journal__activity
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__activity
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__activity
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_res_company__activity
+#, python-format
+msgid ""
+"To comply with articles 40.1, 47.2, 51 quater and 61.2 of the RIVA and "
+"article 9.4 of Order HAC/773/2019, the activity to which the entry "
+"corresponds will be distinguished. Used from move > journal > company. "
+"Example: A036533"
+msgstr ""
+"Para cumplir con los artículos 40.1, 47.2, 51 quáter y 61.2 del RIVA y el "
+"artículo 9.4 de la Orden HAC/773/2019, se distinguirá la actividad a la que "
+"corresponda la inscripción. Usado desde factura > diario > compañía. "
+"Ejemplo: A036533"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_in_total_invoice
+#: model:account.report.column,name:l10n_es_extra_reports.book_es_out_total_invoice
+msgid "Total Factura"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_22
+msgid ""
+"Total bases imponibles y cuotas deducibles en adquisiciones "
+"intracomunitarias de bienes corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_24
+msgid ""
+"Total bases imponibles y cuotas deducibles en adquisiciones "
+"intracomunitarias de bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_26
+msgid ""
+"Total bases imponibles y cuotas deducibles en adquisiciones "
+"intracomunitarias de servicios"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_18
+msgid ""
+"Total bases imponibles y cuotas deducibles en importaciones de bienes "
+"corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_20
+msgid ""
+"Total bases imponibles y cuotas deducibles en importaciones de bienes de "
+"inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_16
+msgid ""
+"Total bases imponibles y cuotas deducibles en operaciones interiores de "
+"bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_14
+msgid ""
+"Total bases imponibles y cuotas deducibles en operaciones interiores de "
+"bienes y servicios corrientes"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_8
+msgid "Total bases y cuotas IVA"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_title_11
+msgid "Total cuotas IVA y recargo de equivalencia"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment__method_used__01
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__account_payment_register__method_used__01
+#, python-format
+msgid "Transfer"
+msgstr "Transferencia"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_invoice_type__type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_reg_key__type
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_type
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_invoice_type_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_reg_key_view_search
+#, python-format
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_sender_type_id
+#, python-format
+msgid "Type ID"
+msgstr "Tipo de Id."
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.book_es_report_line_template_report
+msgid "Unfolded"
+msgstr "Desplegado"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__use_queue
+#, python-format
+msgid "Use queue"
+msgstr "Usar cola de trabajo"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_payment.py:0
+#: code:addons/l10n_es_extra_reports/wizards/account_payment_register.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__method_used
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment_register__method_used
+#, python-format
+msgid "Used to identify method used for registry book"
+msgstr ""
+"Utilizado para identificar el método de pago para los libros de registro"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_vat
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_vat
+msgid "VAT"
+msgstr "NIF"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_company__sii_send_moves_on__validate
+#, python-format
+msgid "Validate"
+msgstr "Validar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_vat
+#, python-format
+msgid "Vat"
+msgstr "NIF"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__version
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_map__version
+#, python-format
+msgid "Version"
+msgstr "Versión"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_result__sii_version
+#, python-format
+msgid "Version of SII"
+msgstr "Versión del SII"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_wsdl__wsdl
+#, python-format
+msgid "WDSL Url"
+msgstr "Enlace WSDL"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model,name:l10n_es_extra_reports.model_sii_wsdl
+#, python-format
+msgid "WDSL Urls"
+msgstr "Enlaces WSDL"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_agency_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.sii_wsdl_view_tree
+msgid "WSDL"
+msgstr "WSDL"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_sii_agency__wsdl_url
+#, python-format
+msgid "WSDL URL"
+msgstr "WSDL URL"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#, python-format
+msgid "WSDL not found. Check your configuration"
+msgstr "WSDL no encontrado. Por favor, verifique su configuración"
+
+#. module: l10n_es_extra_reports
+#: model_terms:ir.ui.view,arch_db:l10n_es_extra_reports.view_company_form_inherit
+msgid "Warnings if fails"
+msgstr "Avisos en caso de fallar"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"When activity code and type is declared as A01, property situations is "
+"mandatory!"
+msgstr ""
+"Cuando el código de actividad y el tipo es declarado como A01, la situación "
+"inmobiliaria es obligatoria!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "When activity code is declared as D, property situations is mandatory!"
+msgstr ""
+"Cuando el código de actividad es declarado como D, la situación inmobiliaria "
+"es obligatoria!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"When registration key is declared as 11, 12 or 13, property situations is "
+"mandatory!"
+msgstr ""
+"Cuando la clave de registro es declarado como 11, 12 o 13, la situación "
+"inmobiliaria es obligatoria!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"When situations code is declared as 1, 2 or 3, cadastral reference is "
+"mandatory!"
+msgstr ""
+"Cuando el código de la situación es declarado como 1, 2 o 3, la referencia "
+"catastral es obligatoria!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_bank_statement_line__is_auto_identify
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_move__is_auto_identify
+#: model:ir.model.fields,help:l10n_es_extra_reports.field_account_payment__is_auto_identify
+#, python-format
+msgid ""
+"When this is active invoice type and is dua is auto calculated every write. "
+"Otherwise is configured by user."
+msgstr ""
+"Cuando este check esta activo, el tipo de factura y el DUA son "
+"automáticamente calculados cada vez qué se guarda. De lo contrario el "
+"usuario lo configura manualmente."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields,field_description:l10n_es_extra_reports.field_res_company__sii_sent_time
+#, python-format
+msgid "Which hour?"
+msgstr "A que hora?"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_query_result__condatos
+msgid "With data"
+msgstr "Con datos"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_company.py:0
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__res_company__sii_send_moves_time__delayed
+#, python-format
+msgid "With delay"
+msgstr "Con retraso"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_180_widthholding
+msgid "Withholdings and payments on account"
+msgstr "Retenciones y pagos a cuenta"
+
+#. module: l10n_es_extra_reports
+#: model:account.report.column,name:l10n_es_extra_reports.mod_190_widthholding
+msgid "Withholdings made"
+msgstr "Retenciones realizadas"
+
+#. module: l10n_es_extra_reports
+#: model:ir.model.fields.selection,name:l10n_es_extra_reports.selection__sii_check_result__sii_query_result__sindatos
+msgid "Without data"
+msgstr "Sin datos"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "You can not cancel this invoice because there is a job running!"
+msgstr ""
+"No puedes cancelar esta factura por qué hay una cola de trabajo ejecutándose!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/sii_models.py:0
+#, python-format
+msgid ""
+"You can't activate this certificate. Please generate the public and private "
+"key through 'Obtain keys' button then activate again."
+msgstr ""
+"No puedes activar este certificado. Por favor, genera la clave pública y "
+"privada a traves del botón \"Procesar fichero\" y después activalo."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "You can't use this action for multiple invoices!"
+msgstr "No puedes utilizar esta acción para múltiples facturas!"
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "You have to select a invoice type in AEAT Tab."
+msgstr "Debes de seleccionar el tipo de factura en la pestaña de AT."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "You have to select a registration key in AEAT Tab."
+msgstr "Debes de seleccionar la clave de registro en la pestaña de AT."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid "You have to select one first invoice in SII Tab."
+msgstr "Debes de seleccionar la primera factura en la pestaña de SII."
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/account_move.py:0
+#, python-format
+msgid ""
+"You must have at least one original invoice linked to this one that will be "
+"substituted."
+msgstr ""
+"Debes de tener al menos una factura original vinculada con esta factura qué "
+"será sustituida."
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_01
+msgid "[01] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_02
+msgid "[02] Cuota devengada 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_03
+msgid "[03] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_04
+msgid "[04] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_05
+msgid "[07] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_06
+msgid "[09] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_190
+msgid "[190] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_191
+msgid "[191] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_196
+msgid "[196] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_197
+msgid "[197] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_202
+msgid "[202] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_203
+msgid "[203] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_208
+msgid "[208] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_209
+msgid "[209] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_214
+msgid "[214] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_215
+msgid "[215] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_21
+msgid "[21] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_220
+msgid "[220] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_221
+msgid "[221] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_22
+msgid "[22] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_23
+msgid "[23] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_24
+msgid "[24] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_25
+msgid "[25] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_26
+msgid "[26] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_27
+msgid "[27] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_28
+msgid "[28] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_29
+msgid "[29] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_30
+msgid "[30] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_33
+msgid "[33] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_34
+msgid "[34] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_35
+msgid "[35] Base imponible 0,5%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_36
+msgid "[36] Cuota 0,5%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_43
+msgid "[43] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_44
+msgid "[44] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_47
+msgid "[47] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_48
+msgid "[48] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_49
+msgid "[49] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_50
+msgid "[50] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_51
+msgid "[51] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_522
+msgid "[522] Regularización por aplicación porcentaje definitivo de prorrata"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_52
+msgid "[52] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_53
+msgid "[53] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_545
+msgid "[545] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_546
+msgid "[546] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_547
+msgid "[547] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_548
+msgid "[548] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_54
+msgid "[54] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_551
+msgid "[551] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_552
+msgid "[552] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_55
+msgid "[55] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_56
+msgid "[56] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_57
+msgid "[57] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_587
+msgid "[587] Base imponible 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_588
+msgid "[588] Cuota 4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_58
+msgid "[58] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_597
+msgid "[597] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_598
+msgid "[598] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_599
+msgid "[599] Base imponible 1,4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_59
+msgid "[59] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_600
+msgid "[600] Cuota 1,4%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_601
+msgid "[601] Base imponible 5,2%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_602
+msgid "[602] Cuota 5,2%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_603
+msgid "[603] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_604
+msgid "[604] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_605
+msgid "[605] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_606
+msgid "[606] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_611
+msgid "[611] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_612
+msgid "[612] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_613
+msgid "[613] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_614
+msgid "[614] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_619
+msgid "[619] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_620
+msgid "[620] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_621
+msgid "[621] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_622
+msgid "[622] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_623
+msgid "[623] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_624
+msgid "[624] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_625
+msgid "[625] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_626
+msgid "[626] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_627
+msgid "[627] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_628
+msgid "[628] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_629
+msgid "[629] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_62
+msgid "[62] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_630
+msgid "[630] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_631
+msgid "[631] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_632
+msgid "[632] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_633
+msgid "[633] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_634
+msgid "[634] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_635
+msgid "[635] Base imponible 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_636
+msgid "[636] Cuota 10%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_637
+msgid "[637] Base imponible 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_638
+msgid "[638] Cuota 21%"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_639
+msgid "[639] Base imponible"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_63
+msgid "[63] Regularización bienes de inversión"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_64
+msgid "[64] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.nmod_303_casilla_64
+msgid "[64] Suma de resultados"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.mod_390_casilla_65
+msgid "[65] Cuota"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#: model:account.report.line,name:l10n_es_extra_reports.nmod_303_casilla_76
+msgid "[76] Regularización cuotas art. 80. Cinco.5ª LIVA"
+msgstr ""
+
+#. module: l10n_es_extra_reports
+#. odoo-python
+#: code:addons/l10n_es_extra_reports/models/res_partner.py:0
+#, python-format
+msgid "partner [%s]"
+msgstr "cliente [%s]"

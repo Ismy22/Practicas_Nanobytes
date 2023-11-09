@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_company_form_inherit" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='general_info']" position="after">
+                    <page name="aeat_data" string="AEAT data">
+                        <group>
+                            <group>
+                                <field name="activity" />
+                            </group>
+                            <group>
+                                <field name="billing_agreement_registration" />
+                            </group>
+                        </group>
+                    </page>
+                    <page name="aeat_sii" string="SII">
+                        <group>
+                            <group>
+                                <field name="is_sii_active" />
+                            </group>
+                            <group></group>
+                        </group>
+                        <group attrs="{'invisible': [('is_sii_active', '=', False)]}">
+                            <group string="General">
+                                <field name="sii_agency_id" attrs="{'required': [('is_sii_active', '=', True)]}" />
+                                <field name="is_sii_test" />
+                                <field name="sii_send_moves_on" />
+                            </group>
+                            <group string="Descriptions">
+                                <field name="is_sii_description_automatic" />
+                                <field name="sii_description" attrs="{'invisible': [('is_sii_description_automatic', '=', True)]}" />
+                                <field name="sii_description_sale" attrs="{'invisible': [('is_sii_description_automatic', '=', True)]}"  />
+                                <field name="sii_description_purchase" attrs="{'invisible': [('is_sii_description_automatic', '=', True)]}" />
+                            </group>
+                            <group string="Technical">
+                                <field name="use_queue" />
+                                <field name="sii_send_moves_time" attrs="{'invisible': [('use_queue', '=', False)]}" />
+                                <field name='sii_sent_time' widget='float_time' attrs="{'invisible': ['|', ('use_queue', '=', False), ('sii_send_moves_time', '!=', 'fixed')]}" />
+                                <field name='sii_delay_time' widget='float_time' attrs="{'invisible': ['|', ('use_queue', '=', False), ('sii_send_moves_time', '!=', 'delayed')]}" />
+                            </group>
+                            <group string="Warnings if fails">
+                                <field name="sii_activity_type_id" />
+                                <field name="sii_activity_user_id" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

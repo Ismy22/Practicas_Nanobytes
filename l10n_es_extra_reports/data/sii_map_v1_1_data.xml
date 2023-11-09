@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data noupdate="0">
+        <record id="sii_map_v1_1" model="sii.map">
+            <field name="name">Mapeo de Impuestos 1.1</field>
+            <field name="version">1.1</field>
+            <field name="date_from">2018-07-01</field>
+        </record>
+        
+        <!-- SII OUT Tax Map Lines -->
+        <record id="sii_map_v1_1_line_SFESB" model="sii.map.line">
+            <field name="code">SFESB</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva21b'),
+                ref('l10n_es.account_tax_template_s_iva10b'),
+                ref('l10n_es.account_tax_template_s_iva5b'),
+                ref('l10n_es.account_tax_template_s_iva4b'),
+                ref('l10n_es.account_tax_template_s_iva0b'),
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Sujetas Bienes</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_s1" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESS" model="sii.map.line">
+            <field name="code">SFESS</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva21s'),
+                ref('l10n_es.account_tax_template_s_iva10s'),
+                ref('l10n_es.account_tax_template_s_iva5s'),
+                ref('l10n_es.account_tax_template_s_iva4s'),
+                ref('l10n_es.account_tax_template_s_iva0s'),
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Sujetas Servicios</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_s1" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESISP" model="sii.map.line">
+            <field name="code">SFESISP</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva0_isp')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Sujetas ISP</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_s2" />
+        </record>
+        <record id="sii_map_v1_1_line_SFENS" model="sii.map.line">
+            <field name="code">SFENS</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva_ns_b')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Bienes No Sujeta</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_n2" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESNS" model="sii.map.line">
+            <field name="code">SFESNS</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva_e'),
+                ref('l10n_es.account_tax_template_s_iva0_sp_i'),
+                ref('l10n_es.account_tax_template_s_iva_ns')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Servicios No Sujeta</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_n2" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESBE" model="sii.map.line">
+            <field name="code">SFESBE</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es_extra_reports.account_tax_template_s_iva0_b')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Bienes Exento</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_ex" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESSE" model="sii.map.line">
+            <field name="code">SFESSE</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva0')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Servicios Exento</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_ex" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESBEI" model="sii.map.line">
+            <field name="code">SFESBEI</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva0_ic')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Bienes Exento Intracomunitarias</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_ex" />
+            <field name="cause_exemption_id" ref="l10n_es_extra_reports.sii_cause_exemption_05" />
+        </record>
+        <record id="sii_map_v1_1_line_SFESBEE" model="sii.map.line">
+            <field name="code">SFESBEE</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_iva0_e')
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Bienes Exento Exportaciones</field>
+            <field name="operation_type_id" ref="l10n_es_extra_reports.sii_operation_type_ex" />
+            <field name="cause_exemption_id" ref="l10n_es_extra_reports.sii_cause_exemption_02" />
+        </record>
+        <record id="sii_map_v1_1_line_SRE" model="sii.map.line">
+            <field name="code">SRE</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_s_req0'),
+                ref('l10n_es.account_tax_template_s_req014'),
+                ref('l10n_es.account_tax_template_s_req05'),
+                ref('l10n_es.account_tax_template_s_req062'),
+                ref('l10n_es.account_tax_template_s_req52'),
+            ])]"/>
+            <field name="out_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Recargo Equivalencias</field>
+        </record>
+
+        <!-- SII IN Tax Map Lines -->
+        <record id="sii_map_v1_1_line_SFRS" model="sii.map.line">
+            <field name="code">SFRS</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_iva21_bc'),
+                ref('l10n_es.account_tax_template_p_iva21_sc'),
+                ref('l10n_es.account_tax_template_p_iva10_bc'),
+                ref('l10n_es.account_tax_template_p_iva10_sc'),
+                ref('l10n_es.account_tax_template_p_iva4_bc'),
+                ref('l10n_es.account_tax_template_p_iva4_sc'),
+                ref('l10n_es.account_tax_template_p_iva0_bc'),
+                ref('l10n_es.account_tax_template_p_iva0_ns'),
+                ref('l10n_es.account_tax_template_p_iva4_bi'),
+                ref('l10n_es.account_tax_template_p_iva10_bi'),
+                ref('l10n_es.account_tax_template_p_iva21_bi'),
+                ref('l10n_es.account_tax_template_p_iva4_sp_in'),
+                ref('l10n_es.account_tax_template_p_iva10_sp_in'),
+                ref('l10n_es.account_tax_template_p_iva21_sp_in'),
+                ref('l10n_es.account_tax_template_p_iva4_ic_bc'),
+                ref('l10n_es.account_tax_template_p_iva10_ic_bc'),
+                ref('l10n_es.account_tax_template_p_iva21_ic_bc'),
+                ref('l10n_es.account_tax_template_p_iva4_ic_bi'),
+                ref('l10n_es.account_tax_template_p_iva10_ic_bi'),
+                ref('l10n_es.account_tax_template_p_iva21_ic_bi'),
+                ref('l10n_es.account_tax_template_p_iva4_ibc'),
+                ref('l10n_es.account_tax_template_p_iva10_ibc'),
+                ref('l10n_es.account_tax_template_p_iva21_ibc')
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Sujetas</field>
+        </record>
+        <record id="sii_map_v1_1_line_SFRISP" model="sii.map.line">
+            <field name="code">SFRISP</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_iva21_isp'),
+                ref('l10n_es.account_tax_template_p_iva10_isp'),
+                ref('l10n_es.account_tax_template_p_iva4_isp')
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">ISP</field>
+        </record>
+        <record id="sii_map_v1_1_line_SFRBI" model="sii.map.line">
+            <field name="code">SFRBI</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_iva4_bi'),
+                ref('l10n_es.account_tax_template_p_iva10_bi'),
+                ref('l10n_es.account_tax_template_p_iva21_bi')
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Bienes de Inversión</field>
+        </record>
+
+        <record id="sii_map_v1_1_line_SFRR" model="sii.map.line">
+            <field name="code">SFRR</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_irpf1'),
+                ref('l10n_es.account_tax_template_p_irpf2'),
+                ref('l10n_es.account_tax_template_p_irpf7'),
+                ref('l10n_es.account_tax_template_p_irpf7e'),
+                ref('l10n_es.account_tax_template_p_irpf9'),
+                ref('l10n_es.account_tax_template_p_irpf15'),
+                ref('l10n_es.account_tax_template_p_irpf15e'),
+                ref('l10n_es.account_tax_template_p_irpf18'),
+                ref('l10n_es.account_tax_template_p_irpf19'),
+                ref('l10n_es.account_tax_template_p_irpf20'),
+                ref('l10n_es.account_tax_template_p_irpf19a'),
+                ref('l10n_es.account_tax_template_p_irpf195a'),
+                ref('l10n_es.account_tax_template_p_irpf20a'),
+                ref('l10n_es.account_tax_template_p_irpf21a'),
+                ref('l10n_es.account_tax_template_p_irpf21t'),
+                ref('l10n_es.account_tax_template_p_irpf21td'),
+                ref('l10n_es.account_tax_template_p_irpf21te'),
+                ref('l10n_es.account_tax_template_p_irpf21p'),
+                ref('l10n_es.account_tax_template_p_irpf24'),
+                ref('l10n_es.account_tax_template_p_rp19'),
+                ref('l10n_es.account_tax_template_p_rrD19'),
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Retención</field>
+        </record>
+        <record id="sii_map_v1_1_line_SFRND" model="sii.map.line">
+            <field name="code">SFRND</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_iva10_nd'),
+                ref('l10n_es.account_tax_template_p_iva4_nd'),
+                ref('l10n_es.account_tax_template_p_iva0_nd'),
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">No deducible</field>
+        </record>
+
+        <record id="sii_map_v1_1_line_SFRDUA" model="sii.map.line">
+            <field name="code">SFRDUA</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_iva4_bi'),
+                ref('l10n_es.account_tax_template_p_iva4_sc'),
+                ref('l10n_es.account_tax_template_p_iva4_bc'),
+                ref('l10n_es.account_tax_template_p_iva10_bi'),
+                ref('l10n_es.account_tax_template_p_iva10_bc'),
+                ref('l10n_es.account_tax_template_p_iva10_sc'),
+                ref('l10n_es.account_tax_template_p_iva21_bc'),
+                ref('l10n_es.account_tax_template_p_iva21_sc'),
+                ref('l10n_es.account_tax_template_p_iva21_bi'),
+                ref('l10n_es.account_tax_template_p_iva21_ibc'),
+                ref('l10n_es.account_tax_template_p_iva21_ibi'),
+                ref('l10n_es.account_tax_template_p_iva21_sp_ex'),
+                ref('l10n_es.account_tax_template_p_iva10_sp_ex'),
+                ref('l10n_es.account_tax_template_p_iva10_ibc'),
+                ref('l10n_es.account_tax_template_p_iva10_ibi'),
+                ref('l10n_es.account_tax_template_p_iva4_sp_ex'),
+                ref('l10n_es.account_tax_template_p_iva4_ibc'),
+                ref('l10n_es.account_tax_template_p_iva4_ibi'),
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">DUA</field>
+        </record>
+
+        <record id="sii_map_v1_1_line_PRE" model="sii.map.line">
+            <field name="code">SRE</field>
+            <field name="taxes" eval="[(6, 0, [
+                ref('l10n_es.account_tax_template_p_req0'),
+                ref('l10n_es.account_tax_template_p_req014'),
+                ref('l10n_es.account_tax_template_p_req05'),
+                ref('l10n_es.account_tax_template_p_req062'),
+                ref('l10n_es.account_tax_template_p_req52'),
+            ])]"/>
+            <field name="in_map_id" ref="sii_map_v1_1"/>
+            <field name="name">Recargo Equivalencia</field>
+        </record>
+
+    </data>
+</odoo>

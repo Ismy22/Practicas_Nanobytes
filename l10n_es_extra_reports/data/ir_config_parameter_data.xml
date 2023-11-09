@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="cfg_sii_public_key" model="ir.config_parameter" forcecreate="True">
+        <field name="key">l10n_es_extra_reports.public_key</field>
+        <field name="value">/var/lib/odoo/filestore/certificates/public_key.crt</field>
+    </record>
+
+    <record id="cfg_sii_private_key" model="ir.config_parameter" forcecreate="True">
+        <field name="key">l10n_es_extra_reports.private_key</field>
+        <field name="value">/var/lib/odoo/filestore/certificates/private_key.pem</field>
+    </record>
+
+</odoo>

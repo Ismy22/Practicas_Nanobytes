@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="sii_agency_at" model="sii.agency">
+            <field name="name">Agencia Tributaría General</field>
+            <field name="version">1.1</field>
+            <field name="date_from">2018-07-01</field>
+        </record>
+
+        <record id="sii_agency_hfda" model="sii.agency">
+            <field name="name">Hacienda Foral de Araba</field>
+            <field name="version">1.0</field>
+        </record>
+
+        <record id="sii_agency_hfdg" model="sii.agency">
+            <field name="name">Hacienda Foral de Gipuzkoa</field>
+            <field name="version">1.0</field>
+        </record>
+
+        <record id="sii_agency_hfdb" model="sii.agency">
+            <field name="name">Hacienda Foral de Bizkaia</field>
+            <field name="version">1.0</field>
+        </record>
+
+        <record id="sii_agency_hfdn" model="sii.agency">
+            <field name="name">Hacienda Foral de Navarra - Enlaces sin confirmar</field>
+            <field name="version">1.0</field>
+        </record>
+
+        <!-- Agencia Tributaria -->
+        <record id="at_wsdl_out" model="sii.wsdl">
+            <field name="name">SuministroFactEmitidas</field>
+            <field name="key">wsdl_out</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroFactEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_in" model="sii.wsdl">
+            <field name="name">SuministroFactRecibidas</field>
+            <field name="key">wsdl_in</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroFactRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_pi" model="sii.wsdl">
+            <field name="name">SuministroBienesInversion</field>
+            <field name="key">wsdl_pi</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroBienesInversion.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_ic" model="sii.wsdl">
+            <field name="name">SuministroOpIntracomunitarias</field>
+            <field name="key">wsdl_ic</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroOpIntracomunitarias.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_pr" model="sii.wsdl">
+            <field name="name">SuministroCobrosEmitidas</field>
+            <field name="key">wsdl_pr</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroCobrosEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_ott" model="sii.wsdl">
+            <field name="name">SuministroOpTrascendTribu</field>
+            <field name="key">wsdl_ott</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroOpTrascendTribu.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+        <record id="at_wsdl_ps" model="sii.wsdl">
+            <field name="name">SuministroPagosRecibidas</field>
+            <field name="key">wsdl_ps</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroPagosRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_at"/>
+        </record>
+
+        <!-- Hacienda Foral de Araba -->
+        <record id="hfda_wsdl_out" model="sii.wsdl">
+            <field name="name">SuministroFactEmitidas</field>
+            <field name="key">wsdl_out</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroFactEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_in" model="sii.wsdl">
+            <field name="name">SuministroFactRecibidas</field>
+            <field name="key">wsdl_in</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroFactRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_pi" model="sii.wsdl">
+            <field name="name">SuministroBienesInversion</field>
+            <field name="key">wsdl_pi</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroBienesInversion.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_ic" model="sii.wsdl">
+            <field name="name">SuministroOpIntracomunitarias</field>
+            <field name="key">wsdl_ic</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroOpIntracomunitarias.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_pr" model="sii.wsdl">
+            <field name="name">SuministroCobrosEmitidas</field>
+            <field name="key">wsdl_pr</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroCobrosEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_ott" model="sii.wsdl">
+            <field name="name">SuministroOpTrascendTribu</field>
+            <field name="key">wsdl_ott</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroOpTrascendTribu.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+        <record id="hfda_wsdl_ps" model="sii.wsdl">
+            <field name="name">SuministroPagosRecibidas</field>
+            <field name="key">wsdl_ps</field>
+            <field name="wsdl">https://sii.araba.eus/documentos/SuministroPagosRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfda"/>
+        </record>
+
+
+        <!-- Hacienda Foral de Gipuzkoa -->
+        <record id="hfdg_wsdl_out" model="sii.wsdl">
+            <field name="name">SuministroFactEmitidas</field>
+            <field name="key">wsdl_out</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroFactEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_in" model="sii.wsdl">
+            <field name="name">SuministroFactRecibidas</field>
+            <field name="key">wsdl_in</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroFactRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_pi" model="sii.wsdl">
+            <field name="name">SuministroBienesInversion</field>
+            <field name="key">wsdl_pi</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroBienesInversion.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_ic" model="sii.wsdl">
+            <field name="name">SuministroOpIntracomunitarias</field>
+            <field name="key">wsdl_ic</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroOpIntracomunitarias.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_pr" model="sii.wsdl">
+            <field name="name">SuministroCobrosEmitidas</field>
+            <field name="key">wsdl_pr</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroCobrosEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_ott" model="sii.wsdl">
+            <field name="name">SuministroOpTrascendTribu</field>
+            <field name="key">wsdl_ott</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroOpTrascendTribu.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+        <record id="hfdg_wsdl_ps" model="sii.wsdl">
+            <field name="name">SuministroPagosRecibidas</field>
+            <field name="key">wsdl_ps</field>
+            <field name="wsdl">https://egoitza.gipuzkoa.eus/ogasuna/sii/ficheros/v1.1/SuministroPagosRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdg"/>
+        </record>
+
+        <!-- Hacienda Foral de Bizkaia -->
+        <record id="hfdb_wsdl_out" model="sii.wsdl">
+            <field name="name">SuministroFactEmitidas</field>
+            <field name="key">wsdl_out</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroFactEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_in" model="sii.wsdl">
+            <field name="name">SuministroFactRecibidas</field>
+            <field name="key">wsdl_in</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroFactRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_pi" model="sii.wsdl">
+            <field name="name">SuministroBienesInversion</field>
+            <field name="key">wsdl_pi</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroBienesInversion.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_ic" model="sii.wsdl">
+            <field name="name">SuministroOpIntracomunitarias</field>
+            <field name="key">wsdl_ic</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroOpIntracomunitarias.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_pr" model="sii.wsdl">
+            <field name="name">SuministroCobrosEmitidas</field>
+            <field name="key">wsdl_pr</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroCobrosEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_ott" model="sii.wsdl">
+            <field name="name">SuministroOpTrascendTribu</field>
+            <field name="key">wsdl_ott</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroOpTrascendTribu.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+        <record id="hfdb_wsdl_ps" model="sii.wsdl">
+            <field name="name">SuministroPagosRecibidas</field>
+            <field name="key">wsdl_ps</field>
+            <field name="wsdl">https://www.bizkaia.eus/ogasuna/sii/documentos/SuministroPagosRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdb"/>
+        </record>
+
+        <!-- Hacienda Foral de Navarra -->
+        <record id="hfdn_wsdl_out" model="sii.wsdl">
+            <field name="name">SuministroFactEmitidas</field>
+            <field name="key">wsdl_out</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroFactEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_in" model="sii.wsdl">
+            <field name="name">SuministroFactRecibidas</field>
+            <field name="key">wsdl_in</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroFactRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_pi" model="sii.wsdl">
+            <field name="name">SuministroBienesInversion</field>
+            <field name="key">wsdl_pi</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroBienesInversion.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_ic" model="sii.wsdl">
+            <field name="name">SuministroOpIntracomunitarias</field>
+            <field name="key">wsdl_ic</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroOpIntracomunitarias.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_pr" model="sii.wsdl">
+            <field name="name">SuministroCobrosEmitidas</field>
+            <field name="key">wsdl_pr</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroCobrosEmitidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_ott" model="sii.wsdl">
+            <field name="name">SuministroOpTrascendTribu</field>
+            <field name="key">wsdl_ott</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroOpTrascendTribu.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+        <record id="hfdn_wsdl_ps" model="sii.wsdl">
+            <field name="name">SuministroPagosRecibidas</field>
+            <field name="key">wsdl_ps</field>
+            <field name="wsdl">https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii_1_1_bis/fact/ws/SuministroPagosRecibidas.wsdl</field>
+            <field name="sii_agency_id" ref="sii_agency_hfdn"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="mod_390" model="account.report">
+        <field name="name">Tax Report (Mod 390)</field>
+        <field name="filter_analytic" eval="False"/>
+        <field name="filter_date_range" eval="True"/>
+        <field name="filter_period_comparison" eval="False"/>
+        <field name="filter_unfold_all" eval="True"/>
+        <field name="filter_journals" eval="True"/>
+        <field name="country_id" ref="base.es"/>
+        <field name="filter_multi_company">disabled</field>
+        <field name="root_report_id" ref="account.generic_tax_report"/>
+        <field name="custom_handler_model_id" ref="model_l10n_es_mod390_tax_report_handler"/>
+        <field name="column_ids">
+            <record id="mod_390_column" model="account.report.column">
+                <field name="name">Balance</field>
+                <field name="expression_label">balance</field>
+            </record>
+        </field>
+        <field name="line_ids">
+            <record id="mod_390_title_1" model="account.report.line">
+                <field name="name">Régimen General</field>
+                <field name="code">aeat_mod_390_title_1</field>
+                <field name="children_ids">
+                    <record id="mod_390_title_2" model="account.report.line">
+                        <field name="name">IVA Devengado</field>
+                        <field name="code">aeat_mod_390_title_2</field>
+                        <field name="children_ids">
+                            <record id="mod_390_title_3" model="account.report.line">
+                                <field name="name">Régimen ordinario</field>
+                                <field name="code">aeat_mod_390_title_3</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_01" model="account.report.line">
+                                        <field name="name">[01] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_01</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_01_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_01', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_02" model="account.report.line">
+                                        <field name="name">[02] Cuota devengada 4%</field>
+                                        <field name="code">aeat_mod_390_02</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_02_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_03', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+
+                                    <record id="mod_390_casilla_03" model="account.report.line">
+                                        <field name="name">[03] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_03</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_03_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_04', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_04" model="account.report.line">
+                                        <field name="name">[04] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_04</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_04_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_06', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_05" model="account.report.line">
+                                        <field name="name">[07] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_05</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_05_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_07', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_06" model="account.report.line">
+                                        <field name="name">[09] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_06</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_06_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_09', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>    
+                                </field>
+                            </record>
+                            <record id="mod_390_title_4" model="account.report.line">
+                                <field name="name">Adquisiciones intracomunitarias de bienes</field>
+                                <field name="code">aeat_mod_390_title_4</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_21" model="account.report.line">
+                                        <field name="name">[21] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_21</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_21_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_21', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_22" model="account.report.line">
+                                        <field name="name">[22] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_22</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_22_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_22', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_23" model="account.report.line">
+                                        <field name="name">[23] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_23</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_23_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_23', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_24" model="account.report.line">
+                                        <field name="name">[24] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_24</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_24_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_24', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_25" model="account.report.line">
+                                        <field name="name">[25] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_25</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_25_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_25', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_26" model="account.report.line">
+                                        <field name="name">[26] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_26</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_26_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_26', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_5" model="account.report.line">
+                                <field name="name">Adquisiciones intracomunitarias de servicios</field>
+                                <field name="code">aeat_mod_390_title_5</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_545" model="account.report.line">
+                                        <field name="name">[545] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_545</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_545_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_545', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_546" model="account.report.line">
+                                        <field name="name">[546] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_546</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_546_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_546', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_547" model="account.report.line">
+                                        <field name="name">[547] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_547</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_547_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_547', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_548" model="account.report.line">
+                                        <field name="name">[548] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_548</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_548_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_548', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_551" model="account.report.line">
+                                        <field name="name">[551] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_551</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_551_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_551', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_552" model="account.report.line">
+                                        <field name="name">[552] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_552</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_552_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_552', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_6" model="account.report.line">
+                                <field name="name">Otros supuestos de inversión de sujeto pasivo</field>
+                                <field name="code">aeat_mod_390_title_6</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_27" model="account.report.line">
+                                        <field name="name">[27] Base imponible</field>
+                                        <field name="code">aeat_mod_390_27</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_27_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_12', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_28" model="account.report.line">
+                                        <field name="name">[28] Cuota</field>
+                                        <field name="code">aeat_mod_390_28</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_28_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_13', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_7" model="account.report.line">
+                                <field name="name">Modificación de bases y cuotas</field>
+                                <field name="code">aeat_mod_390_title_7</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_29" model="account.report.line">
+                                        <field name="name">[29] Base imponible</field>
+                                        <field name="code">aeat_mod_390_29</field>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_29_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">aggregation</field>
+                                                <field name="formula">aeat_mod_390_29.aeat_mod_390_29_sale_balance - aeat_mod_390_29.aeat_mod_390_29_purchase_balance</field>
+                                                <field name="date_scope">normal</field>
+                                            </record>
+                                            <record id="mod_390_casilla_29_aeat_mod_390_29_sale_balance" model="account.report.expression">
+                                                <field name="label">aeat_mod_390_29_sale_balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_14_sale'))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                            <record id="mod_390_casilla_29_aeat_mod_390_29_purchase_balance" model="account.report.expression">
+                                                <field name="label">aeat_mod_390_29_purchase_balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_14_purchase'))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_30" model="account.report.line">
+                                        <field name="name">[30] Cuota</field>
+                                        <field name="code">aeat_mod_390_30</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_30_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_15', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_8" model="account.report.line">
+                                <field name="name">Total bases y cuotas IVA</field>
+                                <field name="code">aeat_mod_390_title_8</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_33" model="account.report.line">
+                                        <field name="name">[33] Base imponible</field>
+                                        <field name="code">aeat_mod_390_33</field>
+                                        <field name="aggregation_formula">aeat_mod_390_29.balance + aeat_mod_390_27.balance + aeat_mod_390_545.balance + aeat_mod_390_547.balance + aeat_mod_390_551.balance + aeat_mod_390_21.balance + aeat_mod_390_23.balance + aeat_mod_390_25.balance + aeat_mod_390_01.balance + aeat_mod_390_03.balance + aeat_mod_390_05.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_34" model="account.report.line">
+                                        <field name="name">[34] Cuota</field>
+                                        <field name="code">aeat_mod_390_34</field>
+                                        <field name="aggregation_formula">aeat_mod_390_30.balance + aeat_mod_390_28.balance + aeat_mod_390_546.balance + aeat_mod_390_548.balance + aeat_mod_390_552.balance + aeat_mod_390_22.balance + aeat_mod_390_24.balance + aeat_mod_390_26.balance + aeat_mod_390_02.balance + aeat_mod_390_04.balance + aeat_mod_390_06.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_9" model="account.report.line">
+                                <field name="name">Recargo de equivalencia</field>
+                                <field name="code">aeat_mod_390_title_9</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_35" model="account.report.line">
+                                        <field name="name">[35] Base imponible 0,5%</field>
+                                        <field name="code">aeat_mod_390_35</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_35_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_16', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_36" model="account.report.line">
+                                        <field name="name">[36] Cuota 0,5%</field>
+                                        <field name="code">aeat_mod_390_36</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_36_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_18', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_599" model="account.report.line">
+                                        <field name="name">[599] Base imponible 1,4%</field>
+                                        <field name="code">aeat_mod_390_599</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_599_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_19', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_600" model="account.report.line">
+                                        <field name="name">[600] Cuota 1,4%</field>
+                                        <field name="code">aeat_mod_390_600</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_600_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_21', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_601" model="account.report.line">
+                                        <field name="name">[601] Base imponible 5,2%</field>
+                                        <field name="code">aeat_mod_390_601</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_601_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_22', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_602" model="account.report.line">
+                                        <field name="name">[602] Cuota 5,2%</field>
+                                        <field name="code">aeat_mod_390_602</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_602_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_24', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_10" model="account.report.line">
+                                <field name="name">Modificación recargo equivalencia</field>
+                                <field name="code">aeat_mod_390_title_10</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_43" model="account.report.line">
+                                        <field name="name">[43] Base imponible</field>
+                                        <field name="code">aeat_mod_390_43</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_43_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_25', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_44" model="account.report.line">
+                                        <field name="name">[44] Cuota</field>
+                                        <field name="code">aeat_mod_390_44</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_44_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_26', raise_if_not_found=False))]"/>
+                                                <field name="subformula">-sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_11" model="account.report.line">
+                                <field name="name">Total cuotas IVA y recargo de equivalencia</field>
+                                <field name="code">aeat_mod_390_title_11</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_47" model="account.report.line">
+                                        <field name="name">[47] Cuota</field>
+                                        <field name="code">aeat_mod_390_47</field>
+                                        <field name="aggregation_formula">aeat_mod_390_34.balance + aeat_mod_390_36.balance + aeat_mod_390_600.balance + aeat_mod_390_602.balance + aeat_mod_390_44.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="mod_390_title_12" model="account.report.line">
+                        <field name="name">IVA deducible</field>
+                        <field name="code">aeat_mod_390_title_12</field>
+                        <field name="children_ids">
+                            <record id="mod_390_title_13" model="account.report.line">
+                                <field name="name">IVA deducible en operaciones interiores de bienes y servicios corrientes</field>
+                                <field name="code">aeat_mod_390_title_13</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_190" model="account.report.line">
+                                        <field name="name">[190] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_190</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_190_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_190', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_191" model="account.report.line">
+                                        <field name="name">[191] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_191</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_191_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_191', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_603" model="account.report.line">
+                                        <field name="name">[603] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_603</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_603_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_603', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_604" model="account.report.line">
+                                        <field name="name">[604] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_604</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_604_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_604', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_605" model="account.report.line">
+                                        <field name="name">[605] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_605</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_605_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_605', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_606" model="account.report.line">
+                                        <field name="name">[606] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_606</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_606_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_606', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_14" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en operaciones interiores de bienes y servicios corrientes</field>
+                                <field name="code">aeat_mod_390_title_14</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_48" model="account.report.line">
+                                        <field name="name">[48] Base imponible</field>
+                                        <field name="code">aeat_mod_390_48</field>
+                                        <field name="aggregation_formula">aeat_mod_390_190.balance + aeat_mod_390_603.balance + aeat_mod_390_605.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_49" model="account.report.line">
+                                        <field name="name">[49] Cuota</field>
+                                        <field name="code">aeat_mod_390_49</field>
+                                        <field name="aggregation_formula">aeat_mod_390_191.balance + aeat_mod_390_604.balance + aeat_mod_390_606.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_15" model="account.report.line">
+                                <field name="name">IVA deducible en operaciones interiores de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_15</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_196" model="account.report.line">
+                                        <field name="name">[196] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_196</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_196_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_196', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_197" model="account.report.line">
+                                        <field name="name">[197] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_197</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_197_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_197', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_611" model="account.report.line">
+                                        <field name="name">[611] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_611</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_611_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_611', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_612" model="account.report.line">
+                                        <field name="name">[612] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_612</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_612_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_612', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_613" model="account.report.line">
+                                        <field name="name">[613] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_613</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_613_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_613', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_614" model="account.report.line">
+                                        <field name="name">[614] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_614</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_614_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_614', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_16" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en operaciones interiores de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_16</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_50" model="account.report.line">
+                                        <field name="name">[50] Base imponible</field>
+                                        <field name="code">aeat_mod_390_50</field>
+                                        <field name="aggregation_formula">aeat_mod_390_196.balance + aeat_mod_390_611.balance + aeat_mod_390_613.balance</field>
+                                    </record>
+
+                                    <record id="mod_390_casilla_51" model="account.report.line">
+                                        <field name="name">[51] Cuota</field>
+                                        <field name="code">aeat_mod_390_51</field>
+                                        <field name="aggregation_formula">aeat_mod_390_197.balance + aeat_mod_390_612.balance + aeat_mod_390_614.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_17" model="account.report.line">
+                                <field name="name">IVA deducible en importaciones de bienes corrientes</field>
+                                <field name="code">aeat_mod_390_title_17</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_202" model="account.report.line">
+                                        <field name="name">[202] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_202</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_202_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_202', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_203" model="account.report.line">
+                                        <field name="name">[203] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_203</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_203_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_203', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_619" model="account.report.line">
+                                        <field name="name">[619] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_619</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_619_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_619', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_620" model="account.report.line">
+                                        <field name="name">[620] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_620</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_620_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_620', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_621" model="account.report.line">
+                                        <field name="name">[621] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_621</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_621_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_621', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_622" model="account.report.line">
+                                        <field name="name">[622] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_622</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_622_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_622', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_18" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en importaciones de bienes corrientes</field>
+                                <field name="code">aeat_mod_390_title_18</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_52" model="account.report.line">
+                                        <field name="name">[52] Base imponible</field>
+                                        <field name="code">aeat_mod_390_52</field>
+                                        <field name="aggregation_formula">aeat_mod_390_202.balance + aeat_mod_390_619.balance + aeat_mod_390_621.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_53" model="account.report.line">
+                                        <field name="name">[53] Cuota</field>
+                                        <field name="code">aeat_mod_390_53</field>
+                                        <field name="aggregation_formula">aeat_mod_390_203.balance + aeat_mod_390_620.balance + aeat_mod_390_622.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_19" model="account.report.line">
+                                <field name="name">IVA deducible en importaciones de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_19</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_208" model="account.report.line">
+                                        <field name="name">[208] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_208</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_208_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_208', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_209" model="account.report.line">
+                                        <field name="name">[209] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_209</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_209_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_209', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_623" model="account.report.line">
+                                        <field name="name">[623] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_623</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_623_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_623', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_624" model="account.report.line">
+                                        <field name="name">[624] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_624</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_624_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_624', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_625" model="account.report.line">
+                                        <field name="name">[625] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_625</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_625_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_625', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_626" model="account.report.line">
+                                        <field name="name">[626] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_626</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_626_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_626', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_20" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en importaciones de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_20</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_54" model="account.report.line">
+                                        <field name="name">[54] Base imponible</field>
+                                        <field name="code">aeat_mod_390_54</field>
+                                        <field name="aggregation_formula">aeat_mod_390_208.balance + aeat_mod_390_623.balance + aeat_mod_390_625.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_55" model="account.report.line">
+                                        <field name="name">[55] Cuota</field>
+                                        <field name="code">aeat_mod_390_55</field>
+                                        <field name="aggregation_formula">aeat_mod_390_209.balance + aeat_mod_390_624.balance + aeat_mod_390_626.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+
+
+                            <record id="mod_390_title_21" model="account.report.line">
+                                <field name="name">IVA deducible en adquisiciones intracomunitarias de bienes corrientes</field>
+                                <field name="code">aeat_mod_390_title_21</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_214" model="account.report.line">
+                                        <field name="name">[214] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_214</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_214_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_214', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_215" model="account.report.line">
+                                        <field name="name">[215] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_215</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_215_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_215', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_627" model="account.report.line">
+                                        <field name="name">[627] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_627</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_627_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_627', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_628" model="account.report.line">
+                                        <field name="name">[628] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_628</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_628_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_628', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_629" model="account.report.line">
+                                        <field name="name">[629] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_629</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_629_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_629', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_630" model="account.report.line">
+                                        <field name="name">[630] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_630</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_630_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_630', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_22" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en adquisiciones intracomunitarias de bienes corrientes</field>
+                                <field name="code">aeat_mod_390_title_22</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_56" model="account.report.line">
+                                        <field name="name">[56] Base imponible</field>
+                                        <field name="code">aeat_mod_390_56</field>
+                                        <field name="aggregation_formula">aeat_mod_390_214.balance + aeat_mod_390_627.balance + aeat_mod_390_629.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_57" model="account.report.line">
+                                        <field name="name">[57] Cuota</field>
+                                        <field name="code">aeat_mod_390_57</field>
+                                        <field name="aggregation_formula">aeat_mod_390_215.balance + aeat_mod_390_628.balance + aeat_mod_390_630.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_23" model="account.report.line">
+                                <field name="name">IVA deducible en adquisiciones intracomunitarias de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_23</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_220" model="account.report.line">
+                                        <field name="name">[220] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_220</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_220_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_220', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_221" model="account.report.line">
+                                        <field name="name">[221] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_221</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_221_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_221', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_631" model="account.report.line">
+                                        <field name="name">[631] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_631</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_631_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_631', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_632" model="account.report.line">
+                                        <field name="name">[632] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_632</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_632_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_632', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_633" model="account.report.line">
+                                        <field name="name">[633] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_633</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_633_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_633', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_634" model="account.report.line">
+                                        <field name="name">[634] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_634</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_634_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_634', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_24" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en adquisiciones intracomunitarias de bienes de inversión</field>
+                                <field name="code">aeat_mod_390_title_24</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_58" model="account.report.line">
+                                        <field name="name">[58] Base imponible</field>
+                                        <field name="code">aeat_mod_390_58</field>
+                                        <field name="aggregation_formula">aeat_mod_390_220.balance + aeat_mod_390_631.balance + aeat_mod_390_633.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_59" model="account.report.line">
+                                        <field name="name">[59] Cuota</field>
+                                        <field name="code">aeat_mod_390_59</field>
+                                        <field name="aggregation_formula">aeat_mod_390_221.balance + aeat_mod_390_632.balance + aeat_mod_390_634.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_25" model="account.report.line">
+                                <field name="name">IVA deducible en adquisiciones intracomunitarias de servicios</field>
+                                <field name="code">aeat_mod_390_title_25</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_587" model="account.report.line">
+                                        <field name="name">[587] Base imponible 4%</field>
+                                        <field name="code">aeat_mod_390_587</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_587_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_587', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_588" model="account.report.line">
+                                        <field name="name">[588] Cuota 4%</field>
+                                        <field name="code">aeat_mod_390_588</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_588_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_588', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_635" model="account.report.line">
+                                        <field name="name">[635] Base imponible 10%</field>
+                                        <field name="code">aeat_mod_390_635</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_635_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_635', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_636" model="account.report.line">
+                                        <field name="name">[636] Cuota 10%</field>
+                                        <field name="code">aeat_mod_390_636</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_636_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_636', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_637" model="account.report.line">
+                                        <field name="name">[637] Base imponible 21%</field>
+                                        <field name="code">aeat_mod_390_637</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_637_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_637', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_638" model="account.report.line">
+                                        <field name="name">[638] Cuota 21%</field>
+                                        <field name="code">aeat_mod_390_638</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_638_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es_extra_reports.mod_390_638', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_26" model="account.report.line">
+                                <field name="name">Total bases imponibles y cuotas deducibles en adquisiciones intracomunitarias de servicios</field>
+                                <field name="code">aeat_mod_390_title_26</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_597" model="account.report.line">
+                                        <field name="name">[597] Base imponible</field>
+                                        <field name="code">aeat_mod_390_597</field>
+                                        <field name="aggregation_formula">aeat_mod_390_587.balance + aeat_mod_390_635.balance + aeat_mod_390_637.balance</field>
+                                    </record>
+                                    <record id="mod_390_casilla_598" model="account.report.line">
+                                        <field name="name">[598] Cuota</field>
+                                        <field name="code">aeat_mod_390_598</field>
+                                        <field name="aggregation_formula">aeat_mod_390_588.balance + aeat_mod_390_636.balance + aeat_mod_390_638.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_27" model="account.report.line">
+                                <field name="name">Rectificación de deducciones</field>
+                                <field name="code">aeat_mod_390_title_27</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_639" model="account.report.line">
+                                        <field name="name">[639] Base imponible</field>
+                                        <field name="code">aeat_mod_390_639</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_639_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_40', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                    <record id="mod_390_casilla_62" model="account.report.line">
+                                        <field name="name">[62] Cuota</field>
+                                        <field name="code">aeat_mod_390_62</field>
+                                        <field name="groupby">account_id</field>
+                                        <field name="foldable" eval="True"/>
+                                        <field name="expression_ids">
+                                            <record id="mod_390_casilla_62_balance" model="account.report.expression">
+                                                <field name="label">balance</field>
+                                                <field name="engine">domain</field>
+                                                <field name="formula" eval="[('tax_tag_ids','=',ref('l10n_es.mod_303_41', raise_if_not_found=False))]"/>
+                                                <field name="subformula">sum</field>
+                                            </record>
+                                        </field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_casilla_63" model="account.report.line">
+                                <field name="name">[63] Regularización bienes de inversión</field>
+                                <field name="code">aeat_mod_390_63</field>
+                                <field name="expression_ids">
+                                    <record id="mod_390_casilla_63_balance" model="account.report.expression">
+                                        <field name="label">balance</field>
+                                        <field name="engine">external</field>
+                                        <field name="formula">sum</field>
+                                        <field name="subformula">editable;rounding=2</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_casilla_522" model="account.report.line">
+                                <field name="name">[522] Regularización por aplicación porcentaje definitivo de prorrata</field>
+                                <field name="code">aeat_mod_390_522</field>
+                                <field name="expression_ids">
+                                    <record id="mod_390_casilla_522_balance" model="account.report.expression">
+                                        <field name="label">balance</field>
+                                        <field name="engine">external</field>
+                                        <field name="formula">sum</field>
+                                        <field name="subformula">editable;rounding=2</field>
+                                    </record>
+                                </field>
+                            </record>
+                            <record id="mod_390_title_28" model="account.report.line">
+                                <field name="name">Suma de deducciones</field>
+                                <field name="code">aeat_mod_390_title_28</field>
+                                <field name="children_ids">
+                                    <record id="mod_390_casilla_64" model="account.report.line">
+                                        <field name="name">[64] Cuota</field>
+                                        <field name="code">aeat_mod_390_64</field>
+                                        <field name="aggregation_formula">aeat_mod_390_49.balance + aeat_mod_390_51.balance + aeat_mod_390_53.balance + aeat_mod_390_55.balance + aeat_mod_390_57.balance + aeat_mod_390_59.balance + aeat_mod_390_62.balance + aeat_mod_390_598.balance + aeat_mod_390_63.balance + aeat_mod_390_522.balance</field>
+                                    </record>
+                                </field>
+                            </record>
+                        </field>
+                    </record>
+                    <record id="mod_390_title_29" model="account.report.line">
+                        <field name="name">Resultado régimen general</field>
+                        <field name="code">aeat_mod_390_title_29</field>
+                        <field name="children_ids">
+                            <record id="mod_390_casilla_65" model="account.report.line">
+                                <field name="name">[65] Cuota</field>
+                                <field name="code">aeat_mod_390_65</field>
+                                <field name="aggregation_formula">aeat_mod_390_47.balance - aeat_mod_390_64.balance</field>
+                            </record>
+                        </field>
+                    </record>
+                </field>
+            </record>
+        </field>
+    </record>
+
+    </data>
+</odoo>
